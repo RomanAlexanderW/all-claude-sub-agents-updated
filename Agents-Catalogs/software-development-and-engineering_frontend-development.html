@@ -1,0 +1,769 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frontend Development - AI Agents Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .stats {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .agent-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .agent-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+        .agent-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        .agent-description {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .badge-coding {
+            background: #d1f4e0;
+            color: #0f5132;
+        }
+        .badge-non-coding {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.875rem;
+            border-top: 1px solid #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Frontend Development</h1>
+            <div class="breadcrumb">Software Development & Engineering → Frontend Development</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">120</div>
+                <div class="stat-label">Total Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">120</div>
+                <div class="stat-label">Coding Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Non-Coding Agents</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <div class="agent-name">Acceptance Criteria Agent</div>
+                    <div class="agent-description">Expert in drafting clear, testable acceptance criteria for requirements and user stories, ensuring traceability to business goals. Use for comprehensive acceptance criteria development.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Acceptance Test Specialist</div>
+                    <div class="agent-description">Expert in user acceptance testing (UAT), business requirement validation, stakeholder collaboration, and sign-off processes. Ensures software meets business needs.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Angular Specialist</div>
+                    <div class="agent-description">Ultra-specialized Angular 18+ framework expert focusing on standalone components, signals-based reactivity, modern control flow syntax, performance optimization, and enterprise-grade application archi</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Api Integration Architect</div>
+                    <div class="agent-description">Expert in API design, third-party integrations, webhooks, and microservices communication. Use for building robust API ecosystems and integration platforms.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Astro Static Site Generator Specialist</div>
+                    <div class="agent-description">Ultra-specialized Astro 5.x+ static site generator and meta-framework expert focusing on islands architecture, server islands, content-driven development, multi-framework integration, performance opti</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Atdd Specialist</div>
+                    <div class="agent-description">Expert in Acceptance Test-Driven Development (ATDD) using collaborative requirements definition, customer-focused testing, and double-loop TDD. Bridges business requirements with technical implementat</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Authentic Confidence Projector</div>
+                    <div class="agent-description">Builds genuine self-confidence that naturally attracts others, based on self-esteem psychology and confidence projection techniques</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Authentic Self Expression Agent</div>
+                    <div class="agent-description">Expert in developing genuine self-expression, overcoming people-pleasing tendencies, establishing authentic communication, and living in alignment with true self through validated authenticity framewo</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Authority Without Intimidation</div>
+                    <div class="agent-description">Builds respect and deference while maintaining approachability and collaborative spirit</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Base Template Generator</div>
+                    <div class="agent-description">Use this agent when you need to create foundational templates, boilerplate code, or starter configurations for new projects, components, or features. This agent excels at generating clean, well-struct</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Behavioral Design Psychologist</div>
+                    <div class="agent-description">Expert in behavioral psychology, persuasive design, cognitive biases, and ethical influence. Use for designing interfaces that guide user behavior while respecting user autonomy.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Boundary Condition Generator</div>
+                    <div class="agent-description">Expert in boundary value analysis and generating test cases at system limits. Creates precise boundary tests using equivalence partitioning and boundary value techniques.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Business Performance Dashboard Agent</div>
+                    <div class="agent-description">Expert in real-time KPI monitoring, executive reporting, and performance analytics. Specializes in creating dynamic, AI-powered dashboards that provide actionable insights, predictive analytics, and a</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cargo Manager</div>
+                    <div class="agent-description">Expert in Cargo.toml configuration, dependency management, build optimization, and Rust project structure. Use for build system and dependency issues.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Charitable Giving Philanthropy Agent</div>
+                    <div class="agent-description">Expert in strategic charitable giving, philanthropic impact optimization, and effective altruism principles to maximize social good through financial contributions</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Ci Cd Pipeline Integration Specialist</div>
+                    <div class="agent-description">Expert in CI/CD pipeline integration testing, deployment validation, and continuous integration workflows. Orchestrates comprehensive pipeline testing including build verification, deployment validati</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cicd Engineer</div>
+                    <div class="agent-description">Expert in CI/CD pipelines, automated testing, build systems, deployment automation, and DevOps practices. Use for build and deployment automation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cicd Self Healing Pipeline Agent</div>
+                    <div class="agent-description">Expert in self-healing CI/CD pipelines, automated build recovery, and intelligent pipeline remediation. Detects and fixes pipeline failures automatically to ensure continuous delivery reliability.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Code Example Usage Agent</div>
+                    <div class="agent-description">Expert in generating illustrative code examples, usage demonstrations, and practical implementation guides for APIs, functions, and code components.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Collaborative Partnership</div>
+                    <div class="agent-description">Creates win-win scenarios that showcase competence while genuinely helping others succeed</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Communication Mastery</div>
+                    <div class="agent-description">Comprehensive verbal and non-verbal communication skill development, including clarity, persuasion, rapport-building, and cross-cultural communication excellence</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Compiler Optimization Specialist</div>
+                    <div class="agent-description">Expert in compiler optimization flags, PGO, LTO, and build configuration. Achieves 20-40% performance gains through advanced compilation strategies.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Compliment Recognition Specialist</div>
+                    <div class="agent-description">Masters the art of genuine, specific praise that builds others up while establishing positive associations</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Consistency Reliability Builder</div>
+                    <div class="agent-description">Ensures alignment between words and actions to build dependable, trustworthy reputation</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Container Image Management</div>
+                    <div class="agent-description">Expert in automating building, tagging, versioning, and pushing images to registries, including reproducible build support and SBOM/cataloging. Use for comprehensive container image lifecycle manageme</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Conversational Flow Rapport Builder</div>
+                    <div class="agent-description">Optimizes conversation dynamics, question-asking techniques, and natural rapport-building patterns</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Creative Expression Artistic Development Agent</div>
+                    <div class="agent-description">Specialist in creative development, artistic skill building, creative flow optimization, artistic vision development, and creative career building. Expert in creativity psychology, artistic methodolog</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Csharp Specialist</div>
+                    <div class="agent-description">Ultra-specialized C# 13+ and .NET 9+ development expert. Master of modern object-oriented design, high-performance applications, cloud-native development, and enterprise architecture.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Css Specialist</div>
+                    <div class="agent-description">Ultra-specialized CSS3+ development expert focusing on modern layout systems, performance optimization, responsive design, and advanced styling techniques. Master of Grid, Flexbox, Container Queries, </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Customer Service Relationship Agent</div>
+                    <div class="agent-description">Expert in building world-class customer experience systems using AI-powered support automation, proactive relationship management, and emotional intelligence frameworks to achieve 95%+ satisfaction sc</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Debt Elimination Credit Repair Agent</div>
+                    <div class="agent-description">Expert in systematically eliminating debt and building excellent credit through strategic payoff methods, credit score optimization, and financial rehabilitation. Specializes in debt avalanche/snowbal</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Declarative Code Writer Agent</div>
+                    <div class="agent-description">Focuses on "what" not "how" (SQL, HTML, CSS, infrastructure-as-code, configuration files, GraphQL). Expert in constraint-based programming and specification-driven development.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Design System Architect</div>
+                    <div class="agent-description">Expert in design system creation, component libraries, design tokens, and scalable UI architectures. Use for building and maintaining consistent, reusable design systems.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Divorce Separation Recovery Agent</div>
+                    <div class="agent-description">Expert in emotional healing, practical divorce navigation, co-parenting strategies, financial restructuring, and rebuilding life after separation. Provides comprehensive support through legal, emotion</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Dotnet Core Enterprise Specialist</div>
+                    <div class="agent-description">|
+  Ultra-specialized .NET 9+ enterprise development agent with verified production-ready capabilities for building high-performance, scalable web applications and APIs. Expert in Native AOT compilati</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Embedded Systems Code Agent</div>
+                    <div class="agent-description">Specializes in C/C++, assembly, Arduino, FPGA, and device drivers. Expert in real-time systems, hardware interfaces, and resource-constrained programming.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Emberjs Framework Specialist</div>
+                    <div class="agent-description">Ultra-specialized Ember.js framework expert focusing on Octane edition, Glimmer components, convention-over-configuration architecture, and modern Ember development patterns. Master of Ember CLI, Embe</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Emotional Psychological Benefit Mapper</div>
+                    <div class="agent-description">Expert in framing software benefits around emotional and psychological needs, focusing on stress reduction, empowerment, confidence building, and success enablement while avoiding bland feature lists </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Empty Nest Transition Agent</div>
+                    <div class="agent-description">Specialist in helping parents adjust to children leaving home, rediscovering couple dynamics, pursuing delayed dreams, and finding new identity beyond active parenting. Focuses on relationship renewal</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">End To End Integration Specialist</div>
+                    <div class="agent-description">Expert in comprehensive end-to-end integration testing that validates complete user workflows across all system layers. Orchestrates realistic user journeys from frontend to backend with production-li</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Entrepreneurship Business Development Agent</div>
+                    <div class="agent-description">Expert in starting, growing, and scaling successful businesses through lean startup methodology, market validation, business model design, and growth strategies. Specializes in MVP development, custom</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Event Driven Code Agent</div>
+                    <div class="agent-description">Designs code around events, listeners, callbacks, and observers (Node.js, frontend, IoT, reactive systems). Expert in asynchronous programming and event-driven architectures.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Financial Literacy Money Management Agent</div>
+                    <div class="agent-description">Expert in understanding personal finance, budgeting, and money management through financial education, behavioral economics, and practical money systems. Specializes in cash flow optimization, expense</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Frontend Ui Code Writer Agent</div>
+                    <div class="agent-description">Produces HTML, CSS, JavaScript, React, Vue, Angular, and mobile UIs. Expert in modern frontend frameworks, responsive design, and user experience optimization.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Gap Consistency Checker Agent</div>
+                    <div class="agent-description">Expert in scanning documentation for missing, conflicting, or ambiguous requirements across specs, user feedback, and codebase. Use for comprehensive requirement validation and gap analysis.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Gatsby Static Site Specialist</div>
+                    <div class="agent-description">Ultra-specialized Gatsby static site generator expert with comprehensive GraphQL data layer, build optimization, plugin ecosystem, and JAMstack deployment mastery. Focused on Gatsby 5.x+ with React 18</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Gui Ui Testing Agent</div>
+                    <div class="agent-description">Expert in GUI and UI testing, visual regression detection, user interface automation, and cross-platform UI validation. Ensures consistent user experiences.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Healthcare Demand Forecasting Agent</div>
+                    <div class="agent-description">Predicts healthcare resource needs and patient flow patterns using verified health system data, demographic projections, and epidemiological models. Delivers quantitative forecasts of bed utilization,</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Idp Platform Architect</div>
+                    <div class="agent-description">Expert in Internal Developer Platform design, Backstage implementation, developer portals, and platform engineering. Use for building self-service platforms and golden paths.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Industry Thought Leadership</div>
+                    <div class="agent-description">Positions expertise through content, speaking, and knowledge-sharing that builds reputation and influence</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Industry Vertical Needs Agent</div>
+                    <div class="agent-description">Expert in translating broad software features into industry-specific benefits, analyzing vertical market requirements, and developing targeted value propositions for healthcare, education, finance, ma</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Influence Persuasion Mastery Agent</div>
+                    <div class="agent-description">Expert in ethical influence strategies, persuasive communication, and leadership presence development, integrating behavioral psychology, neurolinguistics, and social dynamics</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Influence Without Authority</div>
+                    <div class="agent-description">Builds influence and gets things done even without formal power or hierarchy</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Information Architecture Expert</div>
+                    <div class="agent-description">Expert in content organization, navigation structures, taxonomy design, and findability optimization. Use for creating intuitive information hierarchies and user-centric content structures.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Interaction Design Specialist</div>
+                    <div class="agent-description">Expert in user interaction patterns, gesture design, navigation flows, and intuitive interface behaviors. Use for creating seamless, natural user interactions.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Internationalization I18N L10N Code Agent</div>
+                    <div class="agent-description">Handles requirements and planning for translation, currency, time zones, RTL/LTR layouts, and global market adaptation. Expert in global software development and cultural adaptation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Javascript Typescript Specialist</div>
+                    <div class="agent-description">Ultra-specialized JavaScript and TypeScript expert with deep knowledge of modern ES2025+, Node.js, React, Vue, Angular, and full-stack web development.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Jest Testing Specialist</div>
+                    <div class="agent-description">Ultra-specialized Jest testing framework expert with comprehensive unit testing, integration testing, mocking, and test-driven development mastery. Focused on Jest 29+ with advanced matchers, snapshot</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Job Search Interview Mastery Agent</div>
+                    <div class="agent-description">Expert in orchestrating data-driven job search campaigns with ATS optimization, behavioral interview preparation using STAR methodology, and negotiation strategies backed by real-time market compensat</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Language Learning Cultural Fluency Agent</div>
+                    <div class="agent-description">Expert in polyglot development, cultural intelligence building, immersion strategies, communication mastery, and global fluency achievement. Specializes in modern language acquisition methodologies, c</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Legacy Impact Creation Agent</div>
+                    <div class="agent-description">Comprehensive legacy design, meaningful impact creation, purpose-driven life architecture, significance building, and sustainable positive influence across generations and communities</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">License Renewal Management Agent</div>
+                    <div class="agent-description">Automates renewal reminders, license expiration dates, grace periods, and renewal flows; handles payment retries and auto-renewal options. Expert in maximizing license retention and revenue continuity</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">License Upgrade Cross Grade Agent</div>
+                    <div class="agent-description">Facilitates switching/combining licenses, applying proration, and guiding users through upgrades or downgrades mid-cycle. Expert in seamless license transitions and billing adjustments.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Localization Internationalization Agent</div>
+                    <div class="agent-description">Expert in handling requirements and planning for translation, currency, time zones, RTL/LTR layouts, and global market adaptation. Use for comprehensive international expansion planning.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Maintenance Health Check Agent</div>
+                    <div class="agent-description">Expert in automating recurring health checks, stats updates, index rebuilds, integrity checks, database software patching, and AI-powered predictive maintenance with zero-downtime 2025 optimization te</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Marketing Sales Mastery Agent</div>
+                    <div class="agent-description">Expert in creating integrated marketing and sales systems using AI-powered personalization, omnichannel automation, and data-driven conversion optimization to achieve 300%+ revenue growth with improve</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Marriage Partnership Harmony Agent</div>
+                    <div class="agent-description">Specialist in relationship health, couple's communication, conflict resolution, intimacy building, and creating thriving partnerships through evidence-based relationship science.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Material Ui Component Specialist</div>
+                    <div class="agent-description">Ultra-specialized Material-UI (MUI) component library expert with comprehensive theming, responsive design, accessibility, and enterprise React application development mastery. Focused on MUI v5+ with</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Micro Interaction Designer</div>
+                    <div class="agent-description">Expert in micro-animations, feedback systems, loading states, and delightful UI details. Use for creating engaging, responsive micro-interactions that enhance user experience.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mobile Development Specialist</div>
+                    <div class="agent-description">Ultra-specialized mobile development expert with comprehensive mastery of React Native, Flutter, native iOS/Android, cross-platform solutions, mobile DevOps, app store optimization, and modern mobile </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Motivation Inspiration Catalyst</div>
+                    <div class="agent-description">Identifies and appeals to core motivations and values to create genuine engagement and sustained inspiration</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Multi Arch Docker Build</div>
+                    <div class="agent-description">Expert in handling multi-platform builds for x64, ARM, and other architectures, including cross-compilation for heterogeneous deployment targets. Use for building universal container images.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mutation Testing Specialist</div>
+                    <div class="agent-description">Expert in mutation testing using systematic code mutations to evaluate test suite quality and identify gaps in test coverage. Ensures tests can detect real bugs.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Network Relationship Cultivator</div>
+                    <div class="agent-description">Builds and maintains professional relationships through consistent, value-adding touchpoints</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Nextjs 15 Specialist</div>
+                    <div class="agent-description">Ultra-specialized Next.js 15+ development expert focused on App Router architecture, Server Components, Server Actions, Turbopack optimization, and full-stack React development. Expert in Vercel deplo</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Nodejs Specialist</div>
+                    <div class="agent-description">Master Node.js developer specializing in modern JavaScript runtime, async patterns, performance optimization, and enterprise-grade server applications. Expert in Node.js 2025 LTS features, ecosystem t</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Nuxtjs Specialist</div>
+                    <div class="agent-description">Ultra-specialized Nuxt 4+ expert for universal Vue.js applications with advanced server-side rendering, edge deployment, and modern web development patterns. Master of Nitro 3+ server engine, hybrid r</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Obfuscated Educational Code Writer Agent</div>
+                    <div class="agent-description">Writes intentionally challenging/obfuscated code for puzzles, competitions, or deep dives into language quirks. Expert in code golf, esoteric programming, and educational challenges.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Postmortem Devils Advocate</div>
+                    <div class="agent-description">Expert in reconstructing what "could have gone wrong" and critiquing retrospective analyses for glossed-over failures or inadequate learnings. Challenges postmortem conclusions and pushes for deeper r</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Prd Generator Agent</div>
+                    <div class="agent-description">Expert in creating comprehensive Product Requirements Documents (PRDs) with AI integration, user stories, technical feasibility, and success metrics. Use for complete PRD generation and enhancement.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Preact Specialist</div>
+                    <div class="agent-description">Ultra-specialized Preact 10.x+ framework expert with comprehensive knowledge of 3kB React alternative, preact/compat ecosystem, Signals reactivity, performance optimization, and production deployment </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Probabilistic Reasoning Engine</div>
+                    <div class="agent-description">Processes uncertain and incomplete information using advanced probability theory, statistical inference, and uncertainty propagation for robust decision-making under ambiguity with verified mathematic</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Product Positioning Analyst</div>
+                    <div class="agent-description">Expert in monitoring and adapting product positioning in response to market trends, competitor moves, and customer expectations. Guides strategic positioning and re-positioning efforts.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Professional Skill Development Agent</div>
+                    <div class="agent-description">Expert in designing personalized skill acquisition roadmaps using neuroscience-based learning methodologies, micro-learning platforms, and competency validation systems to achieve measurable professio</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Property Based Testing Specialist</div>
+                    <div class="agent-description">Expert in property-based testing using QuickCheck-style frameworks. Generates comprehensive test inputs and verifies system properties hold across all cases.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Pulumi Cloud Engineer</div>
+                    <div class="agent-description">Expert in Pulumi infrastructure as code using real programming languages, cloud-native development, and programmatic infrastructure automation. Use for TypeScript, Python, Go, and C# infrastructure.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">React 19 Specialist</div>
+                    <div class="agent-description">Ultra-specialized React 19+ development expert focused on Server Components, React Compiler, Concurrent Features, and modern React patterns. Expert in Next.js 15+, performance optimization, TypeScript</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Reading Knowledge Absorption Agent</div>
+                    <div class="agent-description">Expert in speed reading, comprehension optimization, knowledge synthesis, information retention, and building comprehensive knowledge systems. Specializes in advanced reading methodologies, informatio</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Recovery Failover Testing Agent</div>
+                    <div class="agent-description">Expert in recovery and failover testing, disaster recovery validation, system resilience testing, and business continuity verification.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Regression Test Specialist</div>
+                    <div class="agent-description">Expert in regression testing, test suite maintenance, change detection, and automated regression prevention. Ensures new changes don't break existing functionality.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Remix Fullstack Specialist</div>
+                    <div class="agent-description">Ultra-specialized Remix full-stack framework expert with comprehensive server-side rendering, nested routing, data loading patterns, and production deployment mastery. Focused on Remix 2.x+ with progr</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Reputation Monitoring Management</div>
+                    <div class="agent-description">Tracks and manages reputation across platforms, monitoring perceptions, mentions, and sentiment to proactively address reputation risks and build positive brand presence</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Requirements Elicitation Agent</div>
+                    <div class="agent-description">Expert in automated stakeholder interviews, requirement gathering, data collection, and stakeholder analysis. Use for comprehensive requirements discovery and elicitation processes.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Requirements Skeptic</div>
+                    <div class="agent-description">Expert in challenging the clarity, completeness, and feasibility of product requirements. Probes for missing user needs, contradictory features, and ambiguous acceptance criteria to prevent costly dev</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Resilience Validator</div>
+                    <div class="agent-description">Expert in validating system recovery, measuring resilience metrics, and ensuring systems meet RTO/RPO requirements. Verifies self-healing and graceful degradation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Retirement Legacy Planning Agent</div>
+                    <div class="agent-description">Expert in planning for retirement and creating lasting financial legacies through comprehensive retirement strategies, estate planning, and wealth transfer optimization. Specializes in retirement calc</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Sass Scss Specialist</div>
+                    <div class="agent-description">Ultra-specialized Sass/SCSS expert for modern CSS architecture, design systems, and performance optimization. Expert in Dart Sass, CSS modules, design tokens, and 2025 CSS integration patterns.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Scalability Performance Engineer</div>
+                    <div class="agent-description">Expert in auto-scaling, CDN optimization, caching strategies, and high-performance architectures. Use for building systems that scale to millions of users.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Scope Creep Sentinel</div>
+                    <div class="agent-description">Expert in detecting and preventing scope creep by challenging boundary expansion and exposing where additional features and requirements may undermine delivery. Argues for stronger boundary-setting an</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Single Parenting Mastery Agent</div>
+                    <div class="agent-description">Specialist in single parenting excellence, work-life balance, child resilience building, support systems, and thriving as a solo parent through evidence-based strategies and community support.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Smoke Sanity Test Agent</div>
+                    <div class="agent-description">Expert in smoke and sanity testing, build verification, critical path validation, and rapid feedback testing. Ensures basic functionality works after each build.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Social Impact Change Making Agent</div>
+                    <div class="agent-description">Expert in creating systemic social change through strategic activism, movement building, and impact-driven initiatives across local and global scales</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Social Proof Consensus Builder</div>
+                    <div class="agent-description">Uses group dynamics and peer validation to enhance personal credibility and influence through consensus building</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Social Skills Networking</div>
+                    <div class="agent-description">Natural social confidence development, strategic professional networking, and meaningful relationship building across diverse social and professional contexts</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Solidjs Specialist</div>
+                    <div class="agent-description">Ultra-specialized SolidJS expert focused on fine-grained reactive web applications with compile-time optimizations, server-side rendering, and production-grade performance patterns. Verified expertise</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Stock Price Movement Predictor</div>
+                    <div class="agent-description">Analyzes technical indicators, market sentiment, fundamental data, and macroeconomic factors to provide data-driven stock price movement predictions while explicitly communicating uncertainty levels a</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Svelte Specialist</div>
+                    <div class="agent-description">Comprehensive Svelte 5 and SvelteKit 2.x specialist with ultra-deep expertise in runes syntax, reactive declarations, component composition, SSR/SSG, animations, custom stores, form actions, and testi</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Swift Specialist</div>
+                    <div class="agent-description">|
+  Ultra-specialized Swift 6.0+ development expert for 2025, mastering complete concurrency safety, data-race prevention, enhanced macro system, non-copyable types, SwiftUI with advanced state manage</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">System Test Specialist</div>
+                    <div class="agent-description">Expert in system testing, full-stack validation, end-to-end workflows, and complete application testing. Validates entire system meets requirements.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Teaching Mentoring Others Agent</div>
+                    <div class="agent-description">Specialist in teaching methodologies, mentorship frameworks, knowledge transfer, student development, and educational leadership. Expert in pedagogy, learning facilitation, and building effective lear</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Team Collaboration Synergy</div>
+                    <div class="agent-description">Builds high-performing teams through collaborative excellence, psychological safety creation, and synergistic team dynamics optimization using evidence-based frameworks</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Teen Young Adult Guidance Agent</div>
+                    <div class="agent-description">Specialist in adolescent development, launching young adults, college preparation, independence building, and transitioning to adult relationships through developmental understanding and practical gui</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Methodology Expert</div>
+                    <div class="agent-description">Expert in testing methodologies, test strategy development, best practices implementation, and testing process optimization. Guides comprehensive testing approaches.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Trust Building Repair</div>
+                    <div class="agent-description">Systematically builds and, when necessary, rebuilds trust through consistent, reliable actions using trust psychology research and repair strategies</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Typescript Specialist</div>
+                    <div class="agent-description">Ultra-specialized TypeScript 5.4+ expert with comprehensive knowledge of advanced type system features, modern development patterns, ecosystem integration, and 2025 best practices. Master of type-leve</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Version History Changelog Agent</div>
+                    <div class="agent-description">Expert in tracking and summarizing all changes to requirements, scope, and design throughout project lifecycle. Use for comprehensive change documentation and version management.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Virtual Presence Remote Influence</div>
+                    <div class="agent-description">Adapts influence techniques for video calls, digital communication, and remote work environments with expertise in virtual presence optimization and remote relationship building</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Vite Build Tool Specialist</div>
+                    <div class="agent-description">Ultra-specialized Vite 6+ development and build expert focused on lightning-fast ESM development server, Rollup production builds, framework integrations (Vue, React, Svelte, SolidJS), esbuild-powered</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Vuejs Specialist</div>
+                    <div class="agent-description">Ultra-specialized Vue.js 3.5+ development expert focused on Composition API, reactive primitives, Nuxt 4, performance optimization, and modern Vue patterns. Expert in Pinia state management, Vue Route</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Webpack Module Bundler Specialist</div>
+                    <div class="agent-description">Ultra-specialized Webpack 5+ module bundler expert with exhaustive knowledge of modern build system architecture, Module Federation micro-frontends, advanced configuration patterns, performance optimi</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated on 2025-11-23 | 610+ Enterprise AI Agents Collection</p>
+        </div>
+    </div>
+</body>
+</html>
