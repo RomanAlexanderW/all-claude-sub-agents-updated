@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Application Security - AI Agents Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .stats {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .agent-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .agent-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+        .agent-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        .agent-description {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .badge-coding {
+            background: #d1f4e0;
+            color: #0f5132;
+        }
+        .badge-non-coding {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.875rem;
+            border-top: 1px solid #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Application Security</h1>
+            <div class="breadcrumb">Security & Compliance → Application Security</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">35</div>
+                <div class="stat-label">Total Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Coding Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">35</div>
+                <div class="stat-label">Non-Coding Agents</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <div class="agent-name">Alipay Integration Agent</div>
+                    <div class="agent-description">Expert in Alipay payment integration for Chinese market access, QR code payments, mobile payment processing, cross-border transactions, and Ant Group ecosystem services. Specializes in China market pe</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Apache Kafka Distributed Streaming Specialist</div>
+                    <div class="agent-description">Ultra-specialized Apache Kafka 3.7+ distributed streaming platform expert with comprehensive knowledge of modern Kafka architecture, enterprise clustering, real-time data pipelines, ecosystem integrat</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Automated Query Procedure Generation Agent</div>
+                    <div class="agent-description">Expert in building optimized queries, stored procedures, views from natural language, AI-powered SQL generation, performance optimization, security validation, and automated code generation following </div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Automated Repair Bug Fixer</div>
+                    <div class="agent-description">Expert in LLM-powered automated bug fixing, code repair, and patch generation. Uses advanced AI techniques to autonomously fix code issues, security vulnerabilities, and runtime errors.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Backend Api Code Writer Agent</div>
+                    <div class="agent-description">Designs REST/gRPC endpoints, business logic, authentication, and database integration. Expert in scalable backend architectures and API development best practices.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Code Reviewer</div>
+                    <div class="agent-description">Expert code review specialist focusing on code quality, security, performance, and maintainability. Use proactively after significant code changes for thorough review.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Code Security Analyzer</div>
+                    <div class="agent-description">Expert in static code analysis, secure coding patterns, and identifying security anti-patterns. Performs deep code review for security vulnerabilities and ensures secure development practices.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Container Vulnerability Scanner</div>
+                    <div class="agent-description">Expert in scanning images for CVEs, malware, secrets, and misconfigurations using comprehensive security tools. Use for continuous container security assessment and vulnerability management.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cybersecurity Threat Prediction Agent</div>
+                    <div class="agent-description">Analyzes verifiable threat intelligence, vulnerability patterns, attack surface evolution, and adversarial behavior trends to assess cybersecurity risk factors and threat landscape patterns. CRITICAL </div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Deno Runtime Specialist</div>
+                    <div class="agent-description">Ultra-specialized Deno 2.x+ JavaScript/TypeScript runtime expert with deep expertise in security-first development, Web Standards APIs, built-in toolchain, and modern edge deployment. Masters zero-con</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Dependency Security Patch Agent</div>
+                    <div class="agent-description">Expert in automated dependency management, security patching, and vulnerability remediation. Monitors dependencies, identifies security issues, and applies patches automatically.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Django Framework Specialist</div>
+                    <div class="agent-description">Ultra-specialized Django 5.0+ expert for high-performance web applications, REST APIs, and enterprise-grade Django development with async/await, advanced ORM, security hardening, and production deploy</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Docker Containerization Specialist</div>
+                    <div class="agent-description">Ultra-specialized Docker containerization platform expert with comprehensive container lifecycle management, security hardening, multi-platform builds, and production orchestration mastery. Focused on</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Docker In Docker Specialist</div>
+                    <div class="agent-description">Expert in safely executing nested Docker commands and builds within containers for CI/CD/testing use cases with security and performance optimization.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Dockerfile Generator Optimizer</div>
+                    <div class="agent-description">Expert in generating minimal and efficient Dockerfiles from project specs, suggesting build optimizations, layer caching, and security hardening. Use for creating production-ready container images.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Expressjs Specialist</div>
+                    <div class="agent-description">Ultra-specialized Express.js 4.19+ framework expert for production-ready Node.js web applications and APIs. Master of middleware architecture, authentication patterns, performance optimization, and mo</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Fuzz Testing Specialist</div>
+                    <div class="agent-description">Expert in coverage-guided fuzzing, mutation-based testing, and automated vulnerability discovery. Uses AFL++, LibFuzzer, and modern fuzzing techniques to find crashes and security issues.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Google Pay Integration Agent</div>
+                    <div class="agent-description">Expert in Google Pay Chrome/Android browser integration, in-app payments, tokenization, security, 3DS handling, and Google ecosystem services. Specializes in cross-platform payment processing and Andr</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Graphql Query Language Specialist</div>
+                    <div class="agent-description">Ultra-specialized GraphQL query language expert with comprehensive schema design, server implementation, client integration, and federation mastery. Focused on production-ready GraphQL APIs with verif</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Image Signing Provenance</div>
+                    <div class="agent-description">Expert in Docker Content Trust, image signatures, provenance, and supply chain attestation for container security. Use for implementing comprehensive image integrity and supply chain transparency.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Multiple Income Streams Agent</div>
+                    <div class="agent-description">Expert in creating diverse income sources and financial security through portfolio income development, side business creation, and passive income generation. Specializes in income diversification stra</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mysql Specialist</div>
+                    <div class="agent-description">Ultra-specialized MySQL 8.4+ database expert with comprehensive knowledge of InnoDB optimization, JSON operations, performance tuning, high availability, replication, security hardening, and modern My</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Natural Disaster Risk Agent</div>
+                    <div class="agent-description">Predicts probability and quantifies impact of natural disasters including earthquakes, hurricanes, floods, wildfires, and volcanic events using verified geophysical data, hazard models, and vulnerabil</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Nestjs Enterprise Specialist</div>
+                    <div class="agent-description">Ultra-specialized NestJS 10.x+ enterprise framework expert for building scalable, type-safe Node.js applications. Master of dependency injection, decorators, microservices architecture, GraphQL integr</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Nginx Specialist</div>
+                    <div class="agent-description">Expert in Nginx 1.25+ configuration, reverse proxy, load balancing, SSL/TLS, HTTP/2/3, WebSocket proxying, security hardening, performance optimization, and enterprise features. Use for web server aut</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Passwordless Auth Specialist</div>
+                    <div class="agent-description">Expert in passwordless authentication, magic links, WebAuthn, biometric authentication, and modern authentication flows. Use for implementing secure, frictionless authentication systems.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Php Specialist</div>
+                    <div class="agent-description">Ultra-specialized PHP 8.4+ expert with comprehensive mastery of modern PHP development, including property hooks, asymmetric visibility, enhanced enums, JIT compilation optimizations, Symfony 7.2+, ad</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Postgresql Specialist</div>
+                    <div class="agent-description">Ultra-specialized PostgreSQL 16+ expert covering advanced database administration, query optimization, schema design, performance tuning, high availability, security, and modern PostgreSQL features in</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Ruby On Rails Specialist</div>
+                    <div class="agent-description">Ultra-specialized Ruby on Rails 7.2+ expert for high-performance web applications, Hotwire integration, API development, and enterprise-grade Rails development with modern Ruby 3.3+, advanced Active R</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Security Hardened Code Writer Agent</div>
+                    <div class="agent-description">Builds code with built-in input validation, sanitization, and threat modeling. Expert in secure coding practices, vulnerability prevention, and defense-in-depth strategies.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Self Healing Code Validator</div>
+                    <div class="agent-description">Expert in automated code review, validation, and quality assurance for self-healing systems. Ensures code changes meet quality, security, and reliability standards before integration.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Spring Boot Specialist</div>
+                    <div class="agent-description">Ultra-specialized Spring Boot 3.3+ expert with comprehensive knowledge of the 2025 Spring ecosystem, native compilation, reactive programming, microservices architecture, and enterprise-ready patterns</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Static Analysis Testing Agent</div>
+                    <div class="agent-description">Expert in static code analysis, code quality assessment, security vulnerability detection, and automated code review. Analyzes code without execution.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Supply Chain Defender</div>
+                    <div class="agent-description">Expert in software supply chain security, SBOM analysis, dependency verification, and preventing malicious package attacks. Protects against third-party and upstream vulnerabilities.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Zero Trust Enforcer</div>
+                    <div class="agent-description">Expert in implementing and validating zero-trust security architecture. Enforces "never trust, always verify" principles with identity-first security and continuous verification.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated on 2025-11-23 | 610+ Enterprise AI Agents Collection</p>
+        </div>
+    </div>
+</body>
+</html>

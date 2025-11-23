@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compliance & Governance - AI Agents Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .stats {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .agent-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .agent-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+        .agent-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        .agent-description {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .badge-coding {
+            background: #d1f4e0;
+            color: #0f5132;
+        }
+        .badge-non-coding {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.875rem;
+            border-top: 1px solid #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Compliance & Governance</h1>
+            <div class="breadcrumb">Security & Compliance → Compliance & Governance</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">34</div>
+                <div class="stat-label">Total Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Coding Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">34</div>
+                <div class="stat-label">Non-Coding Agents</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <div class="agent-name">Accessibility Specialist</div>
+                    <div class="agent-description">Comprehensive accessibility expert covering WCAG compliance, inclusive design, assistive technology integration, accessible development environments, UI/UX accessibility, and universal usability. Expe</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Authorize Net Integration Agent</div>
+                    <div class="agent-description">Expert in Authorize.Net API integration, card processing, eChecks, recurring billing, tokenization, fraud detection suite, and PCI compliance. Specializes in traditional payment gateway integration wi</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Automated Billing Revenue Agent</div>
+                    <div class="agent-description">Integrates with billing platforms to automate invoice generation, recurring payments, refund logic, dunning (failed payment remediation), and compliance (PCI, SCA, tax). Expert in revenue optimization</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Backup Restore Automation</div>
+                    <div class="agent-description">Expert in automated backup scheduling, execution, and validation with full, incremental, and differential strategies, disaster recovery planning, and DORA compliance for 2025 requirements including ra</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Bootstrap Css Framework Specialist</div>
+                    <div class="agent-description">Ultra-specialized Bootstrap 5.3+ CSS framework expert with verified component mastery, responsive design patterns, and production-ready accessibility compliance. Focuses exclusively on documented feat</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Change Tracking Audit Agent</div>
+                    <div class="agent-description">Expert in monitoring database schema/table modifications, user activity tracking, access pattern analysis, blockchain-based immutable audit logs, temporal table management, and automated compliance re</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Compliance Audit Reporting Agent</div>
+                    <div class="agent-description">Generates regulatory and internal compliance reports, supports data export for audits and vendor management. Expert in automated compliance documentation and audit trail generation.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Compliance Documentation Agent</div>
+                    <div class="agent-description">Expert in preparing legal, GDPR/privacy, accessibility, audit, and information security documentation as required by industry and region. Use for comprehensive compliance documentation.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Compliance Security Officer</div>
+                    <div class="agent-description">Expert in GDPR, CCPA, SOC2, HIPAA compliance, zero-trust security, and enterprise security architecture. Use for implementing comprehensive security and compliance systems.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cryptocurrency Payment Integration Agent</div>
+                    <div class="agent-description">Expert in cryptocurrency payment integration, blockchain transaction processing, digital asset acceptance, stablecoin payments, DeFi integration, and crypto compliance. Specializes in Bitcoin, Ethereu</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Data Lifecycle Hygiene</div>
+                    <div class="agent-description">Expert in data cleaning, deduplication, archival policies, retention management, versioning, schema evolution, and automated data hygiene processes with 2025 compliance frameworks and AI-driven lifecy</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Data Privacy Gdpr Compliance Agent</div>
+                    <div class="agent-description">Expert in privacy policy enforcement, data subject requests, consent management, and comprehensive privacy compliance. Specializes in GDPR, CCPA, and global privacy regulations with automated complian</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Database Security Compliance</div>
+                    <div class="agent-description">Expert in role-based access controls, encryption, security audits, GDPR/CCPA/HIPAA compliance, data masking, unauthorized access monitoring, and secrets management with 2025 security standards and zer</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Deployment Security Guardian</div>
+                    <div class="agent-description">Expert in deployment security, supply chain protection, runtime security, and compliance automation. Use for secure CI/CD pipelines, container security, and deployment validation.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Employee Onboarding Offboarding Agent</div>
+                    <div class="agent-description">Expert in end-to-end employee lifecycle management, automating onboarding workflows, offboarding procedures, compliance tracking, and cross-departmental coordination. Specializes in creating seamless </div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Html Specialist</div>
+                    <div class="agent-description">Ultra-specialized HTML5+ and Web Components expert focused on semantic markup, accessibility, performance, and modern web standards compliance. Masters HTML Living Standard, WCAG 2.2/3.0, Web Componen</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Invoice Processing Ap Automation Agent</div>
+                    <div class="agent-description">Expert in automating accounts payable workflows, invoice processing, validation, approval routing, and payment execution. Specializes in OCR/AI-powered data extraction, three-way matching, exception h</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">License Compliance Policy Enforcement Agent</div>
+                    <div class="agent-description">Audits end-user license usage, ensures software is being used according to policy, monitors expiry, disables non-compliant users, or issues warnings. Expert in automated compliance monitoring and poli</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Oracle Database Specialist</div>
+                    <div class="agent-description">Ultra-specialized Oracle Database 23ai expert with comprehensive enterprise administration, autonomous database management, performance optimization, and cloud integration capabilities. Focused on pro</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Policy Compliance Enforcement</div>
+                    <div class="agent-description">Expert in checking containers and runtime for security and compliance baselines (NIST/PCI/DISA/OWASP). Use for automated policy enforcement and comprehensive compliance validation.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Privacy Regulation Impact Agent</div>
+                    <div class="agent-description">Analyzes verifiable regulatory trends, legislative patterns, enforcement precedents, and industry compliance data to assess privacy regulation development indicators and business impact patterns. CRIT</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Protocol Compliance Validator</div>
+                    <div class="agent-description">Expert in validating Task Execution Protocol compliance and quality assurance standards. Ensures protocol integrity and validates quality gates are properly enforced.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Regulatory Risk Assessment Agent</div>
+                    <div class="agent-description">Expert in flagging compliance, legal, and market-entry risks relevant to GTM and profitability plans, keeping businesses ahead of regulatory trends and requirements.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Security Compliance Integration Specialist</div>
+                    <div class="agent-description">Expert in security and compliance integration testing across all system boundaries. Orchestrates comprehensive security validation, compliance verification, and regulatory testing with advanced vulner</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Security Testing Specialist</div>
+                    <div class="agent-description">Expert in comprehensive security testing, vulnerability assessment, penetration testing, and security compliance validation. Ensures applications are secure against threats.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Security Threat Hunter</div>
+                    <div class="agent-description">Expert in identifying potential privacy, security, and compliance pitfalls by challenging security assumptions. Probes for vulnerabilities, attack vectors, and regulatory compliance gaps before they b</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Standards Policy Agent</div>
+                    <div class="agent-description">Expert in ensuring documentation compliance with internal standards, regulatory frameworks, coding conventions, accessibility, and security guidelines. Use for comprehensive standards validation.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Stripe Integration Agent</div>
+                    <div class="agent-description">Expert in comprehensive Stripe API integration, Checkout, Link, subscriptions, fraud monitoring, and all Stripe services. Specializes in modern payment flows, SCA compliance, and revenue optimization </div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Synthetic Data Generation Agent</div>
+                    <div class="agent-description">Expert in creating lifelike, GDPR-compliant synthetic data for testing without exposing PII. Masters privacy-preserving techniques, statistical modeling, and domain-specific data generation.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Table Structure Governance</div>
+                    <div class="agent-description">Expert in enforcing standards for table creation, managing metadata, documenting relationships and dependencies, and maintaining comprehensive governance frameworks for database table structures with </div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Tailwind Css Specialist</div>
+                    <div class="agent-description">Ultra-specialized Tailwind CSS 3.4+ framework expert with verified utility-first design patterns, JIT compilation mastery, and production-ready design system implementation. Focuses exclusively on doc</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Tech Constraints Feasibility Agent</div>
+                    <div class="agent-description">Expert in evaluating technical risks, constraints, legacy compatibility, platform limitations, and regulatory compliance. Use for comprehensive technical feasibility assessment.</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Data Environment Provisioner Agent</div>
+                    <div class="agent-description">Expert in creating lifelike, GDPR-compliant synthetic data for testing, privacy-preserving techniques, statistical modeling, domain-specific data generation, containerized test environments, and autom</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Data Management Specialist</div>
+                    <div class="agent-description">Expert in comprehensive test data management, synthetic data generation, and data lifecycle orchestration. Manages realistic test datasets, data privacy compliance, and automated data provisioning acr</div>
+                    <span class="badge badge-non-coding">Non-Coding Agent</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated on 2025-11-23 | 610+ Enterprise AI Agents Collection</p>
+        </div>
+    </div>
+</body>
+</html>

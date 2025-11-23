@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testing & QA - AI Agents Catalog</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 2rem;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            border-radius: 12px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            overflow: hidden;
+        }
+        .header {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 3rem 2rem;
+            text-align: center;
+        }
+        .header h1 {
+            font-size: 2.5rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+        .breadcrumb {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-top: 0.5rem;
+        }
+        .stats {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            border-bottom: 1px solid #e9ecef;
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .stat {
+            text-align: center;
+            padding: 0.5rem;
+        }
+        .stat-number {
+            font-size: 2rem;
+            font-weight: 700;
+            color: #667eea;
+        }
+        .stat-label {
+            font-size: 0.875rem;
+            color: #6c757d;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+        .content {
+            padding: 2rem;
+        }
+        .agent-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+            gap: 1.5rem;
+            margin-top: 1.5rem;
+        }
+        .agent-card {
+            border: 1px solid #e9ecef;
+            border-radius: 8px;
+            padding: 1.5rem;
+            transition: all 0.3s ease;
+            background: white;
+        }
+        .agent-card:hover {
+            border-color: #667eea;
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
+            transform: translateY(-2px);
+        }
+        .agent-name {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: #2c3e50;
+            margin-bottom: 0.75rem;
+            font-family: 'Monaco', 'Courier New', monospace;
+        }
+        .agent-description {
+            color: #6c757d;
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+        .badge {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-top: 0.75rem;
+        }
+        .badge-coding {
+            background: #d1f4e0;
+            color: #0f5132;
+        }
+        .badge-non-coding {
+            background: #f8d7da;
+            color: #721c24;
+        }
+        .footer {
+            background: #f8f9fa;
+            padding: 1.5rem 2rem;
+            text-align: center;
+            color: #6c757d;
+            font-size: 0.875rem;
+            border-top: 1px solid #e9ecef;
+        }
+        @media (max-width: 768px) {
+            .agent-grid {
+                grid-template-columns: 1fr;
+            }
+            .header h1 {
+                font-size: 1.75rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Testing & QA</h1>
+            <div class="breadcrumb">Software Development & Engineering → Testing & QA</div>
+        </div>
+
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">33</div>
+                <div class="stat-label">Total Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">33</div>
+                <div class="stat-label">Coding Agents</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">0</div>
+                <div class="stat-label">Non-Coding Agents</div>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="agent-grid">
+                <div class="agent-card">
+                    <div class="agent-name">Ai Enhanced Testing Specialist</div>
+                    <div class="agent-description">Expert in AI-enhanced testing, machine learning for test optimization, intelligent test generation, predictive test analytics, and autonomous testing systems.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Benchmark Specialist</div>
+                    <div class="agent-description">Expert in performance benchmarking, Criterion.rs, performance analysis, and optimization measurement. Use for performance testing and analysis.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Chaos Resilience Testing Agent</div>
+                    <div class="agent-description">Expert in chaos engineering, resilience testing, and system failure simulation for self-healing codebases. Validates system recovery capabilities through controlled failure injection.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Classicist Tdd Specialist</div>
+                    <div class="agent-description">Expert in Classicist/Detroit School TDD using inside-out development, state-based testing, and minimal mocking. Focuses on emergent design and real object interactions.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Code Robustness Opponent</div>
+                    <div class="agent-description">Expert in challenging common coding patterns for error-proneness, race conditions, and lack of testability. Identifies fragile code structures and implementation approaches that will cause production </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Compatibility Cross Platform Agent</div>
+                    <div class="agent-description">Expert in compatibility and cross-platform testing, multi-device validation, browser compatibility, OS compatibility, and version compatibility testing.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Continuous Simulation Agent</div>
+                    <div class="agent-description">Expert in modeling continuously changing systems using differential equations, state-space models, and control theory for testing IoT systems, streaming data, and dynamic environments.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Cross Validation Backtesting Agent</div>
+                    <div class="agent-description">Expert in systematically testing prediction accuracy across different time periods and conditions through comprehensive cross-validation and backtesting methodologies. Specializes in temporal validati</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Data Flow Integration Specialist</div>
+                    <div class="agent-description">Expert in validating data flow integrity, transformation accuracy, and data consistency across system boundaries. Orchestrates comprehensive data validation, lineage tracking, and cross-system data sy</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Error Resiliency Integration Specialist</div>
+                    <div class="agent-description">Expert in testing system resilience, fault tolerance, and error handling across integration boundaries. Implements chaos engineering, failure injection, and recovery validation to ensure systems grace</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Feature Flag Orchestrator</div>
+                    <div class="agent-description">Expert in feature flag management, progressive rollouts, A/B testing, and experiment-driven development. Use for LaunchDarkly, Split.io, Unleash, and custom feature flag implementations.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Implementation Specialist</div>
+                    <div class="agent-description">Expert in implementing code to make failing tests pass using minimal, focused implementation. Follows the "simplest thing that works" principle and never modifies tests.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">In Container Test Runner</div>
+                    <div class="agent-description">Expert in running all forms of automated tests within ephemeral containers to guarantee environment parity between development, CI, and production. Use for comprehensive containerized testing strategi</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Incremental Integration Specialist</div>
+                    <div class="agent-description">Expert in incremental integration testing strategies including top-down, bottom-up, and sandwich approaches. Orchestrates systematic module integration with strategic stub/driver usage for complex sys</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Independent Verification Agent</div>
+                    <div class="agent-description">Expert in final quality assurance validation as LLM-as-a-judge for unbiased assessment. Provides independent verification of work quality and user intent alignment.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Migration Upgrade Integration Specialist</div>
+                    <div class="agent-description">Expert in migration and upgrade integration testing across system versions and platforms. Orchestrates comprehensive migration validation, version compatibility testing, and upgrade path verification </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mock Design Specialist</div>
+                    <div class="agent-description">Expert in designing and implementing mocks, stubs, and test doubles. Specializes in creating effective test isolation through strategic mocking patterns.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mock Stub Integration Specialist</div>
+                    <div class="agent-description">Expert in mock and stub-based integration testing for early-stage validation. Simulates external dependencies with controlled responses to isolate system components and validate internal logic before </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mocked Service Simulation</div>
+                    <div class="agent-description">Expert in spinning up mock/stub services in containers to provide complete dependency simulation for tests. Use for creating comprehensive test environments with external service simulation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Mockist Tdd Specialist</div>
+                    <div class="agent-description">Expert in Mockist/London School TDD using outside-in development, interaction-based testing, and comprehensive mocking strategies. Focuses on behavior verification and interface design.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Pricing Strategy Optimizer</div>
+                    <div class="agent-description">Expert in testing and optimizing pricing across markets, segments, and channels. Recommends optimal price points to drive both adoption and profit maximization.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Simulation Validation Calibration Agent</div>
+                    <div class="agent-description">Expert in testing simulation accuracy against real-world outcomes, calibrating model parameters, and ensuring simulation reliability through continuous validation and adjustment processes. Specializes</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Social Proof Credibility Builder</div>
+                    <div class="agent-description">Strategically develops and leverages testimonials, recommendations, and third-party validation for enhanced credibility and trust</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Stakeholder Alignment Agent</div>
+                    <div class="agent-description">Expert in tailoring summaries and highlight reels from PRDs and plans for executives, marketing, engineering, and QA teams while tracking approvals and sign-off. Use for stakeholder communication and </div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Story Tdd Specialist</div>
+                    <div class="agent-description">Expert in Story Test-Driven Development (Story TDD) focusing on user story validation, story-level acceptance criteria, and customer collaboration through executable story tests.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Stress Test Specialist</div>
+                    <div class="agent-description">Expert in stress testing, load testing, system limits, performance under pressure, and resilience testing. Use for testing system behavior under extreme conditions.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Tdd Refactoring Specialist</div>
+                    <div class="agent-description">Expert in the refactoring phase of TDD, focusing on code improvement, design pattern application, and technical debt reduction while maintaining test coverage.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Code Writer Agent</div>
+                    <div class="agent-description">Generates all forms of automated tests: unit, integration, property-based, etc. Expert in comprehensive testing strategies, test automation, and quality assurance implementation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Engineer</div>
+                    <div class="agent-description">Expert in Rust testing strategies, test organization, unit tests, property testing, and test quality. Use proactively to improve test coverage and quality.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Orchestration Coordinator</div>
+                    <div class="agent-description">Expert in test orchestration, test execution coordination, parallel testing, test environment management, and comprehensive test workflow automation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Reporting Feedback Specialist</div>
+                    <div class="agent-description">Expert in comprehensive test reporting, analytics, and feedback systems. Orchestrates intelligent test result analysis, automated insights generation, and stakeholder communication with advanced repor</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Test Writer Specialist</div>
+                    <div class="agent-description">Expert in writing comprehensive, maintainable tests before implementation. Focuses on test-first development, edge case identification, and creating failing tests that drive implementation.</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+                <div class="agent-card">
+                    <div class="agent-name">Use Case Storytelling Agent</div>
+                    <div class="agent-description">Expert in surfacing and narrating compelling real-world stories and testimonials that showcase transformative software benefits for actual users and organizations using advanced narrative design and 2</div>
+                    <span class="badge badge-coding">Coding Agent</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer">
+            <p>Generated on 2025-11-23 | 610+ Enterprise AI Agents Collection</p>
+        </div>
+    </div>
+</body>
+</html>
