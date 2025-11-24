@@ -1,0 +1,65 @@
+{
+  "version": "2.7.0",
+  "agentDirectory": ".claude/agents",
+  "memoryBackend": "agentdb",
+  "reasoningBank": true,
+  "skills": [
+    "swarm-orchestration",
+    "agentdb-vector-search",
+    "pair-programming",
+    "github-code-review",
+    "skill-builder",
+    "memory-management",
+    "semantic-search",
+    "hive-mind-coordination",
+    "swarm-management",
+    "github-workflow",
+    "github-release",
+    "multi-repo-sync",
+    "hooks-automation",
+    "verification-system",
+    "performance-analysis",
+    "documentation-generator"
+  ],
+  "agentdb": {
+    "enabled": true,
+    "version": "1.3.9",
+    "vectorSearch": true,
+    "semanticUnderstanding": true,
+    "rlAlgorithms": 9,
+    "indexing": "hnsw"
+  },
+  "reasoningBankSettings": {
+    "enabled": true,
+    "autoFallback": true,
+    "memoryCompression": "quantization",
+    "compressionRatio": "4x-32x"
+  },
+  "swarmCoordination": {
+    "hiveMind": true,
+    "queenLedCoordination": true,
+    "workerAgents": true,
+    "faultTolerance": true
+  },
+  "mcpTools": {
+    "enabled": true,
+    "toolCount": 100,
+    "categories": [
+      "orchestration",
+      "automation",
+      "integration",
+      "monitoring"
+    ]
+  },
+  "hooks": {
+    "preOperation": true,
+    "postOperation": true,
+    "errorHandling": true,
+    "logging": true
+  },
+  "performance": {
+    "vectorSearchSpeed": "96x-164x",
+    "memorySearchSpeed": "150x",
+    "benchmarkScore": "84.8%"
+  }
+}
