@@ -1,0 +1,57 @@
+{
+  "version": "2.7.0",
+  "tools": {
+    "swarm": {
+      "swarm_init": "Initialize swarm with topology",
+      "agent_spawn": "Create new agent instance",
+      "task_orchestrate": "Coordinate task execution",
+      "swarm_status": "Get swarm status",
+      "swarm_terminate": "Terminate swarm"
+    },
+    "memory": {
+      "memory_usage": "Store/retrieve persistent memory",
+      "memory_search": "Pattern-based memory search",
+      "memory_store": "Store key-value pair",
+      "memory_query": "Query stored memories",
+      "memory_vector_search": "Semantic vector search",
+      "memory_store_vector": "Store with vector embedding",
+      "memory_agentdb_info": "AgentDB status"
+    },
+    "neural": {
+      "neural_status": "Neural module status",
+      "neural_train": "Train neural patterns",
+      "neural_patterns": "List learned patterns"
+    },
+    "github": {
+      "github_repo_analyze": "Analyze repository",
+      "github_pr_manage": "Manage pull requests",
+      "github_issue_track": "Track issues",
+      "github_workflow_run": "Run GitHub Actions",
+      "github_release_create": "Create releases"
+    },
+    "performance": {
+      "benchmark_run": "Run performance benchmarks",
+      "performance_report": "Generate performance report",
+      "bottleneck_analyze": "Analyze bottlenecks"
+    },
+    "coordination": {
+      "agent_communicate": "Inter-agent communication",
+      "task_delegate": "Delegate tasks",
+      "result_aggregate": "Aggregate results"
+    }
+  },
+  "mcpServers": {
+    "claude-flow": {
+      "command": "npx",
+      "args": ["claude-flow@alpha", "mcp", "start"]
+    },
+    "ruv-swarm": {
+      "command": "npx",
+      "args": ["ruv-swarm", "mcp", "start"]
+    },
+    "flow-nexus": {
+      "command": "npx",
+      "args": ["flow-nexus@latest", "mcp", "start"]
+    }
+  }
+}

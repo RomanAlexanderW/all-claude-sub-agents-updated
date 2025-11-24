@@ -1,0 +1,56 @@
+{
+  "name": "all-claude-sub-agents-updated",
+  "version": "2.7.0",
+  "description": "610+ specialized AI agents for Claude Flow v2.7.0 swarm orchestration",
+  "main": "index.js",
+  "type": "module",
+  "keywords": [
+    "claude",
+    "ai-agents",
+    "swarm",
+    "orchestration",
+    "claude-flow",
+    "mcp",
+    "agentdb",
+    "hive-mind"
+  ],
+  "author": "RomanAlexanderW",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/RomanAlexanderW/all-claude-sub-agents-updated"
+  },
+  "dependencies": {
+    "better-sqlite3": "^9.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "typescript": "^5.0.0"
+  },
+  "peerDependencies": {
+    "node": ">=18.0.0"
+  },
+  "scripts": {
+    "init": "npx claude-flow@alpha init --force",
+    "swarm": "npx claude-flow@alpha swarm",
+    "hive": "npx claude-flow@alpha hive-mind wizard",
+    "hive:spawn": "npx claude-flow@alpha hive-mind spawn",
+    "memory:status": "npx claude-flow@alpha memory status --reasoningbank",
+    "memory:store": "npx claude-flow@alpha memory store",
+    "memory:query": "npx claude-flow@alpha memory query",
+    "mcp:start": "npx claude-flow@alpha mcp start",
+    "mcp:add": "claude mcp add claude-flow npx claude-flow@alpha mcp start",
+    "validate": "node scripts/validate-agents.js",
+    "convert": "python convert_agents.py"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "claude-flow": {
+    "version": "2.7.0",
+    "agentDirectory": ".claude/agents",
+    "agentCount": 610,
+    "memoryBackend": "agentdb"
+  }
+}

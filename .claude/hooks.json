@@ -1,0 +1,47 @@
+{
+  "version": "2.7.0",
+  "hooks": {
+    "pre-operation": {
+      "pre-task": {
+        "description": "Auto-assigns agents by complexity",
+        "script": "echo 'Analyzing task complexity...'"
+      },
+      "pre-edit": {
+        "description": "Validates files and prepares resources",
+        "script": "echo 'Validating target files...'"
+      },
+      "pre-command": {
+        "description": "Security validation",
+        "script": "echo 'Security check...'"
+      }
+    },
+    "post-operation": {
+      "post-edit": {
+        "description": "Auto-formats code",
+        "script": "echo 'Formatting code...'"
+      },
+      "post-task": {
+        "description": "Trains neural patterns",
+        "script": "echo 'Learning from task...'"
+      },
+      "post-command": {
+        "description": "Updates memory",
+        "script": "echo 'Updating memory...'"
+      }
+    },
+    "session": {
+      "session-start": {
+        "description": "Restores previous context",
+        "script": "echo 'Restoring session context...'"
+      },
+      "session-end": {
+        "description": "Generates summaries",
+        "script": "echo 'Generating session summary...'"
+      },
+      "session-restore": {
+        "description": "Loads memory",
+        "script": "echo 'Loading session memory...'"
+      }
+    }
+  }
+}

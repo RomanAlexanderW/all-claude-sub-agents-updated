@@ -1,0 +1,95 @@
+{
+  "version": "2.7.0",
+  "skills": {
+    "development": [
+      {
+        "name": "sparc-methodology",
+        "trigger": "use SPARC|TDD approach|test-driven",
+        "description": "Test-driven development with SPARC phases"
+      },
+      {
+        "name": "pair-programming",
+        "trigger": "pair program|code together|collaborative coding",
+        "description": "Interactive pair programming session"
+      },
+      {
+        "name": "skill-builder",
+        "trigger": "create skill|build skill|new skill",
+        "description": "Create custom Claude skills"
+      }
+    ],
+    "intelligence": [
+      {
+        "name": "agentdb-vector-search",
+        "trigger": "vector search|semantic search|find similar",
+        "description": "96x-164x faster semantic vector search"
+      },
+      {
+        "name": "reasoningbank-memory",
+        "trigger": "remember|store memory|recall",
+        "description": "Persistent memory with ReasoningBank"
+      },
+      {
+        "name": "pattern-learning",
+        "trigger": "learn pattern|neural train|improve",
+        "description": "Neural pattern recognition and learning"
+      }
+    ],
+    "swarm": [
+      {
+        "name": "swarm-orchestration",
+        "trigger": "create swarm|deploy swarm|multi-agent",
+        "description": "Multi-agent swarm coordination"
+      },
+      {
+        "name": "hive-mind",
+        "trigger": "hive mind|collective|queen coordinator",
+        "description": "Hive-mind collective intelligence"
+      },
+      {
+        "name": "topology-selection",
+        "trigger": "hierarchical|mesh|adaptive topology",
+        "description": "Dynamic topology optimization"
+      }
+    ],
+    "github": [
+      {
+        "name": "github-code-review",
+        "trigger": "review PR|code review|pull request",
+        "description": "Intelligent multi-agent code reviews"
+      },
+      {
+        "name": "github-workflow",
+        "trigger": "CI/CD|GitHub Actions|pipeline",
+        "description": "Workflow automation"
+      },
+      {
+        "name": "github-release",
+        "trigger": "release|version|deploy",
+        "description": "Release management"
+      },
+      {
+        "name": "multi-repo",
+        "trigger": "multiple repos|cross-repo|monorepo",
+        "description": "Multi-repository coordination"
+      }
+    ],
+    "automation": [
+      {
+        "name": "hooks-system",
+        "trigger": "pre hook|post hook|automation",
+        "description": "Pre/post execution hooks"
+      },
+      {
+        "name": "verification",
+        "trigger": "verify|validate|check",
+        "description": "Automated verification"
+      },
+      {
+        "name": "performance-analysis",
+        "trigger": "benchmark|performance|optimize",
+        "description": "Performance analysis and optimization"
+      }
+    ]
+  }
+}
