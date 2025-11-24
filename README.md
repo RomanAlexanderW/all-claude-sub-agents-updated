@@ -1,16 +1,168 @@
-## 600+ Enterprise AI Agents for Unlimited Possibilities
+# 🌊 Claude-Flow v2.7.0: 610+ AI Agents Repository
 
-> Transform your workflow with the most comprehensive AI agent ecosystem ever created. Deploy intelligent swarms that work in parallel, automate complex tasks, and unlock capabilities you never thought possible—all without writing a single line of code.
+<div align="center">
 
----
+[![📦 Claude Flow v2.7.0](https://img.shields.io/badge/Claude%20Flow-v2.7.0-green?style=for-the-badge&logo=anthropic)](https://github.com/ruvnet/claude-flow)
+[![🤖 610+ Agents](https://img.shields.io/badge/Agents-610%2B-blue?style=for-the-badge&logo=robot)](./agents)
+[![🎯 AgentDB v1.3.9](https://img.shields.io/badge/AgentDB-v1.3.9-purple?style=for-the-badge)](https://docs.agentdb.io)
+[![⚡ ReasoningBank Memory](https://img.shields.io/badge/ReasoningBank-Memory%20System-orange?style=for-the-badge)](./docs/MEMORY-SYSTEM.md)
+[![🐝 Hive-Mind Intelligence](https://img.shields.io/badge/Hive%20Mind-Swarm%20Coordination-crimson?style=for-the-badge)](./docs/HIVE-MIND.md)
+[![🔧 100+ MCP Tools](https://img.shields.io/badge/MCP%20Tools-100%2B-yellow?style=for-the-badge)](./docs/MCP-TOOLS.md)
 
-## 🚀 Quick Overview
+</div>
 
-The Claude-Flow Swarm Automation Framework provides **610+ specialized AI agents** designed to handle everything from complex software development to personal coaching, business automation, predictive analytics, and beyond. Every agent has **full internet access** and can be orchestrated in **parallel swarms** for exponential productivity gains.
+## 🌟 **Overview**
 
-### Agent Distribution
-- **422 Non-Coding Agents** (Business, Research, Personal Development, Predictions)
-- **188 Coding Agents** (Development, Testing, Infrastructure, DevOps)
+This repository contains **610+ specialized AI agents** built for Claude Flow v2.7.0, featuring advanced orchestration with **hive-mind swarm intelligence**, **persistent memory systems**, and **100+ MCP tools**.
+
+### 🎯 **Key Features**
+
+- **🤖 610+ Pre-built Agents**: Organized by category and function
+- **🎨 25 Claude Skills**: Natural language-activated development skills
+- **🚀 AgentDB v1.3.9 Integration**: 96x-164x faster vector search with semantic understanding
+- **🧠 ReasoningBank Memory**: Persistent memory with automatic fallback
+- **🔍 Semantic Vector Search**: HNSW indexing with 9 RL algorithms
+- **🐝 Hive-Mind Intelligence**: Queen-led AI coordination with worker agents
+- **🔧 100+ MCP Tools**: Complete toolkit for swarm orchestration
+- **🔄 Dynamic Agent Architecture**: Self-organizing agents with fault tolerance
+- **💾 Persistent Memory**: 150x faster search, 4-32x memory reduction
+- **🪝 Advanced Hooks System**: Automated workflows with pre/post operation hooks
+- **📊 GitHub Integration**: 6 specialized modes for repository management
+
+## ⚡ **Quick Start**
+
+### 📋 **Prerequisites**
+
+- Node.js 18+ (LTS recommended)
+- npm 9+ or equivalent package manager
+- Claude Code installed globally
+
+### 🚀 **Installation**
+
+```bash
+# Initialize with v2.7.0
+npx claude-flow@alpha init --force
+
+# View available commands
+npx claude-flow@alpha --help
+```
+
+### 🎯 **Key Commands**
+
+```bash
+# Initialize a new project
+npx claude-flow@alpha init --force
+
+# Create a swarm for task execution
+npx claude-flow@alpha swarm "Build a REST API" --claude
+
+# Launch Hive-Mind Wizard
+npx claude-flow@alpha hive-mind wizard
+
+# Store persistent memory
+npx claude-flow@alpha memory store key "value" --reasoningbank
+
+# View agent directory
+npx claude-flow@alpha agents list
+```
+
+## 🎨 **25 Claude Skills**
+
+These skills activate automatically through natural language:
+
+```bash
+# Development & Methodology
+"Let's pair program on this feature"        → pair-programming skill
+"Review this code for best practices"       → code-review skill
+"Create a new skill for this task"          → skill-builder
+
+# Memory & Intelligence
+"Search for similar implementations"        → agentdb-vector-search
+"Store this pattern in memory"              → memory-management
+"Find related code across the project"      → semantic-search
+
+# Swarm Coordination
+"Create a swarm to build this API"          → swarm-orchestration
+"Coordinate these agents on this task"      → hive-mind-coordination
+"Manage the agent swarm"                    → swarm-management
+
+# GitHub Integration
+"Review this PR for security issues"        → github-code-review
+"Manage GitHub workflows"                   → github-workflow
+"Create a release"                          → github-release
+"Handle multi-repo changes"                 → multi-repo-sync
+
+# Automation & Quality
+"Set up automated hooks"                    → hooks-automation
+"Verify this implementation"                → verification-system
+"Analyze performance metrics"               → performance-analysis
+"Generate documentation"                    → documentation-generator
+```
+
+## 🔥 **AgentDB v1.3.9 Integration**
+
+**Performance Metrics:**
+- **96x-164x faster** vector search with semantic understanding
+- **150x faster** memory search with advanced indexing
+- **4-32x memory reduction** through quantization
+- **84.8% SWE-Bench** performance score
+
+AgentDB provides enterprise-grade vector search with:
+- HNSW indexing (O(log n) search complexity)
+- 9 RL algorithms for optimization
+- Automatic schema inference
+- Reflexion memory for continuous learning
+
+## 🧠 **ReasoningBank Memory System**
+
+Persistent memory with automatic fallback:
+- Store and retrieve agent reasoning patterns
+- Query semantically similar past decisions
+- Automatic fallback if AgentDB unavailable
+- 4-32x memory compression
+
+```bash
+# Store reasoning
+npx claude-flow@alpha memory store "pattern-key" "pattern-value" --reasoningbank
+
+# Retrieve and search
+npx claude-flow@alpha memory search "similar-patterns"
+
+# View memory stats
+npx claude-flow@alpha memory stats
+```
+
+## 🐝 **Hive-Mind Intelligence**
+
+Queen-led coordination with specialized worker agents:
+
+```bash
+# Launch Hive-Mind Wizard
+npx claude-flow@alpha hive-mind wizard
+
+# Execute with hive-mind
+npx claude-flow@alpha swarm "complex-task" --hive-mind --claude
+```
+
+## 📁 **Repository Structure**
+
+```
+.
+├── agents/                    # 610+ categorized AI agents
+├── .claude/                   # Claude Code configuration
+│   ├── agents/               # Agent definitions
+│   └── settings.json         # v2.7.0 configuration
+├── docs/                     # Comprehensive documentation
+│   ├── AGENT-SYSTEM.md      # Agent architecture
+│   ├── MEMORY-SYSTEM.md     # Memory systems guide
+│   ├── MCP-TOOLS.md         # 100+ MCP tools reference
+│   ├── HIVE-MIND.md         # Hive-mind coordination
+│   └── INSTALLATION.md      # Installation guide
+├── README.md                # This file
+├── CLAUDE.md                # Claude Code configuration
+├── package.json             # Node.js dependencies
+└── tutorial.md              # v2.7.0 workflow tutorial
+```
 
 ---
 

@@ -1,29 +1,36 @@
 {
   "name": "all-claude-sub-agents-updated",
   "version": "2.7.0",
-  "description": "610+ specialized AI agents for Claude Flow v2.7.0 swarm orchestration",
+  "description": "610+ specialized AI agents for Claude Flow v2.7.0 with AgentDB v1.3.9 integration and ReasoningBank memory system",
   "main": "index.js",
   "type": "module",
   "keywords": [
     "claude",
-    "ai-agents",
-    "swarm",
-    "orchestration",
     "claude-flow",
-    "mcp",
+    "ai-agents",
     "agentdb",
-    "hive-mind"
+    "reasoning-bank",
+    "hive-mind",
+    "swarm-intelligence",
+    "mcp-tools",
+    "orchestration",
+    "multi-agent",
+    "memory-system",
+    "vector-search"
   ],
-  "author": "RomanAlexanderW",
+  "author": "Claude Flow Community + RomanAlexanderW",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/RomanAlexanderW/all-claude-sub-agents-updated"
   },
   "dependencies": {
+    "claude-flow": "^2.7.0-alpha.10",
+    "agentdb": "^1.3.9",
     "better-sqlite3": "^9.0.0"
   },
   "devDependencies": {
+    "@anthropic-ai/claude-code": "^2.0.1",
     "@types/node": "^20.0.0",
     "typescript": "^5.0.0"
   },
@@ -33,15 +40,21 @@
   "scripts": {
     "init": "npx claude-flow@alpha init --force",
     "swarm": "npx claude-flow@alpha swarm",
-    "hive": "npx claude-flow@alpha hive-mind wizard",
+    "hive-mind": "npx claude-flow@alpha hive-mind wizard",
     "hive:spawn": "npx claude-flow@alpha hive-mind spawn",
+    "memory": "npx claude-flow@alpha memory",
     "memory:status": "npx claude-flow@alpha memory status --reasoningbank",
     "memory:store": "npx claude-flow@alpha memory store",
+    "memory:search": "npx claude-flow@alpha memory search",
     "memory:query": "npx claude-flow@alpha memory query",
+    "agents:list": "npx claude-flow@alpha agents list",
+    "agents:search": "npx claude-flow@alpha agents search",
     "mcp:start": "npx claude-flow@alpha mcp start",
     "mcp:add": "claude mcp add claude-flow npx claude-flow@alpha mcp start",
     "validate": "node scripts/validate-agents.js",
-    "convert": "python convert_agents.py"
+    "convert": "python convert_agents.py",
+    "test": "echo \"No tests configured\"",
+    "docs": "echo \"See ./docs directory for documentation\""
   },
   "engines": {
     "node": ">=18.0.0",
