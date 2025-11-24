@@ -1,0 +1,40 @@
+{
+  "version": "1.3.9",
+  "backend": "sqlite",
+  "database": ".swarm/memory.db",
+  "vectorSearch": {
+    "enabled": true,
+    "algorithm": "HNSW",
+    "indexing": "O(log n)",
+    "dimensions": 1024
+  },
+  "reinforcementLearning": {
+    "algorithms": [
+      "Q-Learning",
+      "PPO",
+      "MCTS",
+      "Decision-Transformer",
+      "DQN",
+      "A2C",
+      "SAC",
+      "TD3",
+      "Rainbow"
+    ]
+  },
+  "features": {
+    "reflexionMemory": true,
+    "skillLibrary": true,
+    "causalReasoning": true,
+    "quantization": {
+      "binary": "32x reduction",
+      "scalar": "4x reduction",
+      "product": "8-16x reduction"
+    }
+  },
+  "performance": {
+    "vectorSearch": "96x faster",
+    "batchOperations": "125x faster",
+    "largeQueries": "164x faster",
+    "queryLatency": "2-3ms"
+  }
+}

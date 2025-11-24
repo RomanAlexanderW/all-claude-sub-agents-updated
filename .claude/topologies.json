@@ -1,0 +1,35 @@
+{
+  "version": "2.7.0",
+  "topologies": {
+    "hierarchical": {
+      "description": "Queen-led coordination with specialized workers",
+      "structure": "Tree",
+      "bestFor": "Large-scale projects with clear structure",
+      "agents": ["queen-coordinator", "worker-specialists", "scout-explorers"]
+    },
+    "mesh": {
+      "description": "Peer-to-peer networks with fault tolerance",
+      "structure": "Mesh network",
+      "bestFor": "Fault-tolerant, high-availability systems",
+      "agents": ["mesh-coordinator", "peer-agents"]
+    },
+    "adaptive": {
+      "description": "Dynamic topology switching based on workload",
+      "structure": "Hybrid",
+      "bestFor": "Dynamic workloads and optimization",
+      "agents": ["adaptive-coordinator", "dynamic-agents"]
+    },
+    "ring": {
+      "description": "Sequential processing pipeline",
+      "structure": "Ring",
+      "bestFor": "Sequential workflows",
+      "agents": ["ring-coordinator", "pipeline-agents"]
+    },
+    "star": {
+      "description": "Centralized control with satellite agents",
+      "structure": "Star",
+      "bestFor": "Centralized decision making",
+      "agents": ["central-coordinator", "satellite-agents"]
+    }
+  }
+}
