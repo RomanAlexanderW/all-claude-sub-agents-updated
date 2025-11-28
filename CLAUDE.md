@@ -45,6 +45,24 @@
 - `/scripts` - Utility scripts
 - `/examples` - Example code
 
+### 📋 Repository Update Instructions
+
+**CRITICAL**: Before making ANY changes to the agents folder structure, read:
+- **[`.claude/REPO_UPDATE_INSTRUCTIONS.md`](.claude/REPO_UPDATE_INSTRUCTIONS.md)** - Complete guide for updating all dependent files
+
+This document contains:
+- Quick reference table of ALL files that need updates
+- Checklists for different update scenarios (add/remove/move agents)
+- Automation scripts available (`scripts/generate-catalogs.py`)
+- Verification commands to ensure nothing is missed
+- Current folder structure reference
+
+**Key automation script**:
+```bash
+# Regenerates all catalogs, LLM.txt, and JSON files
+python3 scripts/generate-catalogs.py
+```
+
 ## Project Overview
 
 This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology with Claude-Flow orchestration for systematic Test-Driven Development.
@@ -84,9 +102,19 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 - **Clean Architecture**: Separate concerns
 - **Documentation**: Keep updated
 
-## 🚀 Available Agents (54 Total)
+## 🚀 Available Agents
 
-### Core Development
+### Full Agent Library (607 Agents)
+See **[agents/README.md](agents/README.md)** for the complete library organized in 7 categories:
+- `01-software-engineering/` (274 agents) - Frontend, Backend, DevOps, Testing, Mobile
+- `02-data-and-ai/` (94 agents) - ML, Data Science, Analytics
+- `03-business/` (66 agents) - Marketing, Sales, Finance, Operations
+- `04-security-compliance/` (69 agents) - AppSec, Infrastructure, Compliance
+- `05-predictions-forecasting/` (44 agents) - Sports, Markets, Social, Tech
+- `06-personal-development/` (56 agents) - Career, Skills, Wellness
+- `07-specialized-domains/` (4 agents) - Simulations, Industry-Specific
+
+### Core Development (Built-in)
 `coder`, `reviewer`, `tester`, `planner`, `researcher`
 
 ### Swarm Coordination

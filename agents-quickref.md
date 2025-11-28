@@ -1,321 +1,237 @@
-# 🎯 Agent Quick Reference Guide
+# Agent Quick Reference Guide
 
-> **Find the perfect agent in seconds** - Your comprehensive directory to 607 specialized AI agents
+> **Find the perfect agent in seconds** - Your directory to 607 specialized AI agents
 
 ---
 
-## 📊 **Agent Overview**
+## Repository Structure
 
-| Category | Count | % of Total | Best For |
-|----------|-------|------------|----------|
-| 🔧 **Development & Coding** | 198 | 32.6% | Software development, testing, DevOps |
-| 💼 **Business & Strategy** | 142 | 23.4% | Operations, marketing, finance, planning |
-| 🌟 **Personal Development** | 118 | 19.4% | Skills, coaching, relationships, growth |
-| 🤖 **AI & Machine Learning** | 89 | 14.7% | Predictions, analytics, data science |
-| 🔍 **Research & Analysis** | 60 | 9.9% | Market research, competitive intelligence |
+| Category | Path | Count | Focus |
+|----------|------|-------|-------|
+| **01 - Software Engineering** | `agents/01-software-engineering/` | 274 | Development, DevOps, Testing |
+| **02 - Data & AI** | `agents/02-data-and-ai/` | 94 | ML, Data Science, Analytics |
+| **03 - Business** | `agents/03-business/` | 66 | Marketing, Sales, Payments |
+| **04 - Security & Compliance** | `agents/04-security-compliance/` | 69 | AppSec, Compliance, Governance |
+| **05 - Predictions & Forecasting** | `agents/05-predictions-forecasting/` | 44 | Sports, Financial, Tech Predictions |
+| **06 - Personal Development** | `agents/06-personal-development/` | 56 | Career, Skills, Wellness |
+| **07 - Specialized Domains** | `agents/07-specialized-domains/` | 4 | Simulations, Emerging Tech |
 
 **Total: 607 Specialized Agents**
 
 ---
 
-## ⭐ **TOP 20 MOST VERSATILE AGENTS**
+## Top 20 Most Versatile Agents
 
-*Start here - these agents solve 80% of common use cases*
-
-| Rank | Agent | Category | Use Case | Why It's Essential |
-|------|-------|----------|----------|-------------------|
-| 1 | `advanced-research-engine` | Research | Deep internet research | Replaces hours of manual research |
-| 2 | `business-growth-scaling-agent` | Business | Strategic planning | Complete growth frameworks |
-| 3 | `competitor-analysis-simulation-agent` | Business | Competitive intelligence | Real-time competitor monitoring |
-| 4 | `python-specialist` | Development | Python development | Most popular programming language |
-| 5 | `project-manager` | Business | Project coordination | Universal project management |
-| 6 | `react-19-specialist` | Development | Modern React development | Latest React expertise |
-| 7 | `customer-behavior-prediction-agent` | AI/ML | Customer insights | Predict customer actions |
-| 8 | `marketing-sales-mastery-agent` | Business | Revenue generation | Complete marketing frameworks |
-| 9 | `decision-making-problem-solving-agent` | Personal | Critical thinking | Enhanced decision making |
-| 10 | `typescript-specialist` | Development | TypeScript development | Modern web development |
-| 11 | `innovation-creative-problem-solving-agent` | Business | Creative solutions | Breakthrough thinking |
-| 12 | `leadership-development` | Personal | Team management | Leadership skills |
-| 13 | `nodejs-specialist` | Development | Backend development | Server-side JavaScript |
-| 14 | `content-management-specialist` | Business | Content strategy | Content marketing |
-| 15 | `aws-cloud-architect` | Development | Cloud infrastructure | AWS expertise |
-| 16 | `pricing-strategy-optimizer` | Business | Pricing decisions | Revenue optimization |
-| 17 | `trend-detection-extrapolation` | Research | Future trends | Trend forecasting |
-| 18 | `risk-assessment-agent` | Business | Risk management | Business risk analysis |
-| 19 | `communication-mastery` | Personal | Communication skills | Better interactions |
-| 20 | `nextjs-15-specialist` | Development | Full-stack React | Complete web apps |
+| Rank | Agent | Path | Use Case |
+|------|-------|------|----------|
+| 1 | `advanced-research-engine` | 02-data-and-ai/data-science | Deep research |
+| 2 | `business-growth-scaling-agent` | 03-business/strategy | Strategic planning |
+| 3 | `python-specialist` | 01-software-engineering/backend/languages | Python development |
+| 4 | `react-19-specialist` | 01-software-engineering/frontend/frameworks | React development |
+| 5 | `project-manager` | 01-software-engineering/architecture | Project coordination |
+| 6 | `customer-behavior-prediction-agent` | 05-predictions-forecasting/market-financial | Customer insights |
+| 7 | `marketing-sales-mastery-agent` | 03-business/marketing | Revenue generation |
+| 8 | `typescript-specialist` | 01-software-engineering/backend/languages | TypeScript |
+| 9 | `decision-making-problem-solving-agent` | 06-personal-development/skills | Critical thinking |
+| 10 | `nodejs-specialist` | 01-software-engineering/backend/frameworks | Backend JavaScript |
+| 11 | `innovation-creative-problem-solving-agent` | 06-personal-development/skills | Creative solutions |
+| 12 | `leadership-development` | 06-personal-development/career | Leadership skills |
+| 13 | `aws-cloud-architect` | 01-software-engineering/devops/infrastructure | Cloud infrastructure |
+| 14 | `pricing-strategy-optimizer` | 03-business/strategy | Pricing decisions |
+| 15 | `trend-detection-extrapolation` | 05-predictions-forecasting/technology | Trend forecasting |
+| 16 | `risk-assessment-agent` | 03-business/strategy | Risk management |
+| 17 | `communication-mastery` | 06-personal-development/communication | Communication skills |
+| 18 | `nextjs-15-specialist` | 01-software-engineering/frontend/frameworks | Full-stack React |
+| 19 | `competitor-analysis-simulation-agent` | 05-predictions-forecasting/market-financial | Competitive intel |
+| 20 | `docker-containerization-specialist` | 01-software-engineering/devops/infrastructure | Containerization |
 
 ---
 
-## 🔧 **DEVELOPMENT & CODING AGENTS** (198 Total)
+## Quick Navigation by Category
 
-### **🚀 Most Popular Development Agents**
+### 01 - Software Engineering (274 agents)
 
-| Agent | Specialization | Best For | Expertise Level |
-|-------|----------------|----------|-----------------|
-| `python-specialist` | Python Development | General programming, automation | ⭐⭐⭐⭐⭐ |
-| `react-19-specialist` | Modern React | Frontend applications | ⭐⭐⭐⭐⭐ |
-| `typescript-specialist` | TypeScript | Type-safe development | ⭐⭐⭐⭐⭐ |
-| `nodejs-specialist` | Node.js Backend | Server-side applications | ⭐⭐⭐⭐⭐ |
-| `aws-cloud-architect` | Cloud Infrastructure | Scalable systems | ⭐⭐⭐⭐ |
-| `nextjs-15-specialist` | Full-stack React | Complete web applications | ⭐⭐⭐⭐⭐ |
-| `docker-containerization-specialist` | Containerization | DevOps, deployment | ⭐⭐⭐⭐ |
-| `kubernetes-orchestration-specialist` | Container Orchestration | Large-scale deployment | ⭐⭐⭐⭐ |
-| `postgresql-specialist` | Database Management | Data architecture | ⭐⭐⭐⭐ |
-| `cicd-engineer` | Continuous Integration | Automated deployment | ⭐⭐⭐⭐ |
+#### Frontend (`frontend/`)
+| Sub-folder | Agents | Examples |
+|------------|--------|----------|
+| `frameworks/` | 119 | react-19, vue, angular, svelte, nextjs-15 |
+| `styling/` | - | css, tailwind-css, sass-scss, bootstrap-css |
+| `ui-components/` | - | material-ui, design-system-architect |
 
-### **📝 Testing & Quality Assurance**
-- `test-engineer` - Comprehensive testing strategies
-- `cypress-e2e-testing-specialist` - End-to-end testing
-- `jest-testing-specialist` - JavaScript unit testing
-- `playwright-testing-specialist` - Cross-browser testing
-- `tdd-refactoring-specialist` - Test-driven development
+#### Backend (`backend/`)
+| Sub-folder | Agents | Examples |
+|------------|--------|----------|
+| `languages/` | 12 | python, typescript, go, rust, java, kotlin |
+| `frameworks/` | 45 | django, spring-boot, express, nestjs, laravel |
+| `databases/` | 5 | postgresql, mongodb, redis, mysql, sqlite |
+| `apis-integrations/` | - | graphql, rest-api, grpc |
 
-### **🏗️ Architecture & DevOps**  
-- `architecture-analyst` - System architecture design
-- `microservices-distributed-systems-agent` - Microservices patterns
-- `serverless-deployment-architect` - Serverless applications
-- `observability-platform-engineer` - System monitoring
-- `security-testing-specialist` - Security assessments
+#### DevOps (`devops/`)
+| Sub-folder | Agents | Examples |
+|------------|--------|----------|
+| `infrastructure/` | 28 | aws-cloud, terraform, kubernetes, docker |
+| `monitoring/` | 1 | observability-platform-engineer |
 
----
+#### Testing (`testing/`)
+| Sub-folder | Agents | Examples |
+|------------|--------|----------|
+| `unit-testing/` | 37 | jest, cypress, playwright, tdd specialists |
 
-## 💼 **BUSINESS & STRATEGY AGENTS** (142 Total)
-
-### **🎯 Core Business Operations**
-
-| Agent | Focus Area | Impact Level | Use Case |
-|-------|------------|-------------|----------|
-| `business-growth-scaling-agent` | Strategic Growth | 🔥🔥🔥🔥🔥 | Scale operations 10x |
-| `competitor-analysis-simulation-agent` | Competitive Intelligence | 🔥🔥🔥🔥🔥 | Beat competition |
-| `marketing-sales-mastery-agent` | Revenue Generation | 🔥🔥🔥🔥🔥 | Increase sales |
-| `pricing-strategy-optimizer` | Pricing Optimization | 🔥🔥🔥🔥 | Maximize revenue |
-| `customer-retention-loyalty-agent` | Customer Success | 🔥🔥🔥🔥 | Reduce churn |
-| `risk-management-agent` | Risk Mitigation | 🔥🔥🔥🔥 | Avoid disasters |
-| `project-manager` | Project Coordination | 🔥🔥🔥🔥🔥 | Deliver on time |
-| `innovation-creative-problem-solving-agent` | Innovation | 🔥🔥🔥🔥 | Breakthrough solutions |
-
-### **💰 Finance & Operations**
-- `investment-wealth-building-agent` - Investment strategies
-- `debt-elimination-credit-repair-agent` - Financial health
-- `automated-billing-revenue-agent` - Revenue automation
-- `invoice-processing-ap-automation-agent` - Process automation
-- `kpi-profitability-dashboard-agent` - Performance tracking
-
-### **📈 Marketing & Sales**
-- `content-management-specialist` - Content strategy
-- `social-media-trend-forecasting-agent` - Social media marketing
-- `campaign-planning-specialist` - Marketing campaigns
-- `customer-journey-orchestration-agent` - Customer experience
-- `sales-enablement-content-agent` - Sales materials
+#### Other
+| Sub-folder | Agents | Examples |
+|------------|--------|----------|
+| `mobile/` | 12 | flutter, react-native, swift, kotlin |
+| `architecture/` | 9 | microservices, system design, patterns |
 
 ---
 
-## 🌟 **PERSONAL DEVELOPMENT AGENTS** (118 Total)
+### 02 - Data & AI (94 agents)
 
-### **🎯 Top Personal Growth Agents**
-
-| Agent | Development Area | Time Investment | ROI |
-|-------|------------------|----------------|-----|
-| `leadership-development` | Leadership Skills | 4-6 weeks | 🚀🚀🚀🚀🚀 |
-| `communication-mastery` | Communication | 2-3 weeks | 🚀🚀🚀🚀🚀 |
-| `decision-making-problem-solving-agent` | Critical Thinking | 3-4 weeks | 🚀🚀🚀🚀 |
-| `emotional-intelligence-master` | Emotional Intelligence | 6-8 weeks | 🚀🚀🚀🚀🚀 |
-| `habit-formation-behavior-change-agent` | Habit Building | 8-12 weeks | 🚀🚀🚀🚀 |
-| `peak-performance-flow-state-agent` | Peak Performance | 4-6 weeks | 🚀🚀🚀🚀 |
-| `time-management-productivity-agent` | Productivity | 2-3 weeks | 🚀🚀🚀🚀🚀 |
-| `networking-relationship-cultivator` | Networking | Ongoing | 🚀🚀🚀🚀 |
-
-### **🧠 Cognitive Enhancement**
-- `creative-expression-artistic-development-agent` - Creativity
-- `reading-knowledge-absorption-agent` - Learning optimization
-- `memory-optimizer` - Memory improvement
-- `focus-enhancement-system` - Attention management
-
-### **💪 Life Optimization**
-- `work-life-balance-optimizer` - Balance
-- `stress-management-program` - Stress reduction
-- `career-change-pivoting-agent` - Career transitions
-- `retirement-planning-lifestyle-agent` - Life planning
+| Sub-folder | Agents | Focus |
+|------------|--------|-------|
+| `data-engineering/` | 3 | ETL, pipelines, data architecture |
+| `data-science/` | 12 | Analysis, visualization, statistics |
+| `machine-learning/` | 80 | Models, training, MLOps, PyTorch, TensorFlow |
+| `analytics/` | - | BI, reporting, insights |
 
 ---
 
-## 🤖 **AI & MACHINE LEARNING AGENTS** (89 Total)
+### 03 - Business (66 agents)
 
-### **🎯 Prediction Powerhouses**
+| Sub-folder | Agents | Focus |
+|------------|--------|-------|
+| `marketing/` | 13 | Campaigns, SEO, content strategy |
+| `sales/` | - | Enablement, CRM, lead generation |
+| `customer-success/` | 3 | Retention, onboarding, support |
+| `finance/` | 5 | Billing, invoicing, financial planning |
+| `finance/payments/` | 17 | **All payment integrations** |
+| `operations/` | 13 | Process optimization, workflow |
+| `strategy/` | 15 | Planning, competitive analysis |
 
-| Agent | Prediction Type | Accuracy Range | Best Use Case |
-|-------|----------------|----------------|---------------|
-| `customer-behavior-prediction-agent` | Customer Actions | 85-92% | E-commerce optimization |
-| `stock-price-movement-predictor` | Financial Markets | 75-85% | Investment decisions |
-| `weather-pattern-prediction-agent` | Weather Forecasting | 90-95% | Planning & operations |
-| `viral-video-prediction-agent` | Content Virality | 70-80% | Content marketing |
-| `election-outcome-prediction-agent` | Political Outcomes | 80-88% | Political analysis |
-| `market-crash-bubble-detection-agent` | Financial Risk | 75-85% | Risk management |
-| `technology-adoption-prediction-agent` | Tech Trends | 80-88% | Strategic planning |
-
-### **📊 Analytics & Insights**
-- `real-time-prediction-engine` - Live predictions
-- `bayesian-network-prediction` - Probabilistic modeling
-- `time-series-forecasting` - Temporal predictions
-- `cross-domain-prediction-synthesis-agent` - Multi-domain analysis
-- `uncertainty-quantification-agent` - Risk quantification
-
-### **🔬 Specialized ML**
-- `pytorch-deep-learning-specialist` - Deep learning
-- `tensorflow-machine-learning-specialist` - ML frameworks
-- `ai-enhanced-testing-specialist` - AI-powered testing
-- `synthetic-data-generation-agent` - Data synthesis
-
----
-
-## 🔍 **RESEARCH & ANALYSIS AGENTS** (60 Total)
-
-### **🎯 Research Superstars**
-
-| Agent | Research Type | Speed Boost | Quality Level |
-|-------|---------------|-------------|---------------|
-| `advanced-research-engine` | General Research | 10x faster | ⭐⭐⭐⭐⭐ |
-| `market-user-research` | Market Analysis | 8x faster | ⭐⭐⭐⭐⭐ |
-| `competitor-benchmarking-agent` | Competitive Analysis | 12x faster | ⭐⭐⭐⭐ |
-| `trend-detection-extrapolation` | Trend Analysis | 15x faster | ⭐⭐⭐⭐ |
-| `consumer-insights-synthesizer` | Consumer Research | 9x faster | ⭐⭐⭐⭐⭐ |
-| `patent-innovation-prediction-agent` | Patent Research | 20x faster | ⭐⭐⭐⭐ |
-
-### **📈 Market Intelligence**
-- `industry-digitization-agent` - Industry analysis
-- `regulatory-risk-assessment-agent` - Regulatory research
-- `supply-chain-disruption-agent` - Supply chain analysis
-- `cultural-trend-evolution-agent` - Cultural research
-
-### **🎯 Specialized Research**
-- `academic-literature-synthesizer` - Academic research
-- `technology-assessment-engine` - Tech evaluation
-- `demographic-analysis-specialist` - Population research
-- `economic-indicator-analysis` - Economic research
+#### Payment Agents (17 total in `finance/payments/`)
+- `stripe-integration-agent`
+- `paypal-integration-agent`
+- `apple-pay-integration-agent`
+- `google-pay-integration-agent`
+- `square-integration-agent`
+- `braintree-integration-agent`
+- `klarna-bnpl-integration-agent`
+- `afterpay-bnpl-integration-agent`
+- `amazon-pay-integration-agent`
+- `wechat-pay-integration-agent`
+- `alipay-integration-agent`
+- `venmo-integration-agent`
+- `authorize-net-integration-agent`
+- `bank-transfer-ach-integration-agent`
+- `cryptocurrency-payment-integration-agent`
+- `installments-financing-integration-agent`
+- `automated-billing-revenue-agent`
 
 ---
 
-## 🚀 **QUICK SELECTION GUIDE**
+### 04 - Security & Compliance (69 agents)
 
-### **⚡ Choose by Time Constraint**
-
-**🕐 Need results in 5 minutes?**
-- `advanced-research-engine`
-- `competitor-analysis-simulation-agent`
-- `python-specialist`
-- `decision-making-problem-solving-agent`
-
-**🕐 Have 30 minutes for analysis?**
-- `business-growth-scaling-agent`
-- `market-user-research`
-- `customer-behavior-prediction-agent`
-- `innovation-creative-problem-solving-agent`
-
-**🕐 Working on multi-day project?**
-- `project-manager`
-- `architecture-analyst`
-- `leadership-development`
-- `comprehensive-business-strategy-agent`
-
-### **🎯 Choose by Goal**
-
-**💰 Want to make money?**
-- `pricing-strategy-optimizer`
-- `revenue-growth-manager`
-- `sales-forecast-simulation-agent`
-- `investment-wealth-building-agent`
-
-**📊 Need data insights?**
-- `customer-behavior-prediction-agent`
-- `trend-detection-extrapolation`
-- `market-crash-bubble-detection-agent`
-- `consumer-insights-synthesizer`
-
-**🔧 Building software?**
-- `python-specialist` / `react-19-specialist` / `nodejs-specialist`
-- `aws-cloud-architect`
-- `docker-containerization-specialist`
-- `cicd-engineer`
-
-**🌟 Personal growth?**
-- `leadership-development`
-- `communication-mastery`
-- `habit-formation-behavior-change-agent`
-- `peak-performance-flow-state-agent`
+| Sub-folder | Agents | Focus |
+|------------|--------|-------|
+| `application-security/` | 34 | Code security, vulnerability scanning |
+| `infrastructure-security/` | 4 | Network, cloud security |
+| `compliance-governance/` | 31 | GDPR, HIPAA, SOC2, auditing |
 
 ---
 
-## 💡 **PRO TIPS FOR AGENT SELECTION**
+### 05 - Predictions & Forecasting (44 agents)
 
-### **🎯 Matching Strategy**
+**All prediction agents consolidated here:**
 
-1. **Start with your end goal** - What specific outcome do you want?
-2. **Check the "Best For" column** - Match your use case exactly
-3. **Consider expertise level** - Match complexity to your needs
-4. **Look at time investment** - Align with your available time
-5. **Check ROI ratings** - Prioritize high-impact agents
+| Sub-folder | Agents | Examples |
+|------------|--------|----------|
+| `sports/` | 10 | baseball, basketball, football, tennis |
+| `market-financial/` | 9 | stock, crypto, economic forecasts |
+| `social-political/` | 6 | elections, social movements |
+| `technology/` | 10 | AI development, climate, trends |
+| `entertainment/` | 9 | viral content, music, movies |
 
-### **⚡ Power User Shortcuts**
+---
 
-**🔥 Most Versatile Combo (3 agents):**
+### 06 - Personal Development (56 agents)
+
+| Sub-folder | Agents | Focus |
+|------------|--------|-------|
+| `career/` | 14 | Job search, transitions, leadership |
+| `skills/` | 16 | Learning, mastery, education |
+| `communication/` | 8 | Public speaking, writing, influence |
+| `wellness/` | 9 | Health, stress, work-life balance |
+| `relationships/` | 9 | Networking, conflict resolution |
+
+---
+
+### 07 - Specialized Domains (4 agents)
+
+| Sub-folder | Agents | Focus |
+|------------|--------|-------|
+| `simulations/` | 2 | Monte Carlo, agent-based models |
+| `industry-verticals/` | - | Healthcare, legal, real estate |
+| `emerging-tech/` | 2 | Quantum, blockchain |
+
+---
+
+## Quick Selection Guide
+
+### By Goal
+
+| Goal | Agents |
+|------|--------|
+| **Build software** | python-specialist, react-19, nodejs, aws-cloud |
+| **Make money** | pricing-strategy-optimizer, revenue-growth-manager |
+| **Analyze data** | customer-behavior-prediction, trend-detection |
+| **Personal growth** | leadership-development, communication-mastery |
+| **Security** | code-security-analyzer, vulnerability-scanner |
+
+### By Time Constraint
+
+| Time | Best Agents |
+|------|-------------|
+| **5 minutes** | advanced-research-engine, decision-making-problem-solving |
+| **30 minutes** | business-growth-scaling, market-user-research |
+| **Multi-day** | project-manager, architecture-analyst |
+
+---
+
+## Search Tool
+
+```bash
+# Search by category
+python scripts/agents-search.py --category "backend"
+python scripts/agents-search.py --category "predictions"
+python scripts/agents-search.py --category "payments"
+
+# Full-text search
+python scripts/agents-search.py --query "payment stripe"
+python scripts/agents-search.py --query "react testing"
+
+# Show statistics
+python scripts/agents-search.py --stats
+
+# List all categories
+python scripts/agents-search.py --list-categories
+```
+
+---
+
+## Power User Combos
+
+**Most Versatile (3 agents):**
 - `advanced-research-engine` + `decision-making-problem-solving-agent` + `project-manager`
 
-**🚀 Business Growth Stack (4 agents):**
+**Business Growth (4 agents):**
 - `business-growth-scaling-agent` + `competitor-analysis-simulation-agent` + `pricing-strategy-optimizer` + `marketing-sales-mastery-agent`
 
-**💻 Full-Stack Development (5 agents):**
+**Full-Stack Development (5 agents):**
 - `react-19-specialist` + `nodejs-specialist` + `postgresql-specialist` + `aws-cloud-architect` + `docker-containerization-specialist`
 
-**🧠 Personal Optimization (4 agents):**
+**Personal Optimization (4 agents):**
 - `leadership-development` + `communication-mastery` + `peak-performance-flow-state-agent` + `time-management-productivity-agent`
 
 ---
 
-## 🔍 **SEARCH TIPS**
-
-### **Finding Agents Quickly**
-
-1. **Use Ctrl+F** to search by keyword
-2. **Search patterns:**
-   - `*-specialist` for technical expertise
-   - `*-prediction-agent` for forecasting
-   - `*-optimization-*` for improvement
-   - `*-management-*` for processes
-
-3. **Category jumping:**
-   - Jump to 🔧 for coding
-   - Jump to 💼 for business
-   - Jump to 🌟 for personal growth
-   - Jump to 🤖 for predictions
-   - Jump to 🔍 for research
-
-### **Advanced Selection**
-
-**By Industry:**
-- **SaaS/Tech**: React, Node.js, AWS, Python specialists
-- **E-commerce**: Customer behavior, pricing, marketing agents  
-- **Consulting**: Research, analysis, presentation agents
-- **Finance**: Risk, investment, prediction agents
-
-**By Team Size:**
-- **Solo/Small Teams**: Generalist agents (top 20 list)
-- **Growing Companies**: Specialized business agents
-- **Enterprises**: Architecture, scale, security agents
-
----
-
-## 🎯 **NEXT STEPS**
-
-1. **Bookmark this page** - You'll reference it constantly
-2. **Try the Top 20** - Start with most versatile agents
-3. **Use prompt templates** - Check `prompt-templates.md` for examples
-4. **Follow the tutorial** - See `tutorial.md` for step-by-step guidance
-5. **Reference flowstrats.md** - Include in every swarm prompt
-
-**Remember**: Always include this in your Claude Code prompts:
-> "Please read and reference the flowstrats.md file for optimal claude-flow utilization strategies"
-
----
-
-*🎯 Find your perfect agent match in seconds, not hours.*
+*Find your perfect agent match in seconds.*

@@ -1883,141 +1883,96 @@ Get productive with your 607 agents in minutes:
 
 ## 📁 Organized Agents Directory
 
-All 610+ agents are now organized into a comprehensive, easy-to-navigate directory structure by domain and specialty. No more searching through hundreds of files—find exactly what you need in seconds!
+All 607 agents are now organized into a comprehensive, easy-to-navigate 7-category directory structure. No more searching through hundreds of files—find exactly what you need in seconds!
 
 ### 🗂️ Main Categories
 
-#### 💻 [Software Development & Engineering](agents/software-development-and-engineering)
-**245 agents** | The most comprehensive coding agent collection available
+#### 💻 [01-Software Engineering](agents/01-software-engineering/) (274 agents)
+The most comprehensive coding agent collection available
 
-- **[Frontend Development](agents/software-development-and-engineering/frontend-development)** ([📄 Catalog](Agents-Catalogs/software-development-and-engineering_frontend-development.html)) — 120 agents
-  React, Vue, Angular, TypeScript, CSS, HTML, UI/UX specialists
+- **[frontend/](agents/01-software-engineering/frontend/)** — React, Vue, Angular, Svelte, CSS, UI specialists
+- **[backend/](agents/01-software-engineering/backend/)** — Python, Java, Go, Rust, Node.js, APIs, databases
+- **[devops/](agents/01-software-engineering/devops/)** — Docker, Kubernetes, AWS, Terraform, GitOps
+- **[testing/](agents/01-software-engineering/testing/)** — TDD, Jest, Cypress, Playwright specialists
+- **[mobile/](agents/01-software-engineering/mobile/)** — iOS, Android, Flutter, React Native
+- **[architecture/](agents/01-software-engineering/architecture/)** — System design, patterns, analysis
 
-- **[Backend Development](agents/software-development-and-engineering/backend-development)** ([📄 Catalog](Agents-Catalogs/software-development-and-engineering_backend-development.html)) — 51 agents
-  APIs, Databases, Server-side, Microservices, Node.js, Python, Go, Java experts
+#### 📊 [02-Data & AI](agents/02-data-and-ai/) (94 agents)
+Transform data into actionable insights
 
-- **[DevOps & Infrastructure](agents/software-development-and-engineering/devops-and-infrastructure)** ([📄 Catalog](Agents-Catalogs/software-development-and-engineering_devops-and-infrastructure.html)) — 28 agents
-  Docker, Kubernetes, CI/CD, Cloud, Monitoring, GitOps specialists
+- **[data-engineering/](agents/02-data-and-ai/data-engineering/)** — ETL, pipelines, data architecture
+- **[data-science/](agents/02-data-and-ai/data-science/)** — Analysis, visualization, statistics
+- **[machine-learning/](agents/02-data-and-ai/machine-learning/)** — PyTorch, TensorFlow, ML models (80 agents)
+- **[analytics/](agents/02-data-and-ai/analytics/)** — BI, reporting, insights
 
-- **[Testing & QA](agents/software-development-and-engineering/testing-and-qa)** ([📄 Catalog](Agents-Catalogs/software-development-and-engineering_testing-and-qa.html)) — 33 agents
-  Unit, Integration, E2E, Performance, Security testing experts
+#### 💼 [03-Business](agents/03-business/) (66 agents)
+Drive business growth and operational excellence
 
-- **[Mobile Development](agents/software-development-and-engineering/mobile-development)** ([📄 Catalog](Agents-Catalogs/software-development-and-engineering_mobile-development.html)) — 13 agents
-  iOS, Android, React Native, Flutter specialists
+- **[marketing/](agents/03-business/marketing/)** — Campaigns, SEO, content strategy
+- **[sales/](agents/03-business/sales/)** — Enablement, CRM, lead generation
+- **[customer-success/](agents/03-business/customer-success/)** — Retention, onboarding, support
+- **[finance/payments/](agents/03-business/finance/payments/)** — ALL 17 payment agents (Stripe, PayPal, etc.)
+- **[operations/](agents/03-business/operations/)** — Process optimization, workflow
+- **[strategy/](agents/03-business/strategy/)** — Planning, competitive analysis
 
-#### 📊 [Data & Analytics](agents/data-and-analytics)
-**115 agents** | Transform data into actionable insights
+#### 🔒 [04-Security & Compliance](agents/04-security-compliance/) (69 agents)
+Protect your systems and ensure compliance
 
-- **[Machine Learning & AI](agents/data-and-analytics/machine-learning-and-ai)** ([📄 Catalog](Agents-Catalogs/data-and-analytics_machine-learning-and-ai.html)) — 91 agents
-  ML models, Deep Learning, AI systems, Neural networks
+- **[application-security/](agents/04-security-compliance/application-security/)** — Code security, vulnerability scanning
+- **[infrastructure-security/](agents/04-security-compliance/infrastructure-security/)** — Network, cloud security
+- **[compliance-governance/](agents/04-security-compliance/compliance-governance/)** — GDPR, HIPAA, SOC2, auditing
 
-- **[Data Science & Analytics](agents/data-and-analytics/data-science-and-analytics)** ([📄 Catalog](Agents-Catalogs/data-and-analytics_data-science-and-analytics.html)) — 15 agents
-  BI, Visualization, Reporting, Statistical analysis
+#### 🎯 [05-Predictions & Forecasting](agents/05-predictions-forecasting/) (44 agents)
+ALL prediction agents consolidated in one place
 
-- **[Data Engineering](agents/data-and-analytics/data-engineering)** ([📄 Catalog](Agents-Catalogs/data-and-analytics_data-engineering.html)) — 9 agents
-  ETL, Pipelines, Data architecture, Integration
+- **[sports/](agents/05-predictions-forecasting/sports/)** — Baseball, basketball, football, tennis
+- **[market-financial/](agents/05-predictions-forecasting/market-financial/)** — Stock, crypto, economic forecasts
+- **[social-political/](agents/05-predictions-forecasting/social-political/)** — Elections, social movements
+- **[technology/](agents/05-predictions-forecasting/technology/)** — AI development, climate, trends
+- **[entertainment/](agents/05-predictions-forecasting/entertainment/)** — Viral content, music, movies
 
-#### 🔒 [Security & Compliance](agents/security-and-compliance)
-**73 agents** | Protect your systems and ensure compliance
+#### 👤 [06-Personal Development](agents/06-personal-development/) (56 agents)
+Transform your career and life
 
-- **[Application Security](agents/security-and-compliance/application-security)** ([📄 Catalog](Agents-Catalogs/security-and-compliance_application-security.html)) — 35 agents
-  Penetration testing, Code security, OWASP, Vulnerability assessment
+- **[career/](agents/06-personal-development/career/)** — Job search, transitions, leadership
+- **[skills/](agents/06-personal-development/skills/)** — Learning, mastery, education
+- **[communication/](agents/06-personal-development/communication/)** — Public speaking, writing, influence
+- **[wellness/](agents/06-personal-development/wellness/)** — Health, stress, work-life balance
+- **[relationships/](agents/06-personal-development/relationships/)** — Networking, conflict resolution
 
-- **[Compliance & Governance](agents/security-and-compliance/compliance-and-governance)** ([📄 Catalog](Agents-Catalogs/security-and-compliance_compliance-and-governance.html)) — 34 agents
-  GDPR, HIPAA, SOC2, Auditing, Policy management
+#### 🔬 [07-Specialized Domains](agents/07-specialized-domains/) (4 agents)
+Industry-specific and advanced technology experts
 
-- **[Infrastructure Security](agents/security-and-compliance/infrastructure-security)** ([📄 Catalog](Agents-Catalogs/security-and-compliance_infrastructure-security.html)) — 4 agents
-  Network security, Cloud security, IAM, Encryption
-
-#### 💼 [Business & Operations](agents/business-and-operations)
-**34 agents** | Drive business growth and operational excellence
-
-- **[Marketing & Sales](agents/business-and-operations/marketing-and-sales)** ([📄 Catalog](Agents-Catalogs/business-and-operations_marketing-and-sales.html)) — 7 agents
-  Digital marketing, Sales enablement, Content strategy, SEO
-
-- **[Operations & Process](agents/business-and-operations/operations-and-process)** ([📄 Catalog](Agents-Catalogs/business-and-operations_operations-and-process.html)) — 12 agents
-  Process optimization, Workflow automation, Supply chain
-
-- **[Finance & Analytics](agents/business-and-operations/finance-and-analytics)** ([📄 Catalog](Agents-Catalogs/business-and-operations_finance-and-analytics.html)) — 10 agents
-  Financial planning, Payment integration, Revenue optimization
-
-- **[Strategy & Growth](agents/business-and-operations/strategy-and-growth)** ([📄 Catalog](Agents-Catalogs/business-and-operations_strategy-and-growth.html)) — 3 agents
-  Business development, Scaling, Strategic planning
-
-- **[Customer Success](agents/business-and-operations/customer-success)** ([📄 Catalog](Agents-Catalogs/business-and-operations_customer-success.html)) — 2 agents
-  Customer support, Retention, Service excellence
-
-#### 🎯 [Personal & Professional Development](agents/personal-and-professional-development)
-**30 agents** | Transform your career and life
-
-- **[Relationships & Communication](agents/personal-and-professional-development/relationships-and-communication)** ([📄 Catalog](Agents-Catalogs/personal-and-professional-development_relationships-and-communication.html)) — 12 agents
-  Interpersonal skills, Conflict resolution, Networking
-
-- **[Learning & Skills](agents/personal-and-professional-development/learning-and-skills)** ([📄 Catalog](Agents-Catalogs/personal-and-professional-development_learning-and-skills.html)) — 8 agents
-  Education, Skill acquisition, Training, Coaching
-
-- **[Career Development](agents/personal-and-professional-development/career-development)** ([📄 Catalog](Agents-Catalogs/personal-and-professional-development_career-development.html)) — 4 agents
-  Job search, Career transitions, Professional growth
-
-- **[Health & Wellness](agents/personal-and-professional-development/health-and-wellness)** ([📄 Catalog](Agents-Catalogs/personal-and-professional-development_health-and-wellness.html)) — 3 agents
-  Fitness, Nutrition, Mental health, Longevity
-
-- **[Life Planning](agents/personal-and-professional-development/life-planning)** ([📄 Catalog](Agents-Catalogs/personal-and-professional-development_life-planning.html)) — 3 agents
-  Financial planning, Retirement, Life goals
-
-#### 🎨 [Creative & Design](agents/creative-and-design)
-**16 agents** | Unleash creativity and innovation
-
-- **[Visual Design](agents/creative-and-design/visual-design)** ([📄 Catalog](Agents-Catalogs/creative-and-design_visual-design.html)) — 9 agents
-  UI/UX, Graphic design, Branding, Design systems
-
-- **[Content Creation](agents/creative-and-design/content-creation)** ([📄 Catalog](Agents-Catalogs/creative-and-design_content-creation.html)) — 5 agents
-  Writing, Video, Audio, Storytelling
-
-- **[Innovation & Creativity](agents/creative-and-design/innovation-and-creativity)** ([📄 Catalog](Agents-Catalogs/creative-and-design_innovation-and-creativity.html)) — 2 agents
-  Ideation, Problem-solving, Creative thinking
-
-#### 🔬 [Specialized Domains](agents/specialized-domains)
-**7 agents** | Industry-specific and advanced technology experts
-
-- **[Simulation & Modeling](agents/specialized-domains/simulation-and-modeling)** ([📄 Catalog](Agents-Catalogs/specialized-domains_simulation-and-modeling.html)) — 4 agents
-  Agent-based modeling, Monte Carlo, System simulation
-
-- **[Industry-Specific](agents/specialized-domains/industry-specific)** ([📄 Catalog](Agents-Catalogs/specialized-domains_industry-specific.html)) — 2 agents
-  Healthcare, Legal, Education, Real Estate, Sports
-
-- **[Advanced Technologies](agents/specialized-domains/advanced-technologies)** ([📄 Catalog](Agents-Catalogs/specialized-domains_advanced-technologies.html)) — 1 agents
-  Quantum computing, Bioinformatics, Robotics
+- **[simulations/](agents/07-specialized-domains/simulations/)** — Monte Carlo, agent-based models
+- **[industry-verticals/](agents/07-specialized-domains/industry-verticals/)** — Healthcare, legal, real estate
+- **[emerging-tech/](agents/07-specialized-domains/emerging-tech/)** — Quantum, blockchain innovations
 
 ### 📖 How to Navigate
 
-1. **Browse by Category**: Click folder links above to explore agents
-2. **View Beautiful Catalogs**: Click 📄 Catalog links for elegant HTML catalogs with descriptions
-3. **Complete Directory**: See **[AGENTS_DIRECTORY.md](AGENTS_DIRECTORY.md)** for the full nested structure with all 27 subcategories
-4. **Quick Reference**: Use the complete agent list in **[agents-quickref.md](agents-quickref.md)**
+1. **Browse by Category**: Navigate to numbered category folders
+2. **Use Search Tool**: `python scripts/agents-search.py --query "your search"`
+3. **Quick Reference**: See **[agents-quickref.md](agents-quickref.md)** for all 607 agents
+4. **Category Catalogs**: Check **[Agents-Catalogs/](Agents-Catalogs/)** for detailed category listings
 
 ### 📈 Directory Statistics
 
-- **Total Agents**: 607
-- **Categorized**: 520 agents (86%)
-- **Main Categories**: 7
-- **Subcategories**: 27
-- **HTML Catalogs**: 27 interactive catalogs
-- **Coding Agents**: 245 (47%)
-- **Non-Coding Agents**: 275 (53%)
+| Metric | Count |
+|--------|-------|
+| **Total Agents** | 607 |
+| **Main Categories** | 7 |
+| **Sub-Categories** | 36 |
+| **Uncategorized** | 0 |
 
-### 🔍 Finding the Right Agent
+### 🔍 Quick Navigation
 
-**By Function:**
-- Need frontend work? → [Frontend Development](agents/software-development-and-engineering/frontend-development)
-- Building ML models? → [Machine Learning & AI](agents/data-and-analytics/machine-learning-and-ai)
-- Security concerns? → [Application Security](agents/security-and-compliance/application-security)
-- Growing business? → [Strategy & Growth](agents/business-and-operations/strategy-and-growth)
-
-**By Output:**
-- Catalogs show agent descriptions at a glance
-- Directory shows full hierarchical organization
-- Folders contain the actual agent markdown files
+| Looking for... | Go to... |
+|---------------|----------|
+| Payment integration | `03-business/finance/payments/` |
+| Sports predictions | `05-predictions-forecasting/sports/` |
+| Stock predictions | `05-predictions-forecasting/market-financial/` |
+| React/Vue/Angular | `01-software-engineering/frontend/frameworks/` |
+| Docker/Kubernetes | `01-software-engineering/devops/` |
+| Machine learning | `02-data-and-ai/machine-learning/` |
 
 ---
 

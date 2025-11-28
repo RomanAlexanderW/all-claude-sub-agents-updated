@@ -2,7 +2,7 @@
 
 ## Welcome to Claude Flow v2.0.0-alpha.88
 
-The ultimate AI agent orchestration platform with **54+ specialized agents**, **112 MCP tools**, and **swarm intelligence**. Build, deploy, and scale AI-powered applications with unprecedented speed and reliability.
+The ultimate AI agent orchestration platform with **607 specialized agents**, **112 MCP tools**, and **swarm intelligence**. Build, deploy, and scale AI-powered applications with unprecedented speed and reliability.
 
 ---
 
@@ -45,7 +45,7 @@ npx claude-flow@alpha github pr-manager "review and merge pending PRs"
 
 ## 🌟 Key Features Overview
 
-### 🤖 AI Agent Ecosystem (54+ Agents)
+### 🤖 AI Agent Ecosystem (607 Agents)
 | Category | Agents | Capabilities |
 |----------|---------|--------------|
 | **Core Development** | `coder`, `reviewer`, `tester`, `planner`, `researcher` | Full development lifecycle |
@@ -602,7 +602,7 @@ npx claude-flow@alpha --agents 10 swarm "full enterprise application"
 ## **Claude Flow v2.0.0-alpha.88**
 ### *The Ultimate AI Agent Orchestration Platform*
 
-**54+ Specialized Agents • 112 MCP Tools • Swarm Intelligence • Enterprise Ready**
+**607 Specialized Agents • 112 MCP Tools • Swarm Intelligence • Enterprise Ready**
 
 ### **Get Started in 30 Seconds**
 ```bash
