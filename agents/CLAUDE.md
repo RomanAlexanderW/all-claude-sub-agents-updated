@@ -1,22 +1,21 @@
-# Claude Code Configuration - SPARC Development Environment
+# Claude Code Configuration - Agent Repository
 
-## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
+## CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
 
 **ABSOLUTE RULES**:
 1. ALL operations MUST be concurrent/parallel in a single message
 2. **NEVER save working files, text/mds and tests to the root folder**
 3. ALWAYS organize files in appropriate subdirectories
 
-### ⚡ GOLDEN RULE: "1 MESSAGE = ALL RELATED OPERATIONS"
+### GOLDEN RULE: "1 MESSAGE = ALL RELATED OPERATIONS"
 
 **MANDATORY PATTERNS:**
 - **TodoWrite**: ALWAYS batch ALL todos in ONE call (5-10+ todos minimum)
 - **Task tool**: ALWAYS spawn ALL agents in ONE message with full instructions
 - **File operations**: ALWAYS batch ALL reads/writes/edits in ONE message
 - **Bash commands**: ALWAYS batch ALL terminal operations in ONE message
-- **Memory operations**: ALWAYS batch ALL memory store/retrieve in ONE message
 
-### 📁 File Organization Rules
+### File Organization Rules
 
 **NEVER save to root folder. Use these directories:**
 - `/src` - Source code files
@@ -26,77 +25,138 @@
 - `/scripts` - Utility scripts
 - `/examples` - Example code
 
-## Project Overview
+---
 
-This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology with Claude-Flow orchestration for systematic Test-Driven Development.
+## Agent Repository Overview
 
-## SPARC Commands
+**Total Agents**: 607
+**Main Categories**: 7
+**All Agents Categorized**: Yes
 
-### Core Commands
-- `npx claude-flow sparc modes` - List available modes
-- `npx claude-flow sparc run <mode> "<task>"` - Execute specific mode
-- `npx claude-flow sparc tdd "<feature>"` - Run complete TDD workflow
-- `npx claude-flow sparc info <mode>` - Get mode details
+---
 
-### Batchtools Commands
-- `npx claude-flow sparc batch <modes> "<task>"` - Parallel execution
-- `npx claude-flow sparc pipeline "<task>"` - Full pipeline processing
-- `npx claude-flow sparc concurrent <mode> "<tasks-file>"` - Multi-task processing
+## Agent Directory Structure
 
-### Build Commands
-- `npm run build` - Build project
-- `npm run test` - Run tests
-- `npm run lint` - Linting
-- `npm run typecheck` - Type checking
+```
+agents/
+├── 01-software-engineering/     (274 agents)
+│   ├── frontend/
+│   │   ├── frameworks/          React, Vue, Angular, Svelte specialists
+│   │   ├── styling/             CSS, Tailwind, Sass specialists
+│   │   └── ui-components/       Material-UI, design systems
+│   ├── backend/
+│   │   ├── languages/           Python, Java, Go, Rust specialists
+│   │   ├── frameworks/          Django, Spring, Express specialists
+│   │   ├── databases/           PostgreSQL, MongoDB, Redis specialists
+│   │   └── apis-integrations/   REST, GraphQL integration agents
+│   ├── devops/
+│   │   ├── ci-cd/               Pipeline specialists
+│   │   ├── containers/          Docker, Kubernetes specialists
+│   │   ├── infrastructure/      AWS, Terraform specialists
+│   │   └── monitoring/          Observability agents
+│   ├── testing/
+│   │   └── unit-testing/        TDD, Jest, Cypress specialists
+│   ├── mobile/                  iOS, Android, Flutter, React Native
+│   └── architecture/            System design, patterns, analysis
+│
+├── 02-data-and-ai/              (94 agents)
+│   ├── data-engineering/        ETL, pipelines, data architecture
+│   ├── data-science/            Analysis, visualization, statistics
+│   ├── machine-learning/        Models, training, MLOps (80 agents)
+│   └── analytics/               BI, reporting, insights
+│
+├── 03-business/                 (66 agents)
+│   ├── marketing/               Campaigns, SEO, content strategy
+│   ├── sales/                   Enablement, CRM, lead generation
+│   ├── customer-success/        Retention, onboarding, support
+│   ├── finance/
+│   │   └── payments/            ALL 17 payment integration agents
+│   ├── operations/              Process optimization, workflow
+│   └── strategy/                Planning, competitive analysis
+│
+├── 04-security-compliance/      (69 agents)
+│   ├── application-security/    Code security, vulnerability scanning
+│   ├── infrastructure-security/ Network, cloud security
+│   └── compliance-governance/   GDPR, HIPAA, auditing, policies
+│
+├── 05-predictions-forecasting/  (44 agents)  ← ALL prediction agents
+│   ├── sports/                  Baseball, basketball, football, tennis
+│   ├── market-financial/        Stock, crypto, economic forecasts
+│   ├── social-political/        Elections, social movements
+│   ├── technology/              AI development, climate, trends
+│   └── entertainment/           Viral content, music, movies
+│
+├── 06-personal-development/     (56 agents)
+│   ├── career/                  Job search, transitions, leadership
+│   ├── skills/                  Learning, mastery, education
+│   ├── communication/           Public speaking, writing, influence
+│   ├── wellness/                Health, stress, work-life balance
+│   └── relationships/           Networking, conflict resolution
+│
+└── 07-specialized-domains/      (4 agents)
+    ├── simulations/             Monte Carlo, agent-based models
+    ├── industry-verticals/      Healthcare, legal, real estate
+    └── emerging-tech/           Quantum, blockchain innovations
+```
 
-## SPARC Workflow Phases
+---
 
-1. **Specification** - Requirements analysis (`sparc run spec-pseudocode`)
-2. **Pseudocode** - Algorithm design (`sparc run spec-pseudocode`)
-3. **Architecture** - System design (`sparc run architect`)
-4. **Refinement** - TDD implementation (`sparc tdd`)
-5. **Completion** - Integration (`sparc run integration`)
+## Key Agent Categories
 
-## Code Style & Best Practices
+### Most Used Development Agents
+- `python-specialist` - Python 3.12+ development
+- `react-19-specialist` - Modern React development
+- `typescript-specialist` - Type-safe development
+- `nodejs-specialist` - Server-side JavaScript
+- `aws-cloud-architect` - Cloud infrastructure
 
-- **Modular Design**: Files under 500 lines
-- **Environment Safety**: Never hardcode secrets
-- **Test-First**: Write tests before implementation
-- **Clean Architecture**: Separate concerns
-- **Documentation**: Keep updated
+### Payment Integration Agents (03-business/finance/payments/)
+All payment agents consolidated in one location:
+- `stripe-integration-agent`
+- `paypal-integration-agent`
+- `apple-pay-integration-agent`
+- `google-pay-integration-agent`
+- `square-integration-agent`
+- `braintree-integration-agent`
+- `klarna-bnpl-integration-agent`
+- `afterpay-bnpl-integration-agent`
+- And 9 more...
 
-## 🚀 Available Agents (54 Total)
+### Prediction Agents (05-predictions-forecasting/)
+All prediction agents consolidated by domain:
+- **Sports**: `baseball-outcome-forecasting-agent`, `basketball-game-prediction-agent`
+- **Financial**: `stock-price-movement-predictor`, `cryptocurrency-volatility-agent`
+- **Social**: `election-outcome-prediction-agent`, `social-movement-prediction-agent`
+- **Tech**: `technology-adoption-prediction-agent`, `ai-development-timeline-agent`
+- **Entertainment**: `viral-video-prediction-agent`, `music-hit-prediction-agent`
 
-### Core Development
-`coder`, `reviewer`, `tester`, `planner`, `researcher`
+---
 
-### Swarm Coordination
-`hierarchical-coordinator`, `mesh-coordinator`, `adaptive-coordinator`, `collective-intelligence-coordinator`, `swarm-memory-manager`
+## Agent Search Tool
 
-### Consensus & Distributed
-`byzantine-coordinator`, `raft-manager`, `gossip-coordinator`, `consensus-builder`, `crdt-synchronizer`, `quorum-manager`, `security-manager`
+Use the search tool to find agents quickly:
 
-### Performance & Optimization
-`perf-analyzer`, `performance-benchmarker`, `task-orchestrator`, `memory-coordinator`, `smart-agent`
+```bash
+# Search by category
+python scripts/agents-search.py --category "backend"
+python scripts/agents-search.py --category "predictions"
+python scripts/agents-search.py --category "payments"
 
-### GitHub & Repository
-`github-modes`, `pr-manager`, `code-review-swarm`, `issue-tracker`, `release-manager`, `workflow-automation`, `project-board-sync`, `repo-architect`, `multi-repo-swarm`
+# Full-text search
+python scripts/agents-search.py --query "payment stripe"
 
-### SPARC Methodology
-`sparc-coord`, `sparc-coder`, `specification`, `pseudocode`, `architecture`, `refinement`
+# Show statistics
+python scripts/agents-search.py --stats
 
-### Specialized Development
-`backend-dev`, `mobile-dev`, `ml-developer`, `cicd-engineer`, `api-docs`, `system-architect`, `code-analyzer`, `base-template-generator`
+# List all categories
+python scripts/agents-search.py --list-categories
+```
 
-### Testing & Validation
-`tdd-london-swarm`, `production-validator`
+---
 
-### Migration & Planning
-`migration-planner`, `swarm-init`
+## Claude Code vs MCP Tools
 
-## 🎯 Claude Code vs MCP Tools
-
-### Claude Code Handles ALL:
+### Claude Code Handles ALL Execution:
 - File operations (Read, Write, Edit, MultiEdit, Glob, Grep)
 - Code generation and programming
 - Bash commands and system operations
@@ -107,153 +167,26 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 - Package management
 - Testing and debugging
 
-### MCP Tools ONLY:
-- Coordination and planning
+### MCP Tools ONLY Coordinate:
+- Swarm initialization (topology setup)
+- Agent type definitions (coordination patterns)
+- Task orchestration (high-level planning)
 - Memory management
 - Neural features
 - Performance tracking
-- Swarm orchestration
-- GitHub integration
 
-**KEY**: MCP coordinates, Claude Code executes.
+**KEY**: MCP coordinates the strategy, Claude Code's Task tool executes with real agents.
 
-## 🚀 Quick Setup
+---
+
+## Quick Setup
 
 ```bash
 # Add Claude Flow MCP server
 claude mcp add claude-flow npx claude-flow@alpha mcp start
 ```
 
-## MCP Tool Categories
-
-### Coordination
-`swarm_init`, `agent_spawn`, `task_orchestrate`
-
-### Monitoring
-`swarm_status`, `agent_list`, `agent_metrics`, `task_status`, `task_results`
-
-### Memory & Neural
-`memory_usage`, `neural_status`, `neural_train`, `neural_patterns`
-
-### GitHub Integration
-`github_swarm`, `repo_analyze`, `pr_enhance`, `issue_triage`, `code_review`
-
-### System
-`benchmark_run`, `features_detect`, `swarm_monitor`
-
-## 📋 Agent Coordination Protocol
-
-### Every Agent MUST:
-
-**1️⃣ BEFORE Work:**
-```bash
-npx claude-flow@alpha hooks pre-task --description "[task]"
-npx claude-flow@alpha hooks session-restore --session-id "swarm-[id]"
-```
-
-**2️⃣ DURING Work:**
-```bash
-npx claude-flow@alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
-npx claude-flow@alpha hooks notify --message "[what was done]"
-```
-
-**3️⃣ AFTER Work:**
-```bash
-npx claude-flow@alpha hooks post-task --task-id "[task]"
-npx claude-flow@alpha hooks session-end --export-metrics true
-```
-
-## 🎯 Concurrent Execution Examples
-
-### ✅ CORRECT (Single Message):
-```javascript
-[BatchTool]:
-  // Initialize swarm
-  mcp__claude-flow__swarm_init { topology: "mesh", maxAgents: 6 }
-  mcp__claude-flow__agent_spawn { type: "researcher" }
-  mcp__claude-flow__agent_spawn { type: "coder" }
-  mcp__claude-flow__agent_spawn { type: "tester" }
-  
-  // Spawn agents with Task tool
-  Task("Research agent: Analyze requirements...")
-  Task("Coder agent: Implement features...")
-  Task("Tester agent: Create test suite...")
-  
-  // Batch todos
-  TodoWrite { todos: [
-    {id: "1", content: "Research", status: "in_progress", priority: "high"},
-    {id: "2", content: "Design", status: "pending", priority: "high"},
-    {id: "3", content: "Implement", status: "pending", priority: "high"},
-    {id: "4", content: "Test", status: "pending", priority: "medium"},
-    {id: "5", content: "Document", status: "pending", priority: "low"}
-  ]}
-  
-  // File operations
-  Bash "mkdir -p app/{src,tests,docs}"
-  Write "app/src/index.js"
-  Write "app/tests/index.test.js"
-  Write "app/docs/README.md"
-```
-
-### ❌ WRONG (Multiple Messages):
-```javascript
-Message 1: mcp__claude-flow__swarm_init
-Message 2: Task("agent 1")
-Message 3: TodoWrite { todos: [single todo] }
-Message 4: Write "file.js"
-// This breaks parallel coordination!
-```
-
-## Performance Benefits
-
-- **84.8% SWE-Bench solve rate**
-- **32.3% token reduction**
-- **2.8-4.4x speed improvement**
-- **27+ neural models**
-
-## Hooks Integration
-
-### Pre-Operation
-- Auto-assign agents by file type
-- Validate commands for safety
-- Prepare resources automatically
-- Optimize topology by complexity
-- Cache searches
-
-### Post-Operation
-- Auto-format code
-- Train neural patterns
-- Update memory
-- Analyze performance
-- Track token usage
-
-### Session Management
-- Generate summaries
-- Persist state
-- Track metrics
-- Restore context
-- Export workflows
-
-## Advanced Features (v2.0.0)
-
-- 🚀 Automatic Topology Selection
-- ⚡ Parallel Execution (2.8-4.4x speed)
-- 🧠 Neural Training
-- 📊 Bottleneck Analysis
-- 🤖 Smart Auto-Spawning
-- 🛡️ Self-Healing Workflows
-- 💾 Cross-Session Memory
-- 🔗 GitHub Integration
-
-## Integration Tips
-
-1. Start with basic swarm init
-2. Scale agents gradually
-3. Use memory for context
-4. Monitor progress regularly
-5. Train patterns from success
-6. Enable hooks automation
-7. Use GitHub tools first
+---
 
 ## Support
 
