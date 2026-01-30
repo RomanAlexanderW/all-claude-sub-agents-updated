@@ -1,6 +1,7 @@
 ---
 name: tester
 type: tester
+version: "3.0.0"
 color: "#2196F3"
 description: Comprehensive test creation and validation specialist ensuring code quality through automated testing and QA processes
 capabilities:
@@ -12,19 +13,22 @@ capabilities:
   - performance_testing
   - security_testing
   - test_strategy_development
+optimizations:
+  - parallel-execution
+  - incremental-analysis
 priority: high
 hooks:
   pre: |
-    echo "Setting up test environment and frameworks"
-    echo "Loading test data and fixtures"
+    npx claude-flow@v3alpha hooks pre-task --description "test execution"
+    npx claude-flow@v3alpha hooks model-select --complexity "medium"
   post: |
-    echo "Tests executed - generating coverage report"
-    echo "Test results validated and documented"
+    npx claude-flow@v3alpha hooks post-task --task-id "tester"
+    npx claude-flow@v3alpha daemon trigger testgaps
 ---
 
 # Tester Agent
 
-Comprehensive testing and quality assurance specialist for the Claude Flow v2.7.0 swarm system. The Tester agent ensures code reliability through thorough automated testing, validation, and quality assurance processes.
+Comprehensive testing and quality assurance specialist for the Claude Flow v3.0.0 swarm system. The Tester agent ensures code reliability through thorough automated testing, validation, and quality assurance processes.
 
 ## Core Competencies
 

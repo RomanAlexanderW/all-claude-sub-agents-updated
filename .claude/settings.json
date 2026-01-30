@@ -1,8 +1,9 @@
 {
-  "version": "2.7.0",
+  "version": "3.0.0",
   "agentDirectory": ".claude/agents",
-  "memoryBackend": "agentdb",
+  "memoryBackend": "hybrid",
   "reasoningBank": true,
+  "neuralArchitecture": "SONA",
   "skills": [
     "swarm-orchestration",
     "agentdb-vector-search",
@@ -19,47 +20,141 @@
     "hooks-automation",
     "verification-system",
     "performance-analysis",
-    "documentation-generator"
+    "documentation-generator",
+    "neural-training",
+    "model-routing",
+    "daemon-management",
+    "agent-booster",
+    "security-validation"
   ],
   "agentdb": {
     "enabled": true,
-    "version": "1.3.9",
+    "version": "2.0.0",
     "vectorSearch": true,
     "semanticUnderstanding": true,
     "rlAlgorithms": 9,
-    "indexing": "hnsw"
+    "indexing": "hnsw",
+    "hybridBackend": {
+      "sqlite": true,
+      "agentdb": true
+    }
   },
   "reasoningBankSettings": {
     "enabled": true,
     "autoFallback": true,
     "memoryCompression": "quantization",
-    "compressionRatio": "4x-32x"
+    "compressionRatio": "4x-32x",
+    "retrieveJudgeDistill": true
+  },
+  "sona": {
+    "enabled": true,
+    "adaptationTime": "<0.05ms",
+    "ewcPlusPlus": true,
+    "hyperbolicEmbeddings": true
+  },
+  "modelRouting": {
+    "enabled": true,
+    "tiers": {
+      "tier1": {
+        "name": "Agent Booster (WASM)",
+        "latency": "<1ms",
+        "cost": "$0",
+        "useCase": "simple transforms"
+      },
+      "tier2": {
+        "name": "Haiku/Sonnet",
+        "latency": "500ms-2s",
+        "useCase": "medium tasks"
+      },
+      "tier3": {
+        "name": "Opus",
+        "latency": "2-5s",
+        "useCase": "complex architecture"
+      }
+    },
+    "wasmTransforms": [
+      "var-to-const",
+      "add-types",
+      "add-error-handling",
+      "async-await",
+      "add-logging",
+      "remove-console"
+    ]
   },
   "swarmCoordination": {
     "hiveMind": true,
     "queenLedCoordination": true,
-    "workerAgents": true,
-    "faultTolerance": true
+    "queenTypes": ["Strategic", "Tactical", "Adaptive"],
+    "workerSpecializations": 8,
+    "consensusAlgorithms": ["Majority", "Weighted", "Byzantine"],
+    "faultTolerance": true,
+    "byzantineFaultTolerant": true,
+    "maxAgentDrift": "hierarchical-specialized"
   },
   "mcpTools": {
     "enabled": true,
-    "toolCount": 100,
+    "toolCount": 140,
     "categories": [
       "orchestration",
       "automation",
       "integration",
-      "monitoring"
-    ]
+      "monitoring",
+      "security",
+      "neural",
+      "daemon"
+    ],
+    "transports": ["stdio", "http", "websocket", "in-process"]
   },
   "hooks": {
+    "total": 17,
+    "core": ["pre-task", "post-task", "pre-edit", "post-edit", "pre-command", "post-command"],
+    "session": ["session-start", "session-end", "session-restore"],
+    "intelligence": ["model-select", "complexity-analyze", "route-decision"],
+    "neural": ["pattern-detect", "learn-trigger", "consolidate"],
     "preOperation": true,
     "postOperation": true,
     "errorHandling": true,
     "logging": true
   },
+  "daemon": {
+    "enabled": true,
+    "workers": 12,
+    "workerTypes": [
+      "UltraLearn",
+      "Optimize",
+      "Consolidate",
+      "Audit",
+      "Map",
+      "DeepDive",
+      "Document",
+      "Refactor",
+      "Benchmark",
+      "TestGaps",
+      "SecurityScan",
+      "PatternMine"
+    ],
+    "autoTrigger": true
+  },
+  "security": {
+    "zodValidation": true,
+    "inputSanitization": true,
+    "pathTraversalPrevention": true,
+    "commandSandboxing": true,
+    "cveHardened": true
+  },
   "performance": {
-    "vectorSearchSpeed": "96x-164x",
+    "vectorSearchSpeed": "150x-12500x",
     "memorySearchSpeed": "150x",
-    "benchmarkScore": "84.8%"
+    "hnswIndexing": true,
+    "benchmarkScore": "84.8%",
+    "targets": {
+      "cliColdStart": "<500ms",
+      "mcpServerInit": "<400ms",
+      "agentSpawn": "<200ms",
+      "vectorSearch": "<1ms",
+      "memoryWrite": "<5ms"
+    },
+    "tokenReduction": "30-50%",
+    "speedImprovement": "2.8-4.4x"
   }
 }

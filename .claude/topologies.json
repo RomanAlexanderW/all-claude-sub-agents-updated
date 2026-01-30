@@ -1,35 +1,89 @@
 {
-  "version": "2.7.0",
+  "version": "3.0.0",
+  "defaultTopology": "hierarchical",
+  "antiDriftStrategy": "specialized",
+  "maxAgents": 8,
   "topologies": {
     "hierarchical": {
-      "description": "Queen-led coordination with specialized workers",
+      "description": "Queen-led coordination with specialized workers - RECOMMENDED for anti-drift",
       "structure": "Tree",
-      "bestFor": "Large-scale projects with clear structure",
-      "agents": ["queen-coordinator", "worker-specialists", "scout-explorers"]
+      "bestFor": "Large-scale projects with clear structure, preventing goal drift",
+      "recommended": true,
+      "agents": ["queen-coordinator", "worker-specialists", "scout-explorers"],
+      "consensus": "raft",
+      "queenTypes": ["Strategic", "Tactical", "Adaptive"],
+      "workerSpecializations": 8,
+      "faultTolerance": "byzantine"
     },
     "mesh": {
-      "description": "Peer-to-peer networks with fault tolerance",
+      "description": "Peer-to-peer networks with Byzantine fault tolerance",
       "structure": "Mesh network",
       "bestFor": "Fault-tolerant, high-availability systems",
-      "agents": ["mesh-coordinator", "peer-agents"]
+      "agents": ["mesh-coordinator", "peer-agents"],
+      "consensus": "byzantine",
+      "faultTolerance": "up to 1/3 agent failures"
     },
     "adaptive": {
-      "description": "Dynamic topology switching based on workload",
-      "structure": "Hybrid",
+      "description": "Dynamic topology switching based on workload and complexity",
+      "structure": "Hybrid/Dynamic",
       "bestFor": "Dynamic workloads and optimization",
-      "agents": ["adaptive-coordinator", "dynamic-agents"]
+      "agents": ["adaptive-coordinator", "dynamic-agents"],
+      "autoSwitch": true,
+      "complexityThreshold": "medium"
     },
     "ring": {
-      "description": "Sequential processing pipeline",
+      "description": "Sequential processing pipeline for ordered workflows",
       "structure": "Ring",
-      "bestFor": "Sequential workflows",
-      "agents": ["ring-coordinator", "pipeline-agents"]
+      "bestFor": "Sequential workflows and pipelines",
+      "agents": ["ring-coordinator", "pipeline-agents"],
+      "ordered": true,
+      "passthrough": true
     },
     "star": {
       "description": "Centralized control with satellite agents",
       "structure": "Star",
-      "bestFor": "Centralized decision making",
-      "agents": ["central-coordinator", "satellite-agents"]
+      "bestFor": "Centralized decision making, simple coordination",
+      "agents": ["central-coordinator", "satellite-agents"],
+      "centralized": true,
+      "singlePointOfFailure": true
+    },
+    "hybrid": {
+      "description": "Combines multiple topologies for complex scenarios",
+      "structure": "Multi-layer",
+      "bestFor": "Complex enterprise applications requiring different patterns",
+      "agents": ["hybrid-coordinator", "topology-adapters"],
+      "layers": ["hierarchical-core", "mesh-workers", "star-satellites"],
+      "dynamicReconfiguration": true
     }
+  },
+  "consensusAlgorithms": {
+    "majority": {
+      "description": "Simple majority voting",
+      "threshold": ">50%",
+      "speed": "fast"
+    },
+    "weighted": {
+      "description": "Weighted voting based on agent expertise",
+      "threshold": "weighted majority",
+      "speed": "medium"
+    },
+    "byzantine": {
+      "description": "Byzantine fault-tolerant consensus",
+      "threshold": ">2/3",
+      "faultTolerance": "up to 1/3 failures",
+      "speed": "slower but resilient"
+    },
+    "raft": {
+      "description": "Leader-based consensus with log replication",
+      "leaderElection": true,
+      "speed": "fast with stable leader"
+    }
+  },
+  "antiDriftConfiguration": {
+    "enabled": true,
+    "strategy": "hierarchical-specialized",
+    "maxAgents": 8,
+    "goalAlignment": "continuous",
+    "contextSynchronization": "real-time"
   }
 }

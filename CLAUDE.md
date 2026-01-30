@@ -1,4 +1,4 @@
-# Claude Code Configuration - SPARC Development Environment
+# Claude Code Configuration - SPARC Development Environment (v3.0.0)
 
 ## 🚨 CRITICAL: CONCURRENT EXECUTION & FILE MANAGEMENT
 
@@ -65,20 +65,83 @@ python3 scripts/generate-catalogs.py
 
 ## Project Overview
 
-This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology with Claude-Flow orchestration for systematic Test-Driven Development.
+This project uses **Claude Flow v3** with SPARC (Specification, Pseudocode, Architecture, Refinement, Completion) methodology for systematic Test-Driven Development.
 
-## SPARC Commands
+### 🆕 Claude Flow v3 Key Features
+- **26 CLI Commands** with 140+ subcommands
+- **SONA**: Self-Optimizing Neural Architecture (<0.05ms adaptation)
+- **17 Hooks** + **12 Background Workers** (daemon)
+- **3-Tier Model Routing**: Agent Booster (WASM) → Haiku → Sonnet/Opus
+- **Hybrid Memory Backend**: SQLite + AgentDB with HNSW indexing
+- **Byzantine Fault-Tolerant Consensus**: Tolerates up to 1/3 agent failures
+- **150x-12500x Faster** vector search with hyperbolic embeddings
+
+## Claude Flow v3 Commands
+
+### Core Commands (26 Primary)
+```bash
+# Initialize project with v3
+npx claude-flow@v3alpha init --force
+npx claude-flow@v3alpha init --wizard  # Interactive setup
+
+# Agent management (8 subcommands)
+npx claude-flow@v3alpha agent spawn <type>
+npx claude-flow@v3alpha agent list
+npx claude-flow@v3alpha agent status <id>
+npx claude-flow@v3alpha agent stop <id>
+npx claude-flow@v3alpha agent metrics
+npx claude-flow@v3alpha agent pool health
+npx claude-flow@v3alpha agent logs <id>
+
+# Swarm orchestration (6 subcommands)
+npx claude-flow@v3alpha swarm create --topology hierarchical
+npx claude-flow@v3alpha swarm status
+npx claude-flow@v3alpha swarm scale --agents 8
+
+# Memory with HNSW (11 subcommands)
+npx claude-flow@v3alpha memory store <key> <value>
+npx claude-flow@v3alpha memory search <query>
+npx claude-flow@v3alpha memory vector-search <query>  # 150x-12500x faster
+npx claude-flow@v3alpha memory status
+
+# Hive-Mind with Byzantine consensus
+npx claude-flow@v3alpha hive-mind wizard
+npx claude-flow@v3alpha hive-mind spawn
+npx claude-flow@v3alpha hive-mind consensus
+```
+
+### v3 Daemon & Background Workers
+```bash
+# 12 auto-triggered workers
+npx claude-flow@v3alpha daemon start
+npx claude-flow@v3alpha daemon trigger audit --context "./src"
+npx claude-flow@v3alpha daemon trigger optimize
+npx claude-flow@v3alpha daemon trigger testgaps
+npx claude-flow@v3alpha daemon trigger securityscan
+```
+
+### v3 Migration Commands
+```bash
+# Safe v2 → v3 migration with rollback
+npx claude-flow@v3alpha migrate status
+npx claude-flow@v3alpha migrate run
+npx claude-flow@v3alpha migrate verify
+npx claude-flow@v3alpha migrate rollback
+npx claude-flow@v3alpha migrate breaking-changes
+```
+
+## SPARC Commands (v3)
 
 ### Core Commands
-- `npx claude-flow sparc modes` - List available modes
-- `npx claude-flow sparc run <mode> "<task>"` - Execute specific mode
-- `npx claude-flow sparc tdd "<feature>"` - Run complete TDD workflow
-- `npx claude-flow sparc info <mode>` - Get mode details
+- `npx claude-flow@v3alpha sparc modes` - List available modes
+- `npx claude-flow@v3alpha sparc run <mode> "<task>"` - Execute specific mode
+- `npx claude-flow@v3alpha sparc tdd "<feature>"` - Run complete TDD workflow
+- `npx claude-flow@v3alpha sparc info <mode>` - Get mode details
 
 ### Batchtools Commands
-- `npx claude-flow sparc batch <modes> "<task>"` - Parallel execution
-- `npx claude-flow sparc pipeline "<task>"` - Full pipeline processing
-- `npx claude-flow sparc concurrent <mode> "<tasks-file>"` - Multi-task processing
+- `npx claude-flow@v3alpha sparc batch <modes> "<task>"` - Parallel execution
+- `npx claude-flow@v3alpha sparc pipeline "<task>"` - Full pipeline processing
+- `npx claude-flow@v3alpha sparc concurrent <mode> "<tasks-file>"` - Multi-task processing
 
 ### Build Commands
 - `npm run build` - Build project
@@ -104,7 +167,7 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 
 ## 🚀 Available Agents
 
-### Full Agent Library (607 Agents)
+### Full Agent Library (610 Agents)
 See **[agents/README.md](agents/README.md)** for the complete library organized in 7 categories:
 - `01-software-engineering/` (274 agents) - Frontend, Backend, DevOps, Testing, Mobile
 - `02-data-and-ai/` (94 agents) - ML, Data Science, Analytics
@@ -120,7 +183,7 @@ See **[agents/README.md](agents/README.md)** for the complete library organized 
 ### Swarm Coordination
 `hierarchical-coordinator`, `mesh-coordinator`, `adaptive-coordinator`, `collective-intelligence-coordinator`, `swarm-memory-manager`
 
-### Consensus & Distributed
+### Consensus & Distributed (v3 Enhanced)
 `byzantine-coordinator`, `raft-manager`, `gossip-coordinator`, `consensus-builder`, `crdt-synchronizer`, `quorum-manager`, `security-manager`
 
 ### Performance & Optimization
@@ -160,37 +223,55 @@ See **[agents/README.md](agents/README.md)** for the complete library organized 
 - Agent type definitions (coordination patterns)
 - Task orchestration (high-level planning)
 - Memory management
-- Neural features
+- Neural features (SONA)
 - Performance tracking
 - GitHub integration
+- Daemon worker management (v3)
+- Model routing (v3)
 
 **KEY**: MCP coordinates the strategy, Claude Code's Task tool executes with real agents.
 
-## 🚀 Quick Setup
+## 🚀 Quick Setup (v3)
 
 ```bash
-# Add MCP servers (Claude Flow required, others optional)
-claude mcp add claude-flow npx claude-flow@alpha mcp start
+# Add MCP servers (Claude Flow v3 required, others optional)
+claude mcp add claude-flow -- npx claude-flow@v3alpha mcp start
 claude mcp add ruv-swarm npx ruv-swarm mcp start  # Optional: Enhanced coordination
 claude mcp add flow-nexus npx flow-nexus@latest mcp start  # Optional: Cloud features
+claude mcp add ruvector npx ruvector mcp start  # Optional: PostgreSQL AI bridge
 ```
 
-## MCP Tool Categories
+## MCP Tool Categories (v3: 140+ Tools)
 
 ### Coordination
-`swarm_init`, `agent_spawn`, `task_orchestrate`
+`swarm_init`, `swarm_create`, `swarm_scale`, `agent_spawn`, `task_orchestrate`
+
+### Agent Management (v3)
+`agent_list`, `agent_status`, `agent_stop`, `agent_metrics`, `agent_pool_health`, `agent_logs`
 
 ### Monitoring
 `swarm_status`, `agent_list`, `agent_metrics`, `task_status`, `task_results`
 
-### Memory & Neural
-`memory_usage`, `neural_status`, `neural_train`, `neural_patterns`
+### Memory & Neural (v3 Enhanced)
+`memory_usage`, `memory_vector_search`, `memory_consolidate`, `neural_status`, `neural_train`, `neural_patterns`, `neural_adapt`
+
+### Daemon & Workers (v3 New)
+`daemon_start`, `daemon_stop`, `daemon_trigger`, `daemon_schedule`, `daemon_workers`
+
+### Model Routing (v3 New)
+`route_analyze`, `route_select`, `route_metrics`, `agent_booster`
 
 ### GitHub Integration
 `github_swarm`, `repo_analyze`, `pr_enhance`, `issue_triage`, `code_review`
 
+### Security (v3 Enhanced)
+`security_audit`, `security_scan`, `security_validate`, `cve_check`, `ai_defence`
+
 ### System
 `benchmark_run`, `features_detect`, `swarm_monitor`
+
+### Migration (v3 New)
+`migrate_status`, `migrate_run`, `migrate_verify`, `migrate_rollback`, `migrate_breaking`
 
 ### Flow-Nexus MCP Tools (Optional Advanced Features)
 Flow-Nexus extends MCP capabilities with 70+ cloud-based orchestration tools:
@@ -239,36 +320,44 @@ Flow-Nexus extends MCP capabilities with 70+ cloud-based orchestration tools:
   Write "database/schema.sql"
 ```
 
-## 📋 Agent Coordination Protocol
+## 📋 Agent Coordination Protocol (v3)
 
 ### Every Agent Spawned via Task Tool MUST:
 
 **1️⃣ BEFORE Work:**
 ```bash
-npx claude-flow@alpha hooks pre-task --description "[task]"
-npx claude-flow@alpha hooks session-restore --session-id "swarm-[id]"
+npx claude-flow@v3alpha hooks pre-task --description "[task]"
+npx claude-flow@v3alpha hooks session-restore --session-id "swarm-[id]"
+npx claude-flow@v3alpha hooks model-select --complexity "[low|medium|high]"
 ```
 
 **2️⃣ DURING Work:**
 ```bash
-npx claude-flow@alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
-npx claude-flow@alpha hooks notify --message "[what was done]"
+npx claude-flow@v3alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
+npx claude-flow@v3alpha hooks notify --message "[what was done]"
+npx claude-flow@v3alpha hooks pattern-detect --context "[relevant context]"
 ```
 
 **3️⃣ AFTER Work:**
 ```bash
-npx claude-flow@alpha hooks post-task --task-id "[task]"
-npx claude-flow@alpha hooks session-end --export-metrics true
+npx claude-flow@v3alpha hooks post-task --task-id "[task]"
+npx claude-flow@v3alpha hooks consolidate --patterns true
+npx claude-flow@v3alpha hooks session-end --export-metrics true
 ```
 
 ## 🎯 Concurrent Execution Examples
 
-### ✅ CORRECT WORKFLOW: MCP Coordinates, Claude Code Executes
+### ✅ CORRECT WORKFLOW: MCP Coordinates, Claude Code Executes (v3)
 
 ```javascript
-// Step 1: MCP tools set up coordination (optional, for complex tasks)
+// Step 1: MCP tools set up coordination with v3 anti-drift configuration
 [Single Message - Coordination Setup]:
-  mcp__claude-flow__swarm_init { topology: "mesh", maxAgents: 6 }
+  mcp__claude-flow__swarm_init {
+    topology: "hierarchical",  // Recommended for anti-drift
+    maxAgents: 8,
+    consensus: "byzantine",
+    strategy: "specialized"
+  }
   mcp__claude-flow__agent_spawn { type: "researcher" }
   mcp__claude-flow__agent_spawn { type: "coder" }
   mcp__claude-flow__agent_spawn { type: "tester" }
@@ -281,7 +370,7 @@ npx claude-flow@alpha hooks session-end --export-metrics true
   Task("Database agent", "Design and implement database schema. Store decisions in memory.", "code-analyzer")
   Task("Tester agent", "Create comprehensive test suite with 90% coverage.", "tester")
   Task("Reviewer agent", "Review code quality and security. Document findings.", "reviewer")
-  
+
   // Batch ALL todos in ONE call
   TodoWrite { todos: [
     {id: "1", content: "Research API patterns", status: "in_progress", priority: "high"},
@@ -293,7 +382,7 @@ npx claude-flow@alpha hooks session-end --export-metrics true
     {id: "7", content: "API documentation", status: "pending", priority: "low"},
     {id: "8", content: "Performance optimization", status: "pending", priority: "low"}
   ]}
-  
+
   // Parallel file operations
   Bash "mkdir -p app/{src,tests,docs,config}"
   Write "app/package.json"
@@ -311,46 +400,84 @@ Message 4: Write "file.js"
 // This breaks parallel coordination!
 ```
 
-## Performance Benefits
+## Performance Benefits (v3)
 
 - **84.8% SWE-Bench solve rate**
-- **32.3% token reduction**
+- **30-50% token reduction** (via intelligent model routing)
 - **2.8-4.4x speed improvement**
+- **150x-12500x faster** vector search
+- **<0.05ms** SONA adaptation time
+- **<500ms** CLI cold start
+- **<1ms** vector search latency
 - **27+ neural models**
 
-## Hooks Integration
+## v3 Hooks System (17 Hooks)
 
-### Pre-Operation
-- Auto-assign agents by file type
-- Validate commands for safety
-- Prepare resources automatically
-- Optimize topology by complexity
-- Cache searches
+### Core Hooks (6)
+- `pre-task` - Auto-assigns agents with 3-tier model routing
+- `post-task` - Trains neural patterns and updates SONA
+- `pre-edit` - Validates with Zod schemas, checks path traversal
+- `post-edit` - Auto-formats and triggers Agent Booster transforms
+- `pre-command` - Security validation with command sandboxing
+- `post-command` - Updates memory and triggers pattern detection
 
-### Post-Operation
-- Auto-format code
-- Train neural patterns
-- Update memory
-- Analyze performance
-- Track token usage
+### Session Hooks (3)
+- `session-start` - Restores previous context with SONA state
+- `session-end` - Generates summaries and exports metrics
+- `session-restore` - Loads memory with hybrid backend
 
-### Session Management
-- Generate summaries
-- Persist state
-- Track metrics
-- Restore context
-- Export workflows
+### Intelligence Routing Hooks (3)
+- `model-select` - Selects optimal model tier (Booster/Haiku/Sonnet/Opus)
+- `complexity-analyze` - Analyzes task complexity for routing
+- `route-decision` - Routes to optimal processing tier
 
-## Advanced Features (v2.0.0)
+### Neural Learning Hooks (5)
+- `pattern-detect` - Detects patterns with HNSW and hyperbolic embeddings
+- `learn-trigger` - Triggers SONA learning cycle with EWC++
+- `consolidate` - Consolidates patterns to prevent catastrophic forgetting
 
-- 🚀 Automatic Topology Selection
-- ⚡ Parallel Execution (2.8-4.4x speed)
-- 🧠 Neural Training
-- 📊 Bottleneck Analysis
-- 🤖 Smart Auto-Spawning
-- 🛡️ Self-Healing Workflows
-- 💾 Cross-Session Memory
-- 🔗 GitHub Integration
+## v3 Daemon Workers (12 Auto-Triggered)
+
+| Worker | Purpose | Auto-Schedule |
+|--------|---------|---------------|
+| **UltraLearn** | Deep knowledge acquisition | On-demand |
+| **Optimize** | Performance tuning | After-task |
+| **Consolidate** | Memory compression | Session-end |
+| **Audit** | Security compliance | Periodic |
+| **Map** | Structure analysis | On-demand |
+| **DeepDive** | Deep investigation | On-demand |
+| **Document** | Auto-documentation | Post-edit |
+| **Refactor** | Code smell detection | On-demand |
+| **Benchmark** | Performance measurement | On-demand |
+| **TestGaps** | Test coverage gaps | Post-edit |
+| **SecurityScan** | Vulnerability scanning | Periodic |
+| **PatternMine** | Pattern discovery | Session-end |
+
+## v3 Model Routing (3-Tier)
+
+| Tier | Model | Latency | Cost | Use Case |
+|------|-------|---------|------|----------|
+| **Tier 1** | Agent Booster (WASM) | <1ms | $0 | Simple transforms |
+| **Tier 2** | Haiku/Sonnet | 500ms-2s | $ | Medium tasks |
+| **Tier 3** | Opus | 2-5s | $$$ | Complex architecture |
+
+**WASM Transforms Available:**
+- `var-to-const`, `add-types`, `add-error-handling`
+- `async-await`, `add-logging`, `remove-console`
+
+## Advanced Features (v3.0.0)
+
+- 🚀 6 Topology Options (hierarchical, mesh, ring, star, hybrid, adaptive)
+- ⚡ 150x-12500x Faster Vector Search with HNSW
+- 🧠 SONA Neural Architecture (<0.05ms adaptation)
+- 🤖 60+ Specialized Agents Built-in
+- 📊 3-Tier Model Routing (30-50% token reduction)
+- 🛡️ Byzantine Fault-Tolerant Consensus
+- 💾 Hybrid Memory Backend (SQLite + AgentDB)
+- 🔗 140+ MCP Tools
+- 🪝 17 Hooks + 12 Background Workers
+- 🔐 CVE-Hardened Security with Zod Validation
+- 🔄 Safe v2→v3 Migration with Rollback
 
 ## Integration Tips
 

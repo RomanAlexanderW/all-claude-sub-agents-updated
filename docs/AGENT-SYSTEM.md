@@ -1,4 +1,4 @@
-# Agent System Architecture - Claude Flow v2.7.0
+# Agent System Architecture - Claude Flow v3.0.0
 
 ## Overview
 
@@ -8,7 +8,7 @@ The Claude Flow Agent System provides a comprehensive framework for building, or
 
 ### Agent Structure
 
-Each agent in Claude Flow v2.7.0 follows this structure:
+Each agent in Claude Flow v3.0.0 follows this structure:
 
 ```yaml
 # .claude/agents/example-agent.yaml
@@ -63,10 +63,10 @@ AgentDB v1.3.9 enables:
 
 ```bash
 # Search for agents by capability
-npx claude-flow@alpha agents search "vector-search" --agentdb
+npx claude-flow@v3alpha agents search "vector-search" --agentdb
 
 # Store agent pattern
-npx claude-flow@alpha memory store "agent-pattern" "solution" --reasoningbank
+npx claude-flow@v3alpha memory store "agent-pattern" "solution" --reasoningbank
 ```
 
 ## 🧠 Memory Integration
@@ -115,10 +115,10 @@ const patterns = await agent.memory.search('similar-patterns', {
 
 ```bash
 # Create swarm with hive-mind
-npx claude-flow@alpha swarm "complex-task" --hive-mind --claude
+npx claude-flow@v3alpha swarm "complex-task" --hive-mind --claude
 
 # Monitor swarm
-npx claude-flow@alpha swarm monitor --live
+npx claude-flow@v3alpha swarm monitor --live
 ```
 
 ## 🔧 Agent Development

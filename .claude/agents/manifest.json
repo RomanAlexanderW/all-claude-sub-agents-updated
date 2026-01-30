@@ -1,6 +1,7 @@
 {
-  "version": "2.7.0",
+  "version": "3.0.0",
   "converted_at": "2025-11-24T08:08:00.582184",
+  "upgraded_at": "2026-01-30T00:00:00.000Z",
   "total_agents": 610,
   "categories": [
     "backend",

@@ -1,6 +1,6 @@
 # 📚 Claude-Flow Documentation
 
-Welcome to the Claude-Flow documentation! This directory contains comprehensive guides and references for using Claude-Flow v2.7.0.
+Welcome to the Claude-Flow documentation! This directory contains comprehensive guides and references for using Claude-Flow v3.0.0.
 
 ## 📖 Core Documentation
 
@@ -104,13 +104,47 @@ Third-party platform integrations
 2. [Performance Metrics](./performance/) - Benchmarks and optimization
 3. [AgentDB Integration](./agentdb/) - 96x-164x performance improvements
 
-## 📊 Performance Highlights
+## 📊 Performance Highlights (v3.0.0)
 
-- **96x-164x faster search** - AgentDB vector search improvements
-- **4-32x memory reduction** - Quantization benefits
+- **150x-12500x faster search** - HNSW + hyperbolic embeddings
+- **50-75% memory reduction** - Enhanced quantization
 - **84.8% SWE-Bench solve rate** - Industry-leading performance
-- **32.3% token reduction** - Efficient context management
+- **30-50% token reduction** - Intelligent 3-tier model routing
 - **2.8-4.4x speed improvement** - Parallel coordination
+- **<0.05ms SONA adaptation** - Self-optimizing neural architecture
+- **<500ms CLI cold start** - Optimized initialization
+
+## 📜 Release History
+
+### v3.0.0 (January 2026) - Current
+**Major Release: SONA Neural Architecture**
+- Self-Optimizing Neural Architecture with <0.05ms adaptation
+- 17 hooks + 12 background daemon workers
+- 3-tier model routing (Agent Booster/WASM → Haiku → Opus)
+- Hybrid memory backend (SQLite + AgentDB)
+- Byzantine fault-tolerant consensus
+- 6 topology options (added hybrid)
+- 140+ MCP tools
+- CVE-hardened security with Zod validation
+- Safe v2→v3 migration with rollback
+
+### v2.7.1 (November 2025)
+**Patch Release: Pattern Persistence Fix**
+- Critical fix for pattern persistence
+- CLI memory commands improvements
+- Performance optimizations
+
+### v2.7.0 (November 2025)
+**Feature Release: AgentDB Integration**
+- AgentDB v1.3.9 integration (96x-164x faster search)
+- ReasoningBank memory system
+- 610 specialized agents
+- 5 network topologies
+- 100+ MCP tools
+- Hive-mind intelligence
+
+### Earlier Versions
+See [./releases/](./releases/) for complete version history.
 
 ## 📞 Support
 
@@ -120,4 +154,4 @@ Third-party platform integrations
 
 ---
 
-*Last Updated: January 2025 | Version: v2.7.1*
+*Last Updated: January 2026 | Version: v3.0.0*

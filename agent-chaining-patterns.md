@@ -59,7 +59,7 @@ Agent Chaining Architecture:
 #### **Chain Execution Framework**
 ```bash
 # Core chaining command structure
-npx claude-flow@alpha chain create "CHAIN_NAME" \
+npx claude-flow@v3alpha chain create "CHAIN_NAME" \
   --agents [agent1→agent2→agent3] \
   --pattern [sequential|conditional|parallel|hybrid] \
   --data-flow [pipeline|broadcast|selective] \
@@ -206,7 +206,7 @@ performance_optimization:
 # Linear Processing Chain Deployment
 
 # Create linear processing chain
-npx claude-flow@alpha chain create "linear_data_processing" \
+npx claude-flow@v3alpha chain create "linear_data_processing" \
   --pattern sequential \
   --agents advanced-research-engine,data-analysis-quality-assurance,trend-detection-extrapolation,decision-making-problem-solving-agent \
   --data-flow cumulative \
@@ -214,13 +214,13 @@ npx claude-flow@alpha chain create "linear_data_processing" \
   --monitoring detailed
 
 # Configure data persistence
-npx claude-flow@alpha chain configure "linear_data_processing" \
+npx claude-flow@v3alpha chain configure "linear_data_processing" \
   --data-persistence enabled \
   --context-sharing full \
   --optimization aggressive
 
 # Setup monitoring dashboard
-npx claude-flow@alpha monitor chain setup "linear_data_processing" \
+npx claude-flow@v3alpha monitor chain setup "linear_data_processing" \
   --metrics execution_time,data_quality,success_rate \
   --alerts enabled \
   --reporting real_time
@@ -1489,28 +1489,28 @@ Medium-Impact Optimizations:
 #### **Quick Chain Setup**
 ```bash
 # Sequential chain deployment
-npx claude-flow@alpha chain create "sequential_chain" \
+npx claude-flow@v3alpha chain create "sequential_chain" \
   --pattern sequential \
   --agents agent1,agent2,agent3 \
   --data-flow pipeline \
   --monitoring comprehensive
 
 # Conditional chain deployment
-npx claude-flow@alpha chain create "conditional_chain" \
+npx claude-flow@v3alpha chain create "conditional_chain" \
   --pattern conditional \
   --decision-agent decision-making-problem-solving-agent \
   --branches branch1,branch2,branch3 \
   --conditions complex.yaml
 
 # Parallel chain deployment
-npx claude-flow@alpha chain create "parallel_chain" \
+npx claude-flow@v3alpha chain create "parallel_chain" \
   --pattern fork-join \
   --parallel-branches 3 \
   --join-agent output-synthesis-refinement \
   --synchronization barrier
 
 # Hybrid chain deployment
-npx claude-flow@alpha chain create "hybrid_chain" \
+npx claude-flow@v3alpha chain create "hybrid_chain" \
   --pattern hybrid \
   --stages 4 \
   --config hybrid_config.yaml \
@@ -1520,17 +1520,17 @@ npx claude-flow@alpha chain create "hybrid_chain" \
 #### **Chain Management Commands**
 ```bash
 # Monitor chain performance
-npx claude-flow@alpha chain monitor --chain-name "CHAIN_NAME" \
+npx claude-flow@v3alpha chain monitor --chain-name "CHAIN_NAME" \
   --metrics performance,quality,resources \
   --alerts enabled
 
 # Optimize chain performance
-npx claude-flow@alpha chain optimize --chain-name "CHAIN_NAME" \
+npx claude-flow@v3alpha chain optimize --chain-name "CHAIN_NAME" \
   --focus speed,quality,cost \
   --adaptation real-time
 
 # Chain health check
-npx claude-flow@alpha chain health --chain-name "CHAIN_NAME" \
+npx claude-flow@v3alpha chain health --chain-name "CHAIN_NAME" \
   --detailed true \
   --recommendations enabled
 ```

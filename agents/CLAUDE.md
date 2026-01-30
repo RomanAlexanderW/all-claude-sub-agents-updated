@@ -183,7 +183,7 @@ python scripts/agents-search.py --list-categories
 
 ```bash
 # Add Claude Flow MCP server
-claude mcp add claude-flow npx claude-flow@alpha mcp start
+claude mcp add claude-flow npx claude-flow@v3alpha mcp start
 ```
 
 ---
