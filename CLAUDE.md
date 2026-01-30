@@ -57,6 +57,9 @@ This document contains:
 - Verification commands to ensure nothing is missed
 - Current folder structure reference
 
+  **IMPORTANT:** During the update from 2.7.0 > v3 of this repo, several critical lessons were learned, and detailed notes taken for future devs & agents to learn from BEFORE attempting any future updates. Please read the entire file, BEFORE updating in the future:
+   https://github.com/RomanAlexanderW/all-claude-sub-agents-updated/blob/main/v2.7-to-v3-Update-Lessons-From-Self-Reflection.md
+
 **Key automation script**:
 ```bash
 # Regenerates all catalogs, LLM.txt, and JSON files
