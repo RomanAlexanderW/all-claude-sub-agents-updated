@@ -477,19 +477,19 @@ Synthesis Points: Queen Agent regularly synthesizes accumulated knowledge
 **Essential Claude-Flow Commands:**
 ```bash
 # Initialize hive-mind coordination
-npx claude-flow@alpha hive-mind spawn "PROJECT_OBJECTIVE" --agents 5-10 --claude
+npx claude-flow@v3alpha hive-mind spawn "PROJECT_OBJECTIVE" --agents 5-10 --claude
 
 # Deploy specialized swarm  
-npx claude-flow@alpha swarm execute "PARALLEL_TASK" --strategy adaptive
+npx claude-flow@v3alpha swarm execute "PARALLEL_TASK" --strategy adaptive
 
 # Enable automation workflows
-npx claude-flow@alpha automate workflow "PROCESS_NAME" --hooks pre,post
+npx claude-flow@v3alpha automate workflow "PROCESS_NAME" --hooks pre,post
 
 # Query shared memory for context
-npx claude-flow@alpha memory query "KEYWORD" --namespace PROJECT_NAME
+npx claude-flow@v3alpha memory query "KEYWORD" --namespace PROJECT_NAME
 
 # Monitor coordination performance
-npx claude-flow@alpha monitor performance --agents all
+npx claude-flow@v3alpha monitor performance --agents all
 ```
 
 ### **🔄 Quality Assurance**

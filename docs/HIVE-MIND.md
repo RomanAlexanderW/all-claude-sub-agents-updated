@@ -2,7 +2,7 @@
 
 ## Overview
 
-Hive-Mind is Claude Flow v2.7.0's advanced swarm coordination system featuring **queen-led intelligence** with specialized worker agents.
+Hive-Mind is Claude Flow v3.0.0's advanced swarm coordination system with **Byzantine fault-tolerant consensus** featuring **queen-led intelligence** with specialized worker agents.
 
 ## 🐝 Architecture
 
@@ -64,23 +64,23 @@ Queen Agent (Decision Maker)
 
 ```bash
 # Launch Hive-Mind wizard
-npx claude-flow@alpha hive-mind wizard
+npx claude-flow@v3alpha hive-mind wizard
 
 # Or initialize with defaults
-npx claude-flow@alpha hive-mind init --workers 8
+npx claude-flow@v3alpha hive-mind init --workers 8
 ```
 
 ### Execute with Hive-Mind
 
 ```bash
 # Run task with hive-mind coordination
-npx claude-flow@alpha swarm "complex-task" --hive-mind --claude
+npx claude-flow@v3alpha swarm "complex-task" --hive-mind --claude
 
 # Monitor execution
-npx claude-flow@alpha hive-mind monitor --live
+npx claude-flow@v3alpha hive-mind monitor --live
 
 # View hive statistics
-npx claude-flow@alpha hive-mind stats
+npx claude-flow@v3alpha hive-mind stats
 ```
 
 ## 🧬 Hive-Mind Operations
@@ -89,45 +89,45 @@ npx claude-flow@alpha hive-mind stats
 
 ```bash
 # Create new hive
-npx claude-flow@alpha hive-mind create --name "my-hive" --workers 10
+npx claude-flow@v3alpha hive-mind create --name "my-hive" --workers 10
 
 # Split hive (when grown too large)
-npx claude-flow@alpha hive-mind split --source "my-hive"
+npx claude-flow@v3alpha hive-mind split --source "my-hive"
 
 # Merge hives
-npx claude-flow@alpha hive-mind merge --hive1 "hive-a" --hive2 "hive-b"
+npx claude-flow@v3alpha hive-mind merge --hive1 "hive-a" --hive2 "hive-b"
 
 # Transfer leadership
-npx claude-flow@alpha hive-mind leadership --transfer --to "agent-id"
+npx claude-flow@v3alpha hive-mind leadership --transfer --to "agent-id"
 ```
 
 ### Knowledge Management
 
 ```bash
 # Share pattern with workers
-npx claude-flow@alpha hive-mind knowledge share "pattern-id"
+npx claude-flow@v3alpha hive-mind knowledge share "pattern-id"
 
 # Query shared knowledge
-npx claude-flow@alpha hive-mind knowledge search "similarity-pattern"
+npx claude-flow@v3alpha hive-mind knowledge search "similarity-pattern"
 
 # Consolidate learning
-npx claude-flow@alpha hive-mind learning consolidate
+npx claude-flow@v3alpha hive-mind learning consolidate
 ```
 
 ### Health & Monitoring
 
 ```bash
 # Check hive health
-npx claude-flow@alpha hive-mind health
+npx claude-flow@v3alpha hive-mind health
 
 # Monitor real-time activity
-npx claude-flow@alpha hive-mind monitor --live --verbose
+npx claude-flow@v3alpha hive-mind monitor --live --verbose
 
 # Analyze performance
-npx claude-flow@alpha hive-mind analyze --metrics
+npx claude-flow@v3alpha hive-mind analyze --metrics
 
 # Get colony statistics
-npx claude-flow@alpha hive-mind stats --detailed
+npx claude-flow@v3alpha hive-mind stats --detailed
 ```
 
 ## 🏗️ Configuration

@@ -10,13 +10,13 @@
 **🎯 Solution (30 seconds):**
 ```bash
 # 1. Check claude-flow status
-npx claude-flow@alpha status
+npx claude-flow@v3alpha status
 
 # 2. Restart coordination
-npx claude-flow@alpha restart --force
+npx claude-flow@v3alpha restart --force
 
 # 3. Clear memory cache if needed
-npx claude-flow@alpha memory clear --confirm
+npx claude-flow@v3alpha memory clear --confirm
 ```
 
 ### **❌ Problem: Poor Agent Coordination**
@@ -40,7 +40,7 @@ npx claude-flow@alpha memory clear --confirm
 ### **Issue #1: Claude-Flow Not Installing**
 
 **❌ Symptoms:**
-- `npx claude-flow@alpha init --force` fails
+- `npx claude-flow@v3alpha init --force` fails
 - Permission errors during installation
 - Missing dependencies
 
@@ -53,13 +53,13 @@ npm cache clean --force
 npm install -g npm@latest
 
 # Step 3: Try installation with different flags
-npx --yes claude-flow@alpha init --force
+npx --yes claude-flow@v3alpha init --force
 
 # Step 4: Check Node.js version (requires 16+)
 node --version
 
 # Step 5: If still failing, install globally first
-npm install -g claude-flow@alpha
+npm install -g claude-flow@v3alpha
 ```
 
 **✅ Expected Result:** Claude-flow initializes and creates project structure
@@ -85,10 +85,10 @@ chmod 644 agents/*.md
 # Files should be: agent-name.md (lowercase, hyphen-separated)
 
 # Step 4: Re-scan agents directory
-npx claude-flow@alpha agents scan --force
+npx claude-flow@v3alpha agents scan --force
 
 # Step 5: Check configuration
-npx claude-flow@alpha config show
+npx claude-flow@v3alpha config show
 ```
 
 **✅ Expected Result:** All 607 agents are recognized and available
@@ -122,10 +122,10 @@ ls -la flowstrats.md
 # See prompt-templates.md for correct format
 
 # Step 3: Enable shared memory coordination
-npx claude-flow@alpha memory status --namespace [PROJECT_NAME]
+npx claude-flow@v3alpha memory status --namespace [PROJECT_NAME]
 
 # Step 4: Monitor agent coordination
-npx claude-flow@alpha monitor coordination --real-time
+npx claude-flow@v3alpha monitor coordination --real-time
 ```
 
 **✅ Expected Result:** Agents reference each other's work and build upon findings
@@ -197,16 +197,16 @@ Use: "Deploy hive-mind coordination for strategic analysis of our expansion into
 **🔧 Memory Troubleshooting:**
 ```bash
 # Step 1: Check memory system status
-npx claude-flow@alpha memory status
+npx claude-flow@v3alpha memory status
 
 # Step 2: Verify namespace usage
-npx claude-flow@alpha memory list --namespaces
+npx claude-flow@v3alpha memory list --namespaces
 
 # Step 3: Check memory query functionality
-npx claude-flow@alpha memory query "test" --namespace default
+npx claude-flow@v3alpha memory query "test" --namespace default
 
 # Step 4: Clear and reinitialize if needed
-npx claude-flow@alpha memory reset --namespace [PROJECT_NAME]
+npx claude-flow@v3alpha memory reset --namespace [PROJECT_NAME]
 ```
 
 **🔧 Prompt Fixes:**
@@ -232,17 +232,17 @@ Include coordination instructions:
 **🔧 Performance Optimization:**
 ```bash
 # Step 1: Check system resources
-npx claude-flow@alpha system status
+npx claude-flow@v3alpha system status
 
 # Step 2: Optimize agent allocation
-npx claude-flow@alpha agents optimize --auto
+npx claude-flow@v3alpha agents optimize --auto
 
 # Step 3: Adjust coordination strategy
 # Use SWARM for faster parallel processing
 # Use HIVE-MIND only when deep coordination needed
 
 # Step 4: Monitor performance metrics
-npx claude-flow@alpha performance monitor --duration 300
+npx claude-flow@v3alpha performance monitor --duration 300
 ```
 
 **🔧 Prompt Optimization:**
@@ -266,16 +266,16 @@ Performance Tips:
 **🔧 Memory Management:**
 ```bash
 # Step 1: Check current memory usage
-npx claude-flow@alpha memory usage --detailed
+npx claude-flow@v3alpha memory usage --detailed
 
 # Step 2: Clean old namespaces
-npx claude-flow@alpha memory cleanup --older-than 7d
+npx claude-flow@v3alpha memory cleanup --older-than 7d
 
 # Step 3: Archive important sessions
-npx claude-flow@alpha memory archive --namespace [PROJECT_NAME]
+npx claude-flow@v3alpha memory archive --namespace [PROJECT_NAME]
 
 # Step 4: Set memory limits
-npx claude-flow@alpha config set memory.max_size 1GB
+npx claude-flow@v3alpha config set memory.max_size 1GB
 ```
 
 ---
@@ -292,16 +292,16 @@ npx claude-flow@alpha config set memory.max_size 1GB
 **🔧 Quality Assurance Protocol:**
 ```bash
 # Step 1: Identify top-performing agents
-npx claude-flow@alpha agents rank --by-performance
+npx claude-flow@v3alpha agents rank --by-performance
 
 # Step 2: Use agent benchmarks for selection
 # Refer to agents-quickref.md for performance ratings
 
 # Step 3: Enable quality validation
-npx claude-flow@alpha validation enable --strict-mode
+npx claude-flow@v3alpha validation enable --strict-mode
 
 # Step 4: Set confidence score thresholds
-npx claude-flow@alpha config set quality.min_confidence 80
+npx claude-flow@v3alpha config set quality.min_confidence 80
 ```
 
 **🔧 Prompt Quality Controls:**
@@ -359,34 +359,34 @@ Cross-validate financial assumptions between agents before finalizing.
 ### **🔧 Health Check Commands**
 ```bash
 # Complete system diagnosis
-npx claude-flow@alpha diagnose --full
+npx claude-flow@v3alpha diagnose --full
 
 # Agent coordination test
-npx claude-flow@alpha test coordination --agents 3
+npx claude-flow@v3alpha test coordination --agents 3
 
 # Memory system test  
-npx claude-flow@alpha test memory --read-write
+npx claude-flow@v3alpha test memory --read-write
 
 # Performance benchmark
-npx claude-flow@alpha benchmark --quick
+npx claude-flow@v3alpha benchmark --quick
 
 # Configuration validation
-npx claude-flow@alpha config validate
+npx claude-flow@v3alpha config validate
 ```
 
 ### **🔍 Debug Mode Commands**
 ```bash
 # Enable detailed logging
-npx claude-flow@alpha config set debug.level verbose
+npx claude-flow@v3alpha config set debug.level verbose
 
 # Monitor agent communication
-npx claude-flow@alpha monitor agents --debug
+npx claude-flow@v3alpha monitor agents --debug
 
 # Trace memory operations
-npx claude-flow@alpha memory trace --real-time
+npx claude-flow@v3alpha memory trace --real-time
 
 # Profile performance bottlenecks
-npx claude-flow@alpha profile --save-report
+npx claude-flow@v3alpha profile --save-report
 ```
 
 ---
@@ -396,10 +396,10 @@ npx claude-flow@alpha profile --save-report
 ### **🚨 Complete System Reset**
 ```bash
 # WARNING: This will reset ALL data
-npx claude-flow@alpha reset --everything --confirm
+npx claude-flow@v3alpha reset --everything --confirm
 
 # Reinitialize system
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 
 # Restore agent library
 # Copy 607 agents back to agents/ folder
@@ -412,16 +412,16 @@ npx claude-flow --help
 ### **🔄 Partial Reset Options**
 ```bash
 # Reset only memory system
-npx claude-flow@alpha memory reset --all
+npx claude-flow@v3alpha memory reset --all
 
 # Reset only coordination
-npx claude-flow@alpha coordination reset
+npx claude-flow@v3alpha coordination reset
 
 # Reset only configuration
-npx claude-flow@alpha config reset --keep-agents
+npx claude-flow@v3alpha config reset --keep-agents
 
 # Reset specific namespace
-npx claude-flow@alpha memory reset --namespace [PROJECT_NAME]
+npx claude-flow@v3alpha memory reset --namespace [PROJECT_NAME]
 ```
 
 ---
@@ -437,19 +437,19 @@ npx claude-flow@alpha memory reset --namespace [PROJECT_NAME]
 ### **🔧 Advanced Troubleshooting**
 ```bash
 # Generate diagnostic report
-npx claude-flow@alpha support generate-report
+npx claude-flow@v3alpha support generate-report
 
 # Export system logs
-npx claude-flow@alpha logs export --last-24h
+npx claude-flow@v3alpha logs export --last-24h
 
 # Create support package
-npx claude-flow@alpha support package --include-config
+npx claude-flow@v3alpha support package --include-config
 ```
 
 ### **⚡ Quick Reference Cards**
 
 **🚨 When Agents Don't Respond:**
-1. Check `npx claude-flow@alpha status`
+1. Check `npx claude-flow@v3alpha status`
 2. Reference `flowstrats.md` in prompt
 3. Use proper template structure
 4. Restart with `--force` flag

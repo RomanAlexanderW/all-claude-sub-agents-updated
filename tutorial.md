@@ -22,10 +22,10 @@
 
 ```bash
 # Initialize claude-flow framework
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 
 # Verify installation
-npx claude-flow@alpha status
+npx claude-flow@v3alpha status
 ```
 
 **Expected Output:**
@@ -194,13 +194,13 @@ While your hive-mind is working, monitor the coordination:
 
 ```bash
 # Monitor real-time coordination
-npx claude-flow@alpha monitor coordination --real-time
+npx claude-flow@v3alpha monitor coordination --real-time
 
 # Check memory sharing
-npx claude-flow@alpha memory status --namespace expansion_strategy
+npx claude-flow@v3alpha memory status --namespace expansion_strategy
 
 # View agent communication
-npx claude-flow@alpha agents status --coordination
+npx claude-flow@v3alpha agents status --coordination
 ```
 
 ### **Step 8: Advanced Coordination Techniques** *(5 minutes)*
@@ -208,10 +208,10 @@ npx claude-flow@alpha agents status --coordination
 **🔧 Memory Namespace Management:**
 ```bash
 # Create dedicated project namespace
-npx claude-flow@alpha memory create-namespace european_expansion_2025
+npx claude-flow@v3alpha memory create-namespace european_expansion_2025
 
 # Query specific insights
-npx claude-flow@alpha memory query "market size" --namespace european_expansion_2025
+npx claude-flow@v3alpha memory query "market size" --namespace european_expansion_2025
 ```
 
 **🎯 Advanced Prompt Enhancements:**
@@ -323,28 +323,28 @@ Please orchestrate the complete hive-mind coordination for this multi-phase proj
 **🔧 Project Monitoring Commands:**
 ```bash
 # Monitor project coordination performance
-npx claude-flow@alpha monitor project --duration 600
+npx claude-flow@v3alpha monitor project --duration 600
 
 # Track milestone completion
-npx claude-flow@alpha milestones status --project ecommerce_platform
+npx claude-flow@v3alpha milestones status --project ecommerce_platform
 
 # Analyze agent utilization
-npx claude-flow@alpha agents utilization --detailed
+npx claude-flow@v3alpha agents utilization --detailed
 
 # Performance benchmarking
-npx claude-flow@alpha benchmark coordination --agents 10
+npx claude-flow@v3alpha benchmark coordination --agents 10
 ```
 
 **📊 Advanced Coordination Analytics:**
 ```bash
 # Export coordination report
-npx claude-flow@alpha report coordination --format json --save
+npx claude-flow@v3alpha report coordination --format json --save
 
 # Analyze communication patterns
-npx claude-flow@alpha analyze communication --network-graph
+npx claude-flow@v3alpha analyze communication --network-graph
 
 # Optimize agent allocation
-npx claude-flow@alpha optimize agents --project ecommerce_platform
+npx claude-flow@v3alpha optimize agents --project ecommerce_platform
 ```
 
 ### **Step 11: Automation Integration** *(5 minutes)*
@@ -413,25 +413,25 @@ Connect with existing development tools:
 ### **🧠 Memory Optimization Strategies**
 ```bash
 # Create hierarchical memory structure
-npx claude-flow@alpha memory create-hierarchy project/phase/domain
+npx claude-flow@v3alpha memory create-hierarchy project/phase/domain
 
 # Enable memory compression for large projects
-npx claude-flow@alpha memory optimize --compress-old
+npx claude-flow@v3alpha memory optimize --compress-old
 
 # Set up memory alerts for large usage
-npx claude-flow@alpha memory alerts --threshold 80%
+npx claude-flow@v3alpha memory alerts --threshold 80%
 ```
 
 ### **⚡ Performance Optimization**
 ```bash
 # Agent load balancing
-npx claude-flow@alpha agents balance --auto
+npx claude-flow@v3alpha agents balance --auto
 
 # Coordination pattern analysis
-npx claude-flow@alpha analyze patterns --optimize
+npx claude-flow@v3alpha analyze patterns --optimize
 
 # Resource allocation optimization
-npx claude-flow@alpha resources optimize --project-based
+npx claude-flow@v3alpha resources optimize --project-based
 ```
 
 ### **🔄 Quality Assurance Protocols**
@@ -485,13 +485,13 @@ Perfect for: Creative projects, innovation development, complex problem solving
 ### **🔧 Advanced Configuration**
 ```bash
 # Enable experimental features
-npx claude-flow@alpha config set experimental.features true
+npx claude-flow@v3alpha config set experimental.features true
 
 # Customize coordination patterns
-npx claude-flow@alpha config set coordination.pattern adaptive
+npx claude-flow@v3alpha config set coordination.pattern adaptive
 
 # Set up custom agent roles
-npx claude-flow@alpha agents create-role --name CustomExpert
+npx claude-flow@v3alpha agents create-role --name CustomExpert
 ```
 
 ### **📊 Performance Benchmarks**

@@ -2,9 +2,9 @@
 
 ## Overview
 
-Claude Flow v2.7.0 features a **hybrid memory system** combining AgentDB vector search with ReasoningBank persistent memory.
+Claude Flow v3.0.0 features a **hybrid memory system** combining AgentDB vector search with ReasoningBank persistent memory.
 
-## 🚀 AgentDB v1.3.9
+## 🚀 AgentDB v2.0.0
 
 ### Features
 
@@ -27,16 +27,16 @@ SWE-Bench Score: 84.8% (industry leading)
 
 ```bash
 # Initialize AgentDB
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 
 # Vector search for patterns
-npx claude-flow@alpha memory search "similar-patterns" --agentdb
+npx claude-flow@v3alpha memory search "similar-patterns" --agentdb
 
 # Store with semantic indexing
-npx claude-flow@alpha memory store "key" "value" --semanticindexing
+npx claude-flow@v3alpha memory store "key" "value" --semanticindexing
 
 # View AgentDB stats
-npx claude-flow@alpha memory stats --agentdb
+npx claude-flow@v3alpha memory stats --agentdb
 ```
 
 ## 🧠 ReasoningBank
@@ -67,20 +67,20 @@ ReasoningBank
 
 ```bash
 # Store reasoning pattern
-npx claude-flow@alpha memory store "solution-pattern" '{
+npx claude-flow@v3alpha memory store "solution-pattern" '{
   "problem": "optimization",
   "approach": "caching",
   "results": "2x speedup"
 }' --reasoningbank
 
 # Search patterns
-npx claude-flow@alpha memory search "performance-optimization" --semantic
+npx claude-flow@v3alpha memory search "performance-optimization" --semantic
 
 # List stored patterns
-npx claude-flow@alpha memory list --patterns
+npx claude-flow@v3alpha memory list --patterns
 
 # Clear old patterns
-npx claude-flow@alpha memory prune --days 30
+npx claude-flow@v3alpha memory prune --days 30
 ```
 
 ## 🔄 Hybrid Strategy
@@ -138,7 +138,7 @@ ReasoningBank uses quantization to reduce memory:
 ### Memory Stats
 
 ```bash
-npx claude-flow@alpha memory stats
+npx claude-flow@v3alpha memory stats
 # Output:
 # AgentDB size: 1.2 GB
 # Vector indices: 250K patterns
@@ -150,7 +150,7 @@ npx claude-flow@alpha memory stats
 ### Performance Dashboard
 
 ```bash
-npx claude-flow@alpha memory dashboard
+npx claude-flow@v3alpha memory dashboard
 # Shows: Vector search performance, hit rates, response times
 ```
 

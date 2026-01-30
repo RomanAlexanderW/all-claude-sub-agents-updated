@@ -2,7 +2,7 @@
 
 ## Overview
 
-Claude Flow v2.7.0 includes **100+ MCP (Model Context Protocol) tools** for swarm orchestration, agent coordination, and automation.
+Claude Flow v3.0.0 includes **140+ MCP (Model Context Protocol) tools** for swarm orchestration, agent coordination, and automation.
 
 ## 🎯 Tool Categories
 
@@ -153,39 +153,39 @@ Development workflow tools:
 
 ```bash
 # Initialize swarm
-npx claude-flow@alpha swarm init --workers 10
+npx claude-flow@v3alpha swarm init --workers 10
 
 # Distribute task
-npx claude-flow@alpha swarm task-distribute "task-description"
+npx claude-flow@v3alpha swarm task-distribute "task-description"
 
 # Monitor performance
-npx claude-flow@alpha swarm performance-monitor --live
+npx claude-flow@v3alpha swarm performance-monitor --live
 ```
 
 ### Hive-Mind Coordination
 
 ```bash
 # Activate hive-mind
-npx claude-flow@alpha hive-mind init
+npx claude-flow@v3alpha hive-mind init
 
 # Make consensus decision
-npx claude-flow@alpha hive-mind consensus "decision-topic"
+npx claude-flow@v3alpha hive-mind consensus "decision-topic"
 
 # Monitor colony health
-npx claude-flow@alpha hive-mind health-check
+npx claude-flow@v3alpha hive-mind health-check
 ```
 
 ### AgentDB Vector Search
 
 ```bash
 # Search patterns
-npx claude-flow@alpha memory vector-search "similar-patterns"
+npx claude-flow@v3alpha memory vector-search "similar-patterns"
 
 # Store embedding
-npx claude-flow@alpha memory embedding-generate "content"
+npx claude-flow@v3alpha memory embedding-generate "content"
 
 # Rebuild indices
-npx claude-flow@alpha memory index-rebuild
+npx claude-flow@v3alpha memory index-rebuild
 ```
 
 ## 🔧 Configuration

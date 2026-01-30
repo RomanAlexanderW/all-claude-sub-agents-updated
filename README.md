@@ -203,7 +203,7 @@ npx claude-flow@v3alpha swarm create --topology hierarchical --hive-mind
 ├── agents/                    # 610+ categorized AI agents
 ├── .claude/                   # Claude Code configuration
 │   ├── agents/               # Agent definitions
-│   └── settings.json         # v2.7.0 configuration
+│   └── settings.json         # v3.0.0 configuration
 ├── docs/                     # Comprehensive documentation
 │   ├── AGENT-SYSTEM.md      # Agent architecture
 │   ├── MEMORY-SYSTEM.md     # Memory systems guide
@@ -213,7 +213,7 @@ npx claude-flow@v3alpha swarm create --topology hierarchical --hive-mind
 ├── README.md                # This file
 ├── CLAUDE.md                # Claude Code configuration
 ├── package.json             # Node.js dependencies
-└── tutorial.md              # v2.7.0 workflow tutorial
+└── tutorial.md              # v3.0.0 workflow tutorial
 ```
 
 ---

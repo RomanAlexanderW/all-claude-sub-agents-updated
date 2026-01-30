@@ -1,4 +1,4 @@
-# Installation Guide - Claude Flow v2.7.0
+# Installation Guide - Claude Flow v3.0.0
 
 ## System Requirements
 
@@ -30,16 +30,16 @@ npm install -g @anthropic-ai/claude-code
 claude --version
 ```
 
-### 2. Install Claude Flow v2.7.0
+### 2. Install Claude Flow v3.0.0
 
 ```bash
 # Using npx (recommended)
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 
 # Or install globally
-npm install -g claude-flow@alpha
+npm install -g claude-flow@v3alpha
 claude-flow --version
-# Should output: v2.7.0-alpha.10
+# Should output: v3.0.0-alpha.185
 ```
 
 ### 3. Clone This Repository
@@ -56,10 +56,10 @@ npm install
 
 ```bash
 # Initialize with default settings
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 
 # Or with custom configuration
-npx claude-flow@alpha init --agentdb --reasoningbank --vector-search
+npx claude-flow@v3alpha init --agentdb --reasoningbank --vector-search
 ```
 
 ## Platform-Specific Instructions
@@ -71,7 +71,7 @@ npx claude-flow@alpha init --agentdb --reasoningbank --vector-search
 brew install node@20
 
 # Then follow standard installation
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 ```
 
 ### Linux (Ubuntu/Debian)
@@ -85,7 +85,7 @@ curl -fsSL https://deb.nodesource.com/setup_20.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Install Claude Flow
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 ```
 
 ### Windows
@@ -97,17 +97,17 @@ choco install nodejs
 # Or download from https://nodejs.org/
 
 # Then install Claude Flow
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 ```
 
 ### Docker
 
 ```bash
 # Use provided Docker setup
-docker build -t claude-flow:2.7.0 .
+docker build -t claude-flow:3.0.0 .
 
 # Run container
-docker run -it claude-flow:2.7.0 npx claude-flow@alpha init --force
+docker run -it claude-flow:3.0.0 npx claude-flow@v3alpha init --force
 ```
 
 ## Configuration
@@ -119,10 +119,10 @@ docker run -it claude-flow:2.7.0 npx claude-flow@alpha init --force
 claude --version
 
 # Check Claude Flow
-npx claude-flow@alpha --version
+npx claude-flow@v3alpha --version
 
 # Run diagnostics
-npx claude-flow@alpha diagnostics
+npx claude-flow@v3alpha diagnostics
 ```
 
 ### Configure AgentDB
@@ -209,32 +209,32 @@ npm install -g windows-build-tools
 export NODE_OPTIONS="--max-old-space-size=8192"
 
 # Or in commands
-NODE_OPTIONS="--max-old-space-size=8192" npx claude-flow@alpha swarm "task"
+NODE_OPTIONS="--max-old-space-size=8192" npx claude-flow@v3alpha swarm "task"
 ```
 
 ## Verification
 
 ```bash
 # Test basic functionality
-npx claude-flow@alpha agents list --limit 5
+npx claude-flow@v3alpha agents list --limit 5
 
 # Test memory system
-npx claude-flow@alpha memory store "test-key" "test-value" --reasoningbank
+npx claude-flow@v3alpha memory store "test-key" "test-value" --reasoningbank
 
 # Test vector search
-npx claude-flow@alpha memory search "test" --agentdb
+npx claude-flow@v3alpha memory search "test" --agentdb
 
 # Run health check
-npx claude-flow@alpha diagnostics --full
+npx claude-flow@v3alpha diagnostics --full
 ```
 
 ## Next Steps
 
 1. **Read the Tutorial**: `./tutorial.md`
-2. **Explore Agents**: `npx claude-flow@alpha agents list`
-3. **Create First Swarm**: `npx claude-flow@alpha swarm "simple-task" --claude`
-4. **Store Memories**: `npx claude-flow@alpha memory store key value --reasoningbank`
-5. **Learn Hive-Mind**: `npx claude-flow@alpha hive-mind wizard`
+2. **Explore Agents**: `npx claude-flow@v3alpha agents list`
+3. **Create First Swarm**: `npx claude-flow@v3alpha swarm "simple-task" --claude`
+4. **Store Memories**: `npx claude-flow@v3alpha memory store key value --reasoningbank`
+5. **Learn Hive-Mind**: `npx claude-flow@v3alpha hive-mind wizard`
 
 ## Support & Resources
 
@@ -263,4 +263,4 @@ export VECTOR_SEARCH_TIMEOUT=30000
 
 ---
 
-**Installation Complete!** You're ready to use Claude Flow v2.7.0. Start with `npx claude-flow@alpha --help`
+**Installation Complete!** You're ready to use Claude Flow v3.0.0. Start with `npx claude-flow@v3alpha --help`

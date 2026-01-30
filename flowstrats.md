@@ -28,7 +28,7 @@
 
 **Command Pattern:**
 ```bash
-npx claude-flow@alpha hive-mind spawn "PROJECT_OBJECTIVE" --agents 8 --claude
+npx claude-flow@v3alpha hive-mind spawn "PROJECT_OBJECTIVE" --agents 8 --claude
 ```
 
 **Core Structure:**
@@ -88,7 +88,7 @@ npx claude-flow@alpha hive-mind spawn "PROJECT_OBJECTIVE" --agents 8 --claude
 
 **Command Pattern:**
 ```bash
-npx claude-flow@alpha swarm execute "PARALLEL_TASK" --strategy adaptive
+npx claude-flow@v3alpha swarm execute "PARALLEL_TASK" --strategy adaptive
 ```
 
 **Core Structure:**
@@ -145,7 +145,7 @@ npx claude-flow@alpha swarm execute "PARALLEL_TASK" --strategy adaptive
 
 **Command Pattern:**
 ```bash
-npx claude-flow@alpha automate workflow "PROCESS_NAME" --hooks pre,post
+npx claude-flow@v3alpha automate workflow "PROCESS_NAME" --hooks pre,post
 ```
 
 **Core Structure:**
@@ -265,13 +265,13 @@ npx claude-flow@alpha automate workflow "PROCESS_NAME" --hooks pre,post
 **Custom Namespace Strategy:**
 ```bash
 # Create project-specific namespaces
-npx claude-flow@alpha memory create-namespace "project_alpha_2025"
+npx claude-flow@v3alpha memory create-namespace "project_alpha_2025"
 
 # Query specific insights
-npx claude-flow@alpha memory query "architecture" --namespace "project_alpha_2025"
+npx claude-flow@v3alpha memory query "architecture" --namespace "project_alpha_2025"
 
 # Manage memory lifecycle
-npx claude-flow@alpha memory archive --namespace "completed_projects"
+npx claude-flow@v3alpha memory archive --namespace "completed_projects"
 ```
 
 ### **⚡ Performance Optimization**
@@ -285,13 +285,13 @@ npx claude-flow@alpha memory archive --namespace "completed_projects"
 **Optimization Commands:**
 ```bash
 # Memory optimization
-npx claude-flow@alpha memory optimize --compress-old
+npx claude-flow@v3alpha memory optimize --compress-old
 
 # Performance monitoring
-npx claude-flow@alpha memory status --performance
+npx claude-flow@v3alpha memory status --performance
 
 # Cleanup operations
-npx claude-flow@alpha memory cleanup --older-than 30d
+npx claude-flow@v3alpha memory cleanup --older-than 30d
 ```
 
 ---
@@ -309,13 +309,13 @@ npx claude-flow@alpha memory cleanup --older-than 30d
 **Optimization Strategies:**
 ```bash
 # Enable advanced coordination
-npx claude-flow@alpha coordination enable --pattern adaptive
+npx claude-flow@v3alpha coordination enable --pattern adaptive
 
 # Monitor agent communication
-npx claude-flow@alpha monitor agents --communication
+npx claude-flow@v3alpha monitor agents --communication
 
 # Optimize coordination performance
-npx claude-flow@alpha coordination optimize --neural-enhanced
+npx claude-flow@v3alpha coordination optimize --neural-enhanced
 ```
 
 ### **🎯 Quality Assurance Protocols**
@@ -330,13 +330,13 @@ npx claude-flow@alpha coordination optimize --neural-enhanced
 **Quality Commands:**
 ```bash
 # Enable strict quality mode
-npx claude-flow@alpha quality enable --strict-mode
+npx claude-flow@v3alpha quality enable --strict-mode
 
 # Set confidence thresholds
-npx claude-flow@alpha config set quality.min_confidence 85
+npx claude-flow@v3alpha config set quality.min_confidence 85
 
 # Quality monitoring
-npx claude-flow@alpha quality monitor --real-time
+npx claude-flow@v3alpha quality monitor --real-time
 ```
 
 ### **📊 Performance Monitoring**
@@ -350,13 +350,13 @@ npx claude-flow@alpha quality monitor --real-time
 **Monitoring Commands:**
 ```bash
 # Comprehensive monitoring
-npx claude-flow@alpha monitor --comprehensive --duration 600
+npx claude-flow@v3alpha monitor --comprehensive --duration 600
 
 # Performance analytics
-npx claude-flow@alpha analytics performance --export
+npx claude-flow@v3alpha analytics performance --export
 
 # System health check
-npx claude-flow@alpha health --detailed --alerts
+npx claude-flow@v3alpha health --detailed --alerts
 ```
 
 ---
@@ -394,16 +394,16 @@ npx claude-flow@alpha health --detailed --alerts
 **Essential Setup:**
 ```bash
 # Initial system configuration
-npx claude-flow@alpha init --force --configuration optimal
+npx claude-flow@v3alpha init --force --configuration optimal
 
 # Enable all advanced features
-npx claude-flow@alpha config set advanced.features true
+npx claude-flow@v3alpha config set advanced.features true
 
 # Setup monitoring and alerting
-npx claude-flow@alpha monitor setup --comprehensive
+npx claude-flow@v3alpha monitor setup --comprehensive
 
 # Configure memory optimization
-npx claude-flow@alpha memory configure --performance-optimized
+npx claude-flow@v3alpha memory configure --performance-optimized
 ```
 
 **Production Readiness Checklist:**

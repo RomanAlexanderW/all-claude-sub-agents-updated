@@ -733,19 +733,19 @@ Step 5: Continuous Optimization
 #### **Quick Start Industry Templates**
 ```bash
 # Technology/SaaS Quick Start
-npx claude-flow@alpha industry deploy --template saas-growth --complexity advanced
+npx claude-flow@v3alpha industry deploy --template saas-growth --complexity advanced
 
 # Healthcare Quick Start  
-npx claude-flow@alpha industry deploy --template healthcare-ops --complexity expert
+npx claude-flow@v3alpha industry deploy --template healthcare-ops --complexity expert
 
 # E-commerce Quick Start
-npx claude-flow@alpha industry deploy --template ecommerce-growth --complexity advanced
+npx claude-flow@v3alpha industry deploy --template ecommerce-growth --complexity advanced
 
 # Financial Services Quick Start
-npx claude-flow@alpha industry deploy --template fintech-innovation --complexity expert
+npx claude-flow@v3alpha industry deploy --template fintech-innovation --complexity expert
 
 # Manufacturing Quick Start
-npx claude-flow@alpha industry deploy --template smart-manufacturing --complexity advanced
+npx claude-flow@v3alpha industry deploy --template smart-manufacturing --complexity advanced
 ```
 
 ---
@@ -809,13 +809,13 @@ npx claude-flow@alpha industry deploy --template smart-manufacturing --complexit
 **Industry-Specific Deployment:**
 ```bash
 # Deploy industry-optimized swarm
-npx claude-flow@alpha industry-playbook execute [INDUSTRY] --playbook [PLAYBOOK_NAME] --complexity [LEVEL]
+npx claude-flow@v3alpha industry-playbook execute [INDUSTRY] --playbook [PLAYBOOK_NAME] --complexity [LEVEL]
 
 # Monitor industry performance
-npx claude-flow@alpha industry-playbook monitor --industry [INDUSTRY] --metrics all
+npx claude-flow@v3alpha industry-playbook monitor --industry [INDUSTRY] --metrics all
 
 # Optimize based on performance
-npx claude-flow@alpha industry-playbook optimize --industry [INDUSTRY] --focus [AREA]
+npx claude-flow@v3alpha industry-playbook optimize --industry [INDUSTRY] --focus [AREA]
 ```
 
 ---

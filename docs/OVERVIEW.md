@@ -1,6 +1,6 @@
 # 📚 Claude-Flow Documentation
 
-Welcome to the Claude-Flow documentation! This directory contains comprehensive guides and references for using Claude-Flow v2.7.0.
+Welcome to the Claude-Flow documentation! This directory contains comprehensive guides and references for using Claude-Flow v3.0.0.
 
 ## 📖 Core Documentation
 

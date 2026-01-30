@@ -60,7 +60,7 @@ Workflow Automation Stack:
 #### **Workflow Execution Framework**
 ```bash
 # Core workflow execution pattern
-npx claude-flow@alpha automate workflow create "WORKFLOW_NAME" \
+npx claude-flow@v3alpha automate workflow create "WORKFLOW_NAME" \
   --agents [agent1,agent2,agent3] \
   --sequence [sequential|parallel|conditional] \
   --hooks [pre,post,error] \
@@ -178,20 +178,20 @@ performance_optimization:
 # Document Processing Automation Deployment
 
 # Initialize workflow automation
-npx claude-flow@alpha automate workflow create "enterprise_document_processing" \
+npx claude-flow@v3alpha automate workflow create "enterprise_document_processing" \
   --config ./configs/document_processing_config.yaml \
   --agents document-repository-organizer-agent,invoice-processing-ap-automation-agent,compliance-documentation-agent \
   --monitoring comprehensive \
   --recovery-mode automatic
 
 # Setup monitoring dashboard
-npx claude-flow@alpha monitor create-dashboard "document_processing" \
+npx claude-flow@v3alpha monitor create-dashboard "document_processing" \
   --metrics processing_speed,accuracy,error_rate \
   --alerts enabled \
   --reporting daily
 
 # Configure integration points
-npx claude-flow@alpha integration setup \
+npx claude-flow@v3alpha integration setup \
   --type file_system \
   --path "/documents/inbox/" \
   --trigger_on create,modify
@@ -579,26 +579,26 @@ performance_optimization:
 # Enterprise CI/CD Pipeline Deployment
 
 # Initialize CI/CD automation
-npx claude-flow@alpha automate pipeline create "enterprise_cicd" \
+npx claude-flow@v3alpha automate pipeline create "enterprise_cicd" \
   --config ./configs/cicd_config.yaml \
   --agents cicd-engineer,docker-containerization-specialist,kubernetes-orchestration-specialist \
   --quality-gates strict \
   --monitoring comprehensive
 
 # Setup deployment strategies
-npx claude-flow@alpha deployment strategy configure \
+npx claude-flow@v3alpha deployment strategy configure \
   --blue-green enabled \
   --canary enabled \
   --rollback automatic
 
 # Configure monitoring and alerting
-npx claude-flow@alpha monitor pipeline setup \
+npx claude-flow@v3alpha monitor pipeline setup \
   --metrics build_time,test_coverage,deployment_success \
   --alerts critical_failures,performance_regression \
   --dashboards enabled
 
 # Setup security scanning
-npx claude-flow@alpha security scan configure \
+npx claude-flow@v3alpha security scan configure \
   --vulnerability-threshold zero-critical \
   --compliance-checks sox,gdpr,hipaa \
   --remediation automatic
@@ -1270,25 +1270,25 @@ Medium-Impact Optimizations:
 #### **Workflow Automation Setup**
 ```bash
 # Initialize workflow automation framework
-npx claude-flow@alpha automate framework init --production
+npx claude-flow@v3alpha automate framework init --production
 
 # Deploy business process automation
-npx claude-flow@alpha automate deploy --category business_process \
+npx claude-flow@v3alpha automate deploy --category business_process \
   --workflows document_processing,financial_close,customer_onboarding \
   --monitoring comprehensive
 
 # Deploy DevOps automation
-npx claude-flow@alpha automate deploy --category devops \
+npx claude-flow@v3alpha automate deploy --category devops \
   --workflows cicd_pipeline,infrastructure_monitoring \
   --integration kubernetes,docker
 
 # Deploy data processing automation
-npx claude-flow@alpha automate deploy --category data_processing \
+npx claude-flow@v3alpha automate deploy --category data_processing \
   --workflows realtime_analytics,data_integration \
   --scaling automatic
 
 # Deploy decision automation
-npx claude-flow@alpha automate deploy --category decision_automation \
+npx claude-flow@v3alpha automate deploy --category decision_automation \
   --workflows intelligent_decision_engine \
   --confidence-thresholds 70,90
 ```
@@ -1296,16 +1296,16 @@ npx claude-flow@alpha automate deploy --category decision_automation \
 #### **Monitoring and Management**
 ```bash
 # Monitor all workflows
-npx claude-flow@alpha automate monitor --comprehensive \
+npx claude-flow@v3alpha automate monitor --comprehensive \
   --metrics success_rate,performance,cost \
   --alerts enabled
 
 # Optimize workflow performance
-npx claude-flow@alpha automate optimize --workflows all \
+npx claude-flow@v3alpha automate optimize --workflows all \
   --focus speed,reliability,cost
 
 # Generate automation reports
-npx claude-flow@alpha automate report --period monthly \
+npx claude-flow@v3alpha automate report --period monthly \
   --format executive_summary,technical_details
 ```
 

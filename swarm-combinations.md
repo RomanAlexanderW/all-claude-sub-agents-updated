@@ -467,22 +467,22 @@ PROJECT_NAMESPACE = "swarm_[project_name]_[date]_[complexity_level]"
 
 **Simple Swarm (2-3 agents):**
 ```bash
-npx claude-flow@alpha swarm execute "TASK" --agents simple --strategy balanced
+npx claude-flow@v3alpha swarm execute "TASK" --agents simple --strategy balanced
 ```
 
 **Advanced Swarm (4-6 agents):**
 ```bash
-npx claude-flow@alpha swarm execute "TASK" --agents advanced --strategy adaptive
+npx claude-flow@v3alpha swarm execute "TASK" --agents advanced --strategy adaptive
 ```
 
 **Expert Swarm (7-10 agents):**
 ```bash
-npx claude-flow@alpha hive-mind spawn "PROJECT" --agents expert --claude
+npx claude-flow@v3alpha hive-mind spawn "PROJECT" --agents expert --claude
 ```
 
 **Legendary Swarm (11+ agents):**
 ```bash
-npx claude-flow@alpha hive-mind spawn "TRANSFORMATION" --agents legendary --neural
+npx claude-flow@v3alpha hive-mind spawn "TRANSFORMATION" --agents legendary --neural
 ```
 
 ### **🧠 Quality Assurance Protocol**
