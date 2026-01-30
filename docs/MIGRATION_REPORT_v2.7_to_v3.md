@@ -284,6 +284,10 @@ npx claude-flow@v3alpha daemon trigger testgaps
 - [x] All @alpha references changed to @v3alpha
 - [x] Node.js requirement updated to 20+
 - [x] New SONA, daemon, and routing configurations added
+- [x] .claude/agents/manifest.json updated to v3.0.0
+- [x] All 5 core agents updated with v3 frontmatter (version, optimizations, hooks)
+- [x] All agent file content references updated from v2.7.0 to v3.0.0
+- [x] agents/CLAUDE.md @alpha references updated to @v3alpha
 
 ---
 
