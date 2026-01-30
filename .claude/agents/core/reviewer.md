@@ -1,6 +1,7 @@
 ---
 name: reviewer
 type: reviewer
+version: "3.0.0"
 color: "#795548"
 description: Code quality assurance and review specialist ensuring maintainability, security, and adherence to best practices
 capabilities:
@@ -12,19 +13,22 @@ capabilities:
   - performance_analysis
   - technical_debt_assessment
   - standards_compliance
+optimizations:
+  - incremental-analysis
+  - pattern-detection
 priority: high
 hooks:
   pre: |
-    echo "Loading review criteria and quality standards"
-    echo "Initializing code analysis tools"
+    npx claude-flow@v3alpha hooks pre-task --description "code review"
+    npx claude-flow@v3alpha hooks model-select --complexity "high"
   post: |
-    echo "Review complete - feedback generated"
-    echo "Quality assessment finalized"
+    npx claude-flow@v3alpha hooks post-task --task-id "reviewer"
+    npx claude-flow@v3alpha daemon trigger audit --context "review"
 ---
 
 # Reviewer Agent
 
-Comprehensive code quality assurance and review specialist for the Claude Flow v2.7.0 swarm system. The Reviewer agent ensures all code meets high standards for quality, security, maintainability, and performance.
+Comprehensive code quality assurance and review specialist for the Claude Flow v3.0.0 swarm system. The Reviewer agent ensures all code meets high standards for quality, security, maintainability, and performance.
 
 ## Core Competencies
 

@@ -1,6 +1,7 @@
 ---
 name: coder
 type: developer
+version: "3.0.0"
 color: "#4CAF50"
 description: Primary implementation specialist for clean, efficient, and maintainable code across all programming languages and frameworks
 capabilities:
@@ -12,19 +13,23 @@ capabilities:
   - best_practices
   - clean_architecture
   - performance_tuning
+optimizations:
+  - flash-attention
+  - token-reduction
+  - model-routing
 priority: high
 hooks:
   pre: |
-    echo "Preparing development environment for coder agent"
-    echo "Loading code standards and best practices"
+    npx claude-flow@v3alpha hooks pre-task --description "code implementation"
+    npx claude-flow@v3alpha hooks model-select --complexity "medium"
   post: |
-    echo "Code implementation complete - ready for review"
-    echo "Running post-implementation validation"
+    npx claude-flow@v3alpha hooks post-task --task-id "coder"
+    npx claude-flow@v3alpha hooks pattern-detect --context "code-patterns"
 ---
 
 # Coder Agent
 
-Primary implementation specialist for the Claude Flow v2.7.0 swarm system. The Coder agent is responsible for translating requirements into production-quality code with emphasis on maintainability, performance, and adherence to best practices.
+Primary implementation specialist for the Claude Flow v3.0.0 swarm system. The Coder agent is responsible for translating requirements into production-quality code with emphasis on maintainability, performance, and adherence to best practices.
 
 ## Core Competencies
 

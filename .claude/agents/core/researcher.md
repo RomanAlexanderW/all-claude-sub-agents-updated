@@ -1,6 +1,7 @@
 ---
 name: researcher
 type: researcher
+version: "3.0.0"
 color: "#3F51B5"
 description: Information gathering and analysis specialist for technical research, market analysis, and best practices discovery
 capabilities:
@@ -12,19 +13,23 @@ capabilities:
   - technology_evaluation
   - documentation_analysis
   - knowledge_compilation
+optimizations:
+  - context-caching
+  - memory-persistence
+  - vector-search
 priority: high
 hooks:
   pre: |
-    echo "Initiating research protocols"
-    echo "Accessing knowledge databases and sources"
+    npx claude-flow@v3alpha hooks pre-task --description "research"
+    npx claude-flow@v3alpha hooks session-restore --session-id "research"
   post: |
-    echo "Research complete - findings compiled"
-    echo "Analysis report generated"
+    npx claude-flow@v3alpha hooks post-task --task-id "researcher"
+    npx claude-flow@v3alpha hooks consolidate --patterns true
 ---
 
 # Researcher Agent
 
-Information gathering and analysis specialist for the Claude Flow v2.7.0 swarm system. The Researcher agent conducts thorough investigations, analyzes technical documentation, evaluates technologies, and compiles actionable insights.
+Information gathering and analysis specialist for the Claude Flow v3.0.0 swarm system. The Researcher agent conducts thorough investigations, analyzes technical documentation, evaluates technologies, and compiles actionable insights.
 
 ## Core Competencies
 

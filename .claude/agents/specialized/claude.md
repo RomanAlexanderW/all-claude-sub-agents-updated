@@ -140,7 +140,7 @@ This project uses SPARC (Specification, Pseudocode, Architecture, Refinement, Co
 
 ```bash
 # Add Claude Flow MCP server
-claude mcp add claude-flow npx claude-flow@alpha mcp start
+claude mcp add claude-flow npx claude-flow@v3alpha mcp start
 ```
 
 ## MCP Tool Categories
@@ -166,20 +166,20 @@ claude mcp add claude-flow npx claude-flow@alpha mcp start
 
 **1️⃣ BEFORE Work:**
 ```bash
-npx claude-flow@alpha hooks pre-task --description "[task]"
-npx claude-flow@alpha hooks session-restore --session-id "swarm-[id]"
+npx claude-flow@v3alpha hooks pre-task --description "[task]"
+npx claude-flow@v3alpha hooks session-restore --session-id "swarm-[id]"
 ```
 
 **2️⃣ DURING Work:**
 ```bash
-npx claude-flow@alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
-npx claude-flow@alpha hooks notify --message "[what was done]"
+npx claude-flow@v3alpha hooks post-edit --file "[file]" --memory-key "swarm/[agent]/[step]"
+npx claude-flow@v3alpha hooks notify --message "[what was done]"
 ```
 
 **3️⃣ AFTER Work:**
 ```bash
-npx claude-flow@alpha hooks post-task --task-id "[task]"
-npx claude-flow@alpha hooks session-end --export-metrics true
+npx claude-flow@v3alpha hooks post-task --task-id "[task]"
+npx claude-flow@v3alpha hooks session-end --export-metrics true
 ```
 
 ## 🎯 Concurrent Execution Examples

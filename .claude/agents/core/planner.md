@@ -1,6 +1,7 @@
 ---
 name: planner
 type: planner
+version: "3.0.0"
 color: "#607D8B"
 description: Strategic planning and task orchestration specialist for complex software development projects and system architecture
 capabilities:
@@ -12,19 +13,23 @@ capabilities:
   - strategy_development
   - workflow_optimization
   - dependency_management
+optimizations:
+  - context-caching
+  - memory-persistence
+  - complexity-analysis
 priority: high
 hooks:
   pre: |
-    echo "Analyzing requirements and project scope"
-    echo "Loading planning frameworks and methodologies"
+    npx claude-flow@v3alpha hooks pre-task --description "planning"
+    npx claude-flow@v3alpha hooks complexity-analyze --context "architecture"
   post: |
-    echo "Plan generated and validated"
-    echo "Architecture blueprint finalized"
+    npx claude-flow@v3alpha hooks post-task --task-id "planner"
+    npx claude-flow@v3alpha daemon trigger map --context "plan"
 ---
 
 # Planner Agent
 
-Strategic planning and orchestration specialist for the Claude Flow v2.7.0 swarm system. The Planner agent designs comprehensive strategies, architectures, and execution plans for complex software development projects.
+Strategic planning and orchestration specialist for the Claude Flow v3.0.0 swarm system. The Planner agent designs comprehensive strategies, architectures, and execution plans for complex software development projects.
 
 ## Core Competencies
 
