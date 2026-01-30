@@ -1,49 +1,114 @@
 {
-  "version": "2.7.0",
+  "version": "3.0.0",
+  "specification": "MCP 2025-11-25",
+  "toolCount": 140,
+  "transports": ["stdio", "http", "websocket", "in-process"],
   "tools": {
     "swarm": {
-      "swarm_init": "Initialize swarm with topology",
-      "agent_spawn": "Create new agent instance",
-      "task_orchestrate": "Coordinate task execution",
-      "swarm_status": "Get swarm status",
-      "swarm_terminate": "Terminate swarm"
+      "swarm_init": "Initialize swarm with topology and anti-drift configuration",
+      "swarm_create": "Create new swarm instance",
+      "swarm_scale": "Scale swarm agents up/down",
+      "agent_spawn": "Create new agent instance with specialization",
+      "task_orchestrate": "Coordinate task execution with consensus",
+      "swarm_status": "Get comprehensive swarm status",
+      "swarm_terminate": "Gracefully terminate swarm",
+      "swarm_topology": "Configure swarm topology (hierarchical/mesh/ring/star/hybrid/adaptive)"
+    },
+    "agent": {
+      "agent_list": "List all active agents",
+      "agent_status": "Get agent status and health",
+      "agent_stop": "Stop specific agent",
+      "agent_metrics": "Get agent performance metrics",
+      "agent_pool_health": "Check agent pool health",
+      "agent_logs": "Stream agent logs"
     },
     "memory": {
       "memory_usage": "Store/retrieve persistent memory",
-      "memory_search": "Pattern-based memory search",
-      "memory_store": "Store key-value pair",
-      "memory_query": "Query stored memories",
-      "memory_vector_search": "Semantic vector search",
+      "memory_search": "Pattern-based memory search (150x-12500x faster)",
+      "memory_store": "Store key-value pair with hybrid backend",
+      "memory_query": "Query stored memories with HNSW indexing",
+      "memory_vector_search": "Semantic vector search with hyperbolic embeddings",
       "memory_store_vector": "Store with vector embedding",
-      "memory_agentdb_info": "AgentDB status"
+      "memory_agentdb_info": "AgentDB v2.0 status",
+      "memory_consolidate": "Consolidate and compress memory",
+      "memory_export": "Export memory state",
+      "memory_import": "Import memory state"
     },
     "neural": {
-      "neural_status": "Neural module status",
-      "neural_train": "Train neural patterns",
-      "neural_patterns": "List learned patterns"
+      "neural_status": "SONA neural module status",
+      "neural_train": "Train neural patterns with EWC++",
+      "neural_patterns": "List learned patterns",
+      "neural_consolidate": "Consolidate patterns to prevent forgetting",
+      "neural_adapt": "Trigger SONA adaptation (<0.05ms)",
+      "neural_embeddings": "Generate hyperbolic embeddings"
+    },
+    "hooks": {
+      "hooks_list": "List all 17 available hooks",
+      "hooks_run": "Execute specific hook",
+      "hooks_configure": "Configure hook behavior",
+      "hooks_status": "Get hooks execution status"
+    },
+    "daemon": {
+      "daemon_start": "Start background worker daemon",
+      "daemon_stop": "Stop daemon",
+      "daemon_status": "Get daemon status",
+      "daemon_trigger": "Trigger specific worker",
+      "daemon_schedule": "Schedule worker execution",
+      "daemon_workers": "List 12 available workers"
+    },
+    "routing": {
+      "route_analyze": "Analyze task complexity for routing",
+      "route_select": "Select optimal model tier",
+      "route_metrics": "Get routing performance metrics",
+      "agent_booster": "Execute WASM transform (352x faster)"
     },
     "github": {
       "github_repo_analyze": "Analyze repository",
       "github_pr_manage": "Manage pull requests",
+      "github_pr_enhance": "AI-enhanced PR review",
       "github_issue_track": "Track issues",
+      "github_issue_triage": "AI-powered issue triage",
       "github_workflow_run": "Run GitHub Actions",
-      "github_release_create": "Create releases"
+      "github_release_create": "Create releases",
+      "github_code_review": "Multi-agent code review"
     },
     "performance": {
       "benchmark_run": "Run performance benchmarks",
       "performance_report": "Generate performance report",
-      "bottleneck_analyze": "Analyze bottlenecks"
+      "bottleneck_analyze": "Analyze bottlenecks",
+      "flash_attention": "Enable Flash Attention speedups",
+      "performance_profile": "Profile execution performance"
+    },
+    "security": {
+      "security_audit": "Run security audit",
+      "security_scan": "Scan for vulnerabilities",
+      "security_validate": "Validate input with Zod schemas",
+      "cve_check": "Check for CVE issues",
+      "ai_defence": "AI-powered threat detection (<10ms)"
     },
     "coordination": {
       "agent_communicate": "Inter-agent communication",
-      "task_delegate": "Delegate tasks",
-      "result_aggregate": "Aggregate results"
+      "task_delegate": "Delegate tasks with consensus",
+      "result_aggregate": "Aggregate results",
+      "consensus_byzantine": "Byzantine fault-tolerant consensus",
+      "consensus_weighted": "Weighted consensus voting",
+      "consensus_majority": "Majority consensus voting"
+    },
+    "migration": {
+      "migrate_status": "Check migration status",
+      "migrate_run": "Run v2 to v3 migration",
+      "migrate_verify": "Verify migration success",
+      "migrate_rollback": "Rollback migration",
+      "migrate_breaking": "List breaking changes"
     }
   },
   "mcpServers": {
     "claude-flow": {
       "command": "npx",
-      "args": ["claude-flow@alpha", "mcp", "start"]
+      "args": ["claude-flow@v3alpha", "mcp", "start"],
+      "env": {
+        "CLAUDE_FLOW_TOOL_MODE": "develop"
+      }
     },
     "ruv-swarm": {
       "command": "npx",
@@ -52,6 +117,16 @@
     "flow-nexus": {
       "command": "npx",
       "args": ["flow-nexus@latest", "mcp", "start"]
+    },
+    "ruvector": {
+      "command": "npx",
+      "args": ["ruvector", "mcp", "start"]
     }
+  },
+  "toolModes": {
+    "develop": "Full development toolkit",
+    "pr-review": "PR review focused tools",
+    "devops": "DevOps and deployment tools",
+    "triage": "Issue triage tools"
   }
 }

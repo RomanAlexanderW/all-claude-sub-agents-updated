@@ -1,46 +1,168 @@
 {
-  "version": "2.7.0",
+  "version": "3.0.0",
+  "totalHooks": 17,
+  "totalWorkers": 12,
   "hooks": {
-    "pre-operation": {
+    "core": {
       "pre-task": {
-        "description": "Auto-assigns agents by complexity",
-        "script": "echo 'Analyzing task complexity...'"
-      },
-      "pre-edit": {
-        "description": "Validates files and prepares resources",
-        "script": "echo 'Validating target files...'"
-      },
-      "pre-command": {
-        "description": "Security validation",
-        "script": "echo 'Security check...'"
-      }
-    },
-    "post-operation": {
-      "post-edit": {
-        "description": "Auto-formats code",
-        "script": "echo 'Formatting code...'"
+        "description": "Auto-assigns agents by complexity with 3-tier model routing",
+        "script": "npx claude-flow@v3alpha hooks pre-task",
+        "modelRouting": true,
+        "complexityAnalysis": true
       },
       "post-task": {
-        "description": "Trains neural patterns",
-        "script": "echo 'Learning from task...'"
+        "description": "Trains neural patterns and updates SONA",
+        "script": "npx claude-flow@v3alpha hooks post-task",
+        "neuralLearning": true,
+        "patternConsolidation": true
+      },
+      "pre-edit": {
+        "description": "Validates files, prepares resources, checks security",
+        "script": "npx claude-flow@v3alpha hooks pre-edit",
+        "zodValidation": true,
+        "pathTraversalCheck": true
+      },
+      "post-edit": {
+        "description": "Auto-formats code and triggers Agent Booster transforms",
+        "script": "npx claude-flow@v3alpha hooks post-edit",
+        "wasmTransforms": true,
+        "autoFormat": true
+      },
+      "pre-command": {
+        "description": "Security validation with command sandboxing",
+        "script": "npx claude-flow@v3alpha hooks pre-command",
+        "sandboxing": true,
+        "allowlistCheck": true
       },
       "post-command": {
-        "description": "Updates memory",
-        "script": "echo 'Updating memory...'"
+        "description": "Updates memory and triggers pattern detection",
+        "script": "npx claude-flow@v3alpha hooks post-command",
+        "memoryUpdate": true,
+        "patternDetection": true
       }
     },
     "session": {
       "session-start": {
-        "description": "Restores previous context",
-        "script": "echo 'Restoring session context...'"
+        "description": "Restores previous context with SONA state",
+        "script": "npx claude-flow@v3alpha hooks session-start",
+        "sonaRestore": true,
+        "contextRecovery": true
       },
       "session-end": {
-        "description": "Generates summaries",
-        "script": "echo 'Generating session summary...'"
+        "description": "Generates summaries and exports metrics",
+        "script": "npx claude-flow@v3alpha hooks session-end --export-metrics true",
+        "summaryGeneration": true,
+        "metricsExport": true
       },
       "session-restore": {
-        "description": "Loads memory",
-        "script": "echo 'Loading session memory...'"
+        "description": "Loads memory with hybrid backend",
+        "script": "npx claude-flow@v3alpha hooks session-restore",
+        "hybridMemoryLoad": true,
+        "ewcRestore": true
+      }
+    },
+    "intelligence": {
+      "model-select": {
+        "description": "Selects optimal model tier based on task complexity",
+        "script": "npx claude-flow@v3alpha hooks model-select",
+        "tiers": ["agent-booster", "haiku", "sonnet", "opus"],
+        "complexityThresholds": true
+      },
+      "complexity-analyze": {
+        "description": "Analyzes task complexity for routing decisions",
+        "script": "npx claude-flow@v3alpha hooks complexity-analyze",
+        "semanticAnalysis": true,
+        "costOptimization": true
+      },
+      "route-decision": {
+        "description": "Routes to optimal processing tier",
+        "script": "npx claude-flow@v3alpha hooks route-decision",
+        "latencyTarget": "<1ms",
+        "costTarget": "30-50% reduction"
+      }
+    },
+    "neural": {
+      "pattern-detect": {
+        "description": "Detects patterns for SONA learning",
+        "script": "npx claude-flow@v3alpha hooks pattern-detect",
+        "hnswIndexing": true,
+        "hyperbolicEmbeddings": true
+      },
+      "learn-trigger": {
+        "description": "Triggers SONA learning cycle",
+        "script": "npx claude-flow@v3alpha hooks learn-trigger",
+        "ewcPlusPlus": true,
+        "adaptationTime": "<0.05ms"
+      },
+      "consolidate": {
+        "description": "Consolidates learned patterns to prevent forgetting",
+        "script": "npx claude-flow@v3alpha hooks consolidate",
+        "elasticWeightConsolidation": true,
+        "memoryCompression": true
+      }
+    }
+  },
+  "daemon": {
+    "workers": {
+      "UltraLearn": {
+        "description": "Deep knowledge acquisition and learning",
+        "trigger": "npx claude-flow@v3alpha daemon trigger ultralearn",
+        "autoSchedule": "on-demand"
+      },
+      "Optimize": {
+        "description": "Performance optimization and tuning",
+        "trigger": "npx claude-flow@v3alpha daemon trigger optimize",
+        "autoSchedule": "after-task"
+      },
+      "Consolidate": {
+        "description": "Memory consolidation and compression",
+        "trigger": "npx claude-flow@v3alpha daemon trigger consolidate",
+        "autoSchedule": "session-end"
+      },
+      "Audit": {
+        "description": "Security and compliance auditing",
+        "trigger": "npx claude-flow@v3alpha daemon trigger audit",
+        "autoSchedule": "periodic"
+      },
+      "Map": {
+        "description": "Structure mapping and analysis",
+        "trigger": "npx claude-flow@v3alpha daemon trigger map",
+        "autoSchedule": "on-demand"
+      },
+      "DeepDive": {
+        "description": "Deep analysis and investigation",
+        "trigger": "npx claude-flow@v3alpha daemon trigger deepdive",
+        "autoSchedule": "on-demand"
+      },
+      "Document": {
+        "description": "Automatic documentation generation",
+        "trigger": "npx claude-flow@v3alpha daemon trigger document",
+        "autoSchedule": "post-edit"
+      },
+      "Refactor": {
+        "description": "Code smell detection and refactoring",
+        "trigger": "npx claude-flow@v3alpha daemon trigger refactor",
+        "autoSchedule": "on-demand"
+      },
+      "Benchmark": {
+        "description": "Performance benchmarking",
+        "trigger": "npx claude-flow@v3alpha daemon trigger benchmark",
+        "autoSchedule": "on-demand"
+      },
+      "TestGaps": {
+        "description": "Test coverage gap analysis",
+        "trigger": "npx claude-flow@v3alpha daemon trigger testgaps",
+        "autoSchedule": "post-edit"
+      },
+      "SecurityScan": {
+        "description": "Security vulnerability scanning",
+        "trigger": "npx claude-flow@v3alpha daemon trigger securityscan",
+        "autoSchedule": "periodic"
+      },
+      "PatternMine": {
+        "description": "Pattern mining and discovery",
+        "trigger": "npx claude-flow@v3alpha daemon trigger patternmine",
+        "autoSchedule": "session-end"
       }
     }
   }

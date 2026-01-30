@@ -1,8 +1,8 @@
 # 🚀 Claude Flow Documentation Hub
 
-## Welcome to Claude Flow v2.0.0-alpha.88
+## Welcome to Claude Flow v3.0.0
 
-The ultimate AI agent orchestration platform with **607 specialized agents**, **112 MCP tools**, and **swarm intelligence**. Build, deploy, and scale AI-powered applications with unprecedented speed and reliability.
+The ultimate AI agent orchestration platform with **610 specialized agents**, **140+ MCP tools**, **SONA neural architecture**, and **Byzantine fault-tolerant swarm intelligence**. Build, deploy, and scale AI-powered applications with enterprise-grade reliability.
 
 ---
 
@@ -10,42 +10,56 @@ The ultimate AI agent orchestration platform with **607 specialized agents**, **
 
 ### 1. Installation (30 seconds)
 ```bash
-# Install and initialize
-npx claude-flow@alpha init --force
+# Install and initialize with v3
+npx claude-flow@v3alpha init --force
+
+# Or use interactive wizard
+npx claude-flow@v3alpha init --wizard
 
 # Verify installation
-npx claude-flow@alpha --version
+npx claude-flow@v3alpha --version
 ```
 
 ### 2. First Swarm (1 minute)
 ```bash
-# Create your first AI swarm
-npx claude-flow@alpha swarm "build a REST API for user management"
+# Create your first AI swarm with anti-drift configuration
+npx claude-flow@v3alpha swarm create --topology hierarchical --max-agents 8
 
 # Use SPARC development methodology
-npx claude-flow@alpha sparc tdd "user authentication system"
+npx claude-flow@v3alpha sparc tdd "user authentication system"
 
-# Spawn specialized agent teams
-npx claude-flow@alpha hive-mind spawn "full-stack web app"
+# Spawn specialized agent teams with Byzantine consensus
+npx claude-flow@v3alpha hive-mind spawn --consensus byzantine
 ```
 
-### 3. Advanced Features
+### 3. Advanced Features (v3)
 ```bash
+# Agent management
+npx claude-flow@v3alpha agent spawn researcher
+npx claude-flow@v3alpha agent list
+npx claude-flow@v3alpha agent metrics
+
+# Neural SONA operations
+npx claude-flow@v3alpha neural train --patterns
+npx claude-flow@v3alpha neural adapt
+
+# Daemon workers (12 auto-triggered)
+npx claude-flow@v3alpha daemon start
+npx claude-flow@v3alpha daemon trigger audit --context "./src"
+
 # Batch processing with multiple modes
-npx claude-flow@alpha sparc batch research,architecture,code "microservices platform"
+npx claude-flow@v3alpha sparc batch research,architecture,code "microservices platform"
 
-# Complete development pipeline
-npx claude-flow@alpha sparc pipeline "e-commerce platform with payments"
-
-# GitHub integration
-npx claude-flow@alpha github pr-manager "review and merge pending PRs"
+# Migration from v2
+npx claude-flow@v3alpha migrate run
+npx claude-flow@v3alpha migrate verify
 ```
 
 ---
 
 ## 🌟 Key Features Overview
 
-### 🤖 AI Agent Ecosystem (607 Agents)
+### 🤖 AI Agent Ecosystem (610 Agents)
 | Category | Agents | Capabilities |
 |----------|---------|--------------|
 | **Core Development** | `coder`, `reviewer`, `tester`, `planner`, `researcher` | Full development lifecycle |
@@ -54,11 +68,19 @@ npx claude-flow@alpha github pr-manager "review and merge pending PRs"
 | **GitHub Integration** | `pr-manager`, `code-review-swarm`, `issue-tracker`, `release-manager` | Complete DevOps |
 | **Performance** | `perf-analyzer`, `performance-benchmarker`, `production-validator` | Optimization & validation |
 
-### 🐝 Swarm Intelligence Topologies
-- **Hierarchical**: Queen-led coordination with specialized workers
-- **Mesh**: Peer-to-peer collaboration for complex tasks  
+### 🧠 SONA Neural Architecture (v3 New)
+- **<0.05ms** adaptation time
+- **EWC++** prevents catastrophic forgetting
+- **Hyperbolic embeddings** (Poincaré ball model)
+- **5-phase learning**: Retrieve → Judge → Distill → Consolidate → Route
+
+### 🐝 Swarm Intelligence Topologies (6 Options)
+- **Hierarchical** (Recommended): Queen-led coordination with specialized workers, anti-drift
+- **Mesh**: Peer-to-peer collaboration with Byzantine fault tolerance
 - **Adaptive**: Dynamic topology that adjusts to task requirements
-- **Collective**: Hive-mind processing for distributed computing
+- **Ring**: Sequential processing pipeline for ordered workflows
+- **Star**: Centralized control with satellite agents
+- **Hybrid** (v3): Combines multiple topologies for complex scenarios
 
 ### 🛠️ SPARC Development Environment
 - **S**pecification: Automated requirement analysis
@@ -67,8 +89,8 @@ npx claude-flow@alpha github pr-manager "review and merge pending PRs"
 - **R**efinement: Iterative improvement
 - **C**ode: Production-ready implementation
 
-### 🔧 112 MCP Tools
-Complete automation toolkit covering file operations, system management, GitHub integration, performance monitoring, and distributed coordination.
+### 🔧 140+ MCP Tools (v3 Expanded)
+Complete automation toolkit covering swarm orchestration, agent management, memory operations, neural training, daemon workers, security validation, and GitHub integration.
 
 ---
 
@@ -144,31 +166,37 @@ npx claude-flow@alpha swarm status
 npx claude-flow@alpha hooks session-end --export-metrics true
 ```
 
-### Development Workflow
+### Development Workflow (v3)
 ```bash
-# Pre-task setup
-npx claude-flow@alpha hooks pre-task --description "task description"
+# Pre-task setup with model routing
+npx claude-flow@v3alpha hooks pre-task --description "task description"
+npx claude-flow@v3alpha hooks model-select --complexity "medium"
 
-# Post-edit notifications  
-npx claude-flow@alpha hooks post-edit --file "path/to/file"
+# Post-edit with Agent Booster transforms
+npx claude-flow@v3alpha hooks post-edit --file "path/to/file"
 
-# Performance analysis
-npx claude-flow@alpha hooks post-task --analyze-performance true
+# Neural pattern learning
+npx claude-flow@v3alpha hooks pattern-detect --context "relevant context"
+npx claude-flow@v3alpha hooks consolidate --patterns true
+
+# Performance analysis with daemon workers
+npx claude-flow@v3alpha daemon trigger optimize
+npx claude-flow@v3alpha daemon trigger benchmark
 ```
 
 ### GitHub Integration
 ```bash
 # Initialize GitHub integration
-npx claude-flow@alpha github init
+npx claude-flow@v3alpha github init
 
-# Manage pull requests
-npx claude-flow@alpha github pr-manager
+# AI-enhanced PR review
+npx claude-flow@v3alpha github pr-enhance
 
-# Track issues
-npx claude-flow@alpha github issue-tracker
+# Issue triage with AI
+npx claude-flow@v3alpha github issue-triage
 
 # Release management
-npx claude-flow@alpha github release-manager
+npx claude-flow@v3alpha github release-manager
 ```
 
 ---
@@ -181,52 +209,78 @@ npx claude-flow@alpha github release-manager
 ```bash
 # Clear npm cache and reinstall
 npm cache clean --force
-npx claude-flow@alpha init --force --reset
+npx claude-flow@v3alpha init --force --reset
 ```
 
-#### ❌ Agent Connection Issues  
+#### ❌ Migration Issues (v2 to v3)
+```bash
+# Check migration status
+npx claude-flow@v3alpha migrate status
+
+# Run migration
+npx claude-flow@v3alpha migrate run
+
+# Verify migration
+npx claude-flow@v3alpha migrate verify
+
+# Rollback if needed
+npx claude-flow@v3alpha migrate rollback
+```
+
+#### ❌ Agent Connection Issues
 ```bash
 # Check MCP server status
-npx claude-flow@alpha mcp status
+npx claude-flow@v3alpha mcp status
 
 # Restart MCP server
-npx claude-flow@alpha mcp restart
+npx claude-flow@v3alpha mcp restart
 ```
 
 #### ❌ Memory Issues
 ```bash
 # Clear agent memory
-npx claude-flow@alpha memory clear
+npx claude-flow@v3alpha memory clear
+
+# Consolidate memory
+npx claude-flow@v3alpha memory consolidate
 
 # Reset session state
-npx claude-flow@alpha hooks session-restore --reset
+npx claude-flow@v3alpha hooks session-restore --reset
 ```
 
 #### ❌ Performance Issues
 ```bash
-# Enable performance monitoring
-npx claude-flow@alpha hooks post-task --analyze-performance true
+# Run performance optimization daemon
+npx claude-flow@v3alpha daemon trigger optimize
+
+# Use anti-drift configuration
+npx claude-flow@v3alpha swarm create --topology hierarchical --strategy specialized
 
 # Reduce agent count for resource-constrained environments
-npx claude-flow@alpha --agents 3 swarm "task description"
+npx claude-flow@v3alpha swarm create --max-agents 4
 ```
 
 ### Getting Help
 - **GitHub Issues**: [Report bugs and feature requests](https://github.com/ruvnet/claude-flow/issues)
 - **Documentation**: Check specific documentation files for detailed guidance
 - **Community**: Join our Discord community for real-time support
-- **Performance**: SWE-Bench Score: 84.8%, Task Completion: 96.3%
+- **Performance**: SWE-Bench Score: 84.8%, Vector Search: 150x-12500x faster
 
 ---
 
 ## 📊 Performance Metrics
 
-### Benchmarks (v2.0.0-alpha.88)
+### Benchmarks (v3.0.0)
 - **SWE-Bench Score**: 84.8% (industry-leading)
-- **Task Completion Rate**: 96.3%
+- **Vector Search**: 150x-12500x faster with HNSW
+- **Token Reduction**: 30-50% via intelligent model routing
 - **Speed Improvement**: 2.8-4.4x faster than traditional development
-- **Memory Efficiency**: 87% optimization
-- **Fault Recovery**: 99.2% reliability
+- **SONA Adaptation**: <0.05ms
+- **CLI Cold Start**: <500ms
+- **MCP Server Init**: <400ms
+- **Agent Spawn**: <200ms
+- **Memory Efficiency**: 50-75% reduction via quantization
+- **Fault Recovery**: Byzantine fault-tolerant (up to 1/3 failures)
 
 ### System Requirements
 

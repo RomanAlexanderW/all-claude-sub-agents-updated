@@ -1,69 +1,100 @@
-# 🌊 Claude-Flow v2.7.0: 610+ AI Agents Repository
+# 🌊 Claude-Flow v3: 610+ AI Agents Repository
 
 <div align="center">
 
-[![📦 Claude Flow v2.7.0](https://img.shields.io/badge/Claude%20Flow-v2.7.0-green?style=for-the-badge&logo=anthropic)](https://github.com/ruvnet/claude-flow)
+[![📦 Claude Flow v3](https://img.shields.io/badge/Claude%20Flow-v3.0.0-green?style=for-the-badge&logo=anthropic)](https://github.com/ruvnet/claude-flow)
 [![🤖 610+ Agents](https://img.shields.io/badge/Agents-610%2B-blue?style=for-the-badge&logo=robot)](./agents)
-[![🎯 AgentDB v1.3.9](https://img.shields.io/badge/AgentDB-v1.3.9-purple?style=for-the-badge)](https://docs.agentdb.io)
-[![⚡ ReasoningBank Memory](https://img.shields.io/badge/ReasoningBank-Memory%20System-orange?style=for-the-badge)](./docs/MEMORY-SYSTEM.md)
-[![🐝 Hive-Mind Intelligence](https://img.shields.io/badge/Hive%20Mind-Swarm%20Coordination-crimson?style=for-the-badge)](./docs/HIVE-MIND.md)
-[![🔧 100+ MCP Tools](https://img.shields.io/badge/MCP%20Tools-100%2B-yellow?style=for-the-badge)](./docs/MCP-TOOLS.md)
+[![🎯 AgentDB v2.0](https://img.shields.io/badge/AgentDB-v2.0.0-purple?style=for-the-badge)](https://docs.agentdb.io)
+[![🧠 SONA Neural](https://img.shields.io/badge/SONA-Neural%20Architecture-orange?style=for-the-badge)](./docs/MEMORY-SYSTEM.md)
+[![🐝 Byzantine Consensus](https://img.shields.io/badge/Byzantine-Fault%20Tolerant-crimson?style=for-the-badge)](./docs/HIVE-MIND.md)
+[![🔧 140+ MCP Tools](https://img.shields.io/badge/MCP%20Tools-140%2B-yellow?style=for-the-badge)](./docs/MCP-TOOLS.md)
+[![⚡ 150x-12500x Faster](https://img.shields.io/badge/Vector%20Search-150x--12500x%20Faster-brightgreen?style=for-the-badge)](./docs/MEMORY-SYSTEM.md)
 
 </div>
 
 ## 🌟 **Overview**
 
-This repository contains **610+ specialized AI agents** built for Claude Flow v2.7.0, featuring advanced orchestration with **hive-mind swarm intelligence**, **persistent memory systems**, and **100+ MCP tools**.
+This repository contains **610+ specialized AI agents** built for **Claude Flow v3**, featuring enterprise-grade orchestration with **SONA neural architecture**, **Byzantine fault-tolerant consensus**, and **140+ MCP tools**.
+
+### 🆕 **What's New in v3**
+
+- **🧠 SONA**: Self-Optimizing Neural Architecture with <0.05ms adaptation
+- **⚡ 150x-12500x Faster**: Vector search with HNSW and hyperbolic embeddings
+- **🔐 Byzantine Consensus**: Fault-tolerant (tolerates up to 1/3 agent failures)
+- **🤖 3-Tier Model Routing**: Agent Booster (WASM) → Haiku → Sonnet/Opus
+- **🪝 17 Hooks + 12 Workers**: Comprehensive automation system
+- **📦 26 CLI Commands**: With 140+ subcommands
+- **🔄 Safe Migration**: v2→v3 with full rollback support
 
 ### 🎯 **Key Features**
 
 - **🤖 610+ Pre-built Agents**: Organized by category and function
-- **🎨 25 Claude Skills**: Natural language-activated development skills
-- **🚀 AgentDB v1.3.9 Integration**: 96x-164x faster vector search with semantic understanding
-- **🧠 ReasoningBank Memory**: Persistent memory with automatic fallback
-- **🔍 Semantic Vector Search**: HNSW indexing with 9 RL algorithms
-- **🐝 Hive-Mind Intelligence**: Queen-led AI coordination with worker agents
-- **🔧 100+ MCP Tools**: Complete toolkit for swarm orchestration
-- **🔄 Dynamic Agent Architecture**: Self-organizing agents with fault tolerance
-- **💾 Persistent Memory**: 150x faster search, 4-32x memory reduction
-- **🪝 Advanced Hooks System**: Automated workflows with pre/post operation hooks
-- **📊 GitHub Integration**: 6 specialized modes for repository management
+- **🎨 30 Claude Skills**: Natural language-activated development skills
+- **🚀 AgentDB v2.0 Integration**: 150x-12500x faster vector search with hyperbolic embeddings
+- **🧠 SONA + ReasoningBank**: Self-optimizing neural architecture with persistent memory
+- **🔍 Hybrid Memory Backend**: SQLite + AgentDB with HNSW indexing
+- **🐝 Hive-Mind Intelligence**: Queen-led coordination with 3 queen types, 8 worker specializations
+- **🔧 140+ MCP Tools**: Complete toolkit for swarm orchestration
+- **🔄 6 Topologies**: Hierarchical, mesh, ring, star, hybrid, adaptive
+- **💾 Persistent Memory**: 150x-12500x faster search, 50-75% memory reduction
+- **🪝 Advanced Hooks System**: 17 hooks + 12 background workers
+- **📊 GitHub Integration**: AI-enhanced PR reviews and issue triage
+- **🔐 CVE-Hardened Security**: Zod validation, command sandboxing, AI threat detection
 
 ## ⚡ **Quick Start**
 
 ### 📋 **Prerequisites**
 
-- Node.js 18+ (LTS recommended)
-- npm 9+ or equivalent package manager
+- Node.js 20+ (LTS recommended) ⚠️ *Updated from v18*
+- npm 10+ or equivalent package manager
 - Claude Code installed globally
 
 ### 🚀 **Installation**
 
 ```bash
-# Initialize with v2.7.0
-npx claude-flow@alpha init --force
+# Initialize with v3
+npx claude-flow@v3alpha init --force
 
-# View available commands
-npx claude-flow@alpha --help
+# Or use interactive wizard
+npx claude-flow@v3alpha init --wizard
+
+# View available commands (26 primary + 140 subcommands)
+npx claude-flow@v3alpha --help
 ```
 
-### 🎯 **Key Commands**
+### 🎯 **Key Commands (v3)**
 
 ```bash
 # Initialize a new project
-npx claude-flow@alpha init --force
+npx claude-flow@v3alpha init --force
 
-# Create a swarm for task execution
-npx claude-flow@alpha swarm "Build a REST API" --claude
+# Create a swarm with anti-drift configuration
+npx claude-flow@v3alpha swarm create --topology hierarchical --max-agents 8
 
-# Launch Hive-Mind Wizard
-npx claude-flow@alpha hive-mind wizard
+# Agent management
+npx claude-flow@v3alpha agent spawn researcher
+npx claude-flow@v3alpha agent list
+npx claude-flow@v3alpha agent metrics
 
-# Store persistent memory
-npx claude-flow@alpha memory store key "value" --reasoningbank
+# Launch Hive-Mind with Byzantine consensus
+npx claude-flow@v3alpha hive-mind wizard
+npx claude-flow@v3alpha hive-mind consensus
 
-# View agent directory
-npx claude-flow@alpha agents list
+# Memory with HNSW (150x-12500x faster)
+npx claude-flow@v3alpha memory store key "value"
+npx claude-flow@v3alpha memory vector-search "query"
+
+# Neural SONA operations
+npx claude-flow@v3alpha neural train --patterns
+npx claude-flow@v3alpha neural adapt
+
+# Background daemon workers
+npx claude-flow@v3alpha daemon start
+npx claude-flow@v3alpha daemon trigger audit --context "./src"
+
+# Migration from v2
+npx claude-flow@v3alpha migrate status
+npx claude-flow@v3alpha migrate run
 ```
 
 ## 🎨 **25 Claude Skills**
@@ -99,49 +130,70 @@ These skills activate automatically through natural language:
 "Generate documentation"                    → documentation-generator
 ```
 
-## 🔥 **AgentDB v1.3.9 Integration**
+## 🔥 **AgentDB v2.0 + SONA Integration**
 
-**Performance Metrics:**
-- **96x-164x faster** vector search with semantic understanding
-- **150x faster** memory search with advanced indexing
-- **4-32x memory reduction** through quantization
+**Performance Metrics (v3):**
+- **150x-12500x faster** vector search with HNSW and hyperbolic embeddings
+- **<1ms** vector search latency
+- **50-75% memory reduction** through quantization
+- **<0.05ms** SONA adaptation time
 - **84.8% SWE-Bench** performance score
+- **30-50% token reduction** via intelligent model routing
 
-AgentDB provides enterprise-grade vector search with:
-- HNSW indexing (O(log n) search complexity)
-- 9 RL algorithms for optimization
-- Automatic schema inference
-- Reflexion memory for continuous learning
+AgentDB v2.0 provides enterprise-grade features:
+- **Hybrid Backend**: SQLite + AgentDB for maximum performance
+- **HNSW indexing** (O(log n) search complexity)
+- **Hyperbolic embeddings** (Poincaré ball model) for hierarchical relationships
+- **9 RL algorithms** for optimization
+- **EWC++** prevents catastrophic forgetting
+- **Retrieve→Judge→Distill→Consolidate→Route** learning cycle
 
-## 🧠 **ReasoningBank Memory System**
+## 🧠 **SONA Neural Architecture**
 
-Persistent memory with automatic fallback:
-- Store and retrieve agent reasoning patterns
-- Query semantically similar past decisions
-- Automatic fallback if AgentDB unavailable
-- 4-32x memory compression
+Self-Optimizing Neural Architecture with automatic learning:
+- **<0.05ms adaptation time**
+- **Elastic Weight Consolidation++** prevents forgetting
+- **Pattern detection** with HNSW indexing
+- **Hyperbolic embeddings** for hierarchical relationships
+- **5-phase learning cycle**: Retrieve → Judge → Distill → Consolidate → Route
 
 ```bash
-# Store reasoning
-npx claude-flow@alpha memory store "pattern-key" "pattern-value" --reasoningbank
+# Neural operations
+npx claude-flow@v3alpha neural train --patterns
+npx claude-flow@v3alpha neural adapt
+npx claude-flow@v3alpha neural status
 
-# Retrieve and search
-npx claude-flow@alpha memory search "similar-patterns"
-
-# View memory stats
-npx claude-flow@alpha memory stats
+# Memory with hybrid backend
+npx claude-flow@v3alpha memory store "pattern-key" "pattern-value"
+npx claude-flow@v3alpha memory vector-search "similar-patterns"
+npx claude-flow@v3alpha memory consolidate
 ```
 
-## 🐝 **Hive-Mind Intelligence**
+## 🐝 **Hive-Mind Intelligence (v3)**
 
-Queen-led coordination with specialized worker agents:
+Queen-led coordination with **Byzantine fault-tolerant consensus**:
+
+**3 Queen Types:**
+- Strategic Queen: High-level planning and goal setting
+- Tactical Queen: Task decomposition and assignment
+- Adaptive Queen: Dynamic topology adjustment
+
+**8 Worker Specializations:**
+- Researchers, Coders, Testers, Reviewers
+- Architects, DevOps, Security, Optimizers
+
+**3 Consensus Algorithms:**
+- Majority (>50%), Weighted, Byzantine (>2/3, fault-tolerant)
 
 ```bash
 # Launch Hive-Mind Wizard
-npx claude-flow@alpha hive-mind wizard
+npx claude-flow@v3alpha hive-mind wizard
+
+# Byzantine consensus
+npx claude-flow@v3alpha hive-mind consensus --algorithm byzantine
 
 # Execute with hive-mind
-npx claude-flow@alpha swarm "complex-task" --hive-mind --claude
+npx claude-flow@v3alpha swarm create --topology hierarchical --hive-mind
 ```
 
 ## 📁 **Repository Structure**
@@ -1761,16 +1813,21 @@ Agent 5 will synthesize all findings into actionable recommendations"
 
 ## 🎯 Getting Started
 
-### Quick Setup (3 Steps)
+### Quick Setup (v3 - 4 Steps)
 
 ```bash
-# Step 1: Initialize Claude-Flow framework
-npx claude-flow@alpha init --force
+# Step 1: Initialize Claude-Flow v3 framework
+npx claude-flow@v3alpha init --force
 
-# Step 2: Copy all 600+ agents to your agents folder
+# Step 2: (If upgrading from v2) Run migration
+npx claude-flow@v3alpha migrate run
+npx claude-flow@v3alpha migrate verify
+
+# Step 3: Copy all 610+ agents to your agents folder
 # Download agents from this repository and copy them to your local agents/ directory
 
-# Step 3: Start using agents with Claude Code
+# Step 4: Start daemon workers and begin using agents
+npx claude-flow@v3alpha daemon start
 # Open Claude Code and start prompting with your agents
 ```
 
@@ -1794,39 +1851,50 @@ Once you have the agents set up, you can use them with Claude Code:
 4. **Combine Agents**: Mix and match for comprehensive solutions
 5. **Save Templates**: Create reusable prompt templates for common tasks
 
-### Advanced Setup: Optimize Claude-Flow Features
+### Advanced Setup: Optimize Claude-Flow v3 Features
 
 ```bash
-# Step 4: Analyze Claude-Flow capabilities
-npx claude-flow --help
+# Step 5: Explore v3 capabilities (26 commands + 140 subcommands)
+npx claude-flow@v3alpha --help
+
+# Step 6: Configure MCP integration
+claude mcp add claude-flow -- npx claude-flow@v3alpha mcp start
+
+# Step 7: Set up daemon workers for continuous optimization
+npx claude-flow@v3alpha daemon start
+npx claude-flow@v3alpha daemon trigger audit --context "./"
 ```
 
 **Tell Claude Code to:**
-1. Review the `npx claude-flow --help` output thoroughly
-2. Analyze and identify the pros and cons of each mode:
-   - **Hive-mind** features
-   - **Automation** capabilities  
-   - **Swarm** orchestration patterns
-3. Create a comprehensive report on best practices for utilizing all different modes
-4. Save this analysis to `flowstrats.md` in the root directory
+1. Review the `npx claude-flow@v3alpha --help` output thoroughly
+2. Analyze v3 features including:
+   - **SONA** neural architecture and model routing
+   - **17 Hooks** + **12 daemon workers**
+   - **6 Topologies** with anti-drift configuration
+   - **Byzantine consensus** for fault tolerance
+3. Create a comprehensive report on best practices for utilizing all v3 features
+4. Save this analysis to `flowstrats.md` in the docs directory
 
-**Important**: When spawning swarms, always include in your prompt:
-> "Please read and reference the flowstrats.md file for optimal claude-flow utilization strategies"
+**Important**: When spawning swarms with v3, always include:
+> "Use hierarchical topology with specialized strategy to prevent goal drift. Enable Byzantine consensus for fault tolerance."
 
-This ensures your swarms leverage the full potential of the framework's capabilities.
+This ensures your swarms leverage v3's anti-drift and fault-tolerant capabilities.
 
 ---
 
-## 🚀 **QUICK START CHECKLIST**
+## 🚀 **QUICK START CHECKLIST (v3)**
 
-Get productive with your 607 agents in minutes:
+Get productive with your 610 agents in minutes:
 
-- [ ] Run `npx claude-flow@alpha init --force`
-- [ ] Copy 600+ agents to your `agents/` folder
-- [ ] Create `flowstrats.md` analysis (run `npx claude-flow --help` first)
+- [ ] Run `npx claude-flow@v3alpha init --force`
+- [ ] (If upgrading) Run `npx claude-flow@v3alpha migrate run`
+- [ ] Copy 610+ agents to your `agents/` folder
+- [ ] Configure MCP: `claude mcp add claude-flow -- npx claude-flow@v3alpha mcp start`
+- [ ] Start daemon: `npx claude-flow@v3alpha daemon start`
+- [ ] Create `flowstrats.md` analysis (run `npx claude-flow@v3alpha --help` first)
 - [ ] Try your first single agent with proper prompt structure
-- [ ] Deploy your first 3-agent swarm using templates
-- [ ] Master hive-mind coordination for complex projects
+- [ ] Deploy your first 3-agent swarm with hierarchical topology
+- [ ] Master Byzantine-fault-tolerant hive-mind coordination
 
 ## 🎯 **MOST POPULAR AGENT COMBINATIONS**
 
@@ -1987,4 +2055,4 @@ Deploy your first swarm today and experience the future of work.
 
 ---
 
-*Built with ❤️ by the Claude-Flow Team | Version 2.0 | Last Updated: 2024*
+*Built with ❤️ by the Claude-Flow Team | Version 3.0 | Last Updated: January 2026*
